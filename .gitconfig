@@ -102,10 +102,14 @@
 	cmit = commit
 	omit = commit
 	cmt = commit
+	cinnut = commit
+	comkmit = commit
+	cmmit = commit
 	statsu = status
 	statu = status
 	sttus = status
 	stats = status
+	satus = status
 	stts = status
 	st = status
 
