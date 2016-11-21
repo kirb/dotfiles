@@ -6,6 +6,8 @@
 	<true/>
 	<key>AllowClipboardAccess</key>
 	<false/>
+	<key>AlternateMouseScroll</key>
+	<true/>
 	<key>AnimateDimming</key>
 	<false/>
 	<key>AppleAntiAliasingThreshold</key>
@@ -643,6 +645,8 @@
 	<integer>32</integer>
 	<key>HotkeyCode</key>
 	<integer>49</integer>
+	<key>HotkeyMigratedFromSingleToMulti</key>
+	<true/>
 	<key>HotkeyModifiers</key>
 	<integer>524288</integer>
 	<key>IRMemory</key>
@@ -694,9 +698,9 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>1050 328 612 292 0 0 1680 1050 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>348 584 606 456 0 0 1920 1057 </string>
+	<string>351 596 606 456 0 0 1920 1057 </string>
 	<key>NSWindow Frame SUAutomaticUpdateAlert</key>
-	<string>652 662 616 174 0 0 1920 1057 </string>
+	<string>2152 974 616 174 1920 -335 1080 1920 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>2560 720 400 129 1920 30 1680 1050 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
@@ -704,7 +708,7 @@
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>127 138 778 889 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>2167 -701 794 606 1920 -840 1080 1897 </string>
+	<string>2029 116 794 606 1920 -335 1080 1897 </string>
 	<key>NeverWarnAboutShortLivedSessions_6EE2510D-F7CA-4F05-AEE5-F7F9A420683A</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_6EE2510D-F7CA-4F05-AEE5-F7F9A420683A_selection</key>
@@ -1726,9 +1730,9 @@
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/testing.xml?shard=73</string>
+	<string>https://iterm2.com/appcasts/nightly.xml?shard=73</string>
 	<key>SULastCheckTime</key>
-	<date>2016-07-20T02:08:30Z</date>
+	<date>2016-08-13T06:50:21Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -1816,7 +1820,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.4</string>
+	<string>3.0.20160804-nightly</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>6</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
