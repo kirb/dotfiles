@@ -12,7 +12,6 @@ cd ~/Downloads/Adobe
 # loop over the desired downloads
 for path in \
 	/PHSP/16/osx10/Photoshop_16_LS20.dmg \
-	/ILST/19/osx10-64/Illustrator_19_LS20.dmg \
 	/PPRO/9/osx10-64/PremierePro_9_LS20.dmg \
 	/AEFT/13_5/osx10-64/AfterEffects_13_5_LS20.dmg \
 	/AUDT/8/osx10-64/Audition_8_LS20.dmg \
@@ -20,7 +19,7 @@ for path in \
 	file="$(basename "$path")"
 	echo "$file"
 
-	curl -C - -#LOR \
+	curl -C - -#LORk \
 		--cookie MM_TRIALS="$cookie" \
 		https://trials3.adobe.com/AdobeProducts"$path" || \
 		exit 1
