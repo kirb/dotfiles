@@ -6,14 +6,10 @@
 
 	# insanely beautiful diffs
 	pager = diff-so-fancy | less -R -x2
-	editor = nano
 
 # use separate file for username / github token / etc
 [include]
   path = ~/.dotfiles/.gitconfig.private
-
-[init]
-	templatedir = ~/.gittemplate
 
 # rewrites of repo paths
 [url "git@github.com:"]
@@ -31,18 +27,34 @@
 [commit]
 	gpgsign = true
 
+# use the macos keychain credential helper
+[credential]
+	helper = osxkeychain
+
 # push easily. http://stackoverflow.com/a/23918418/89484
 [push]
-	default = current
+	default = matching
 	followTags = true
 
 # rebase! http://stackoverflow.com/q/804115
 [pull]
 	rebase = true
 
+# allow pushing to non-bare repos on this machine
+[receive]
+	denyCurrentBranch = updateInstead
+
 # git mergetool
 [merge]
 	tool = opendiff
+	# conflictstyle = diff3
+
+# use vscode as diff tool
+[diff]
+	tool = code
+
+[difftool "code"]
+	cmd = code -wd $LOCAL $REMOTE
 
 # clone up to 4 submodules at once
 [submodule]
@@ -120,6 +132,6 @@
 	required = true
 
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
 	required = true
