@@ -1499,11 +1499,9 @@
 			<key>Semantic History</key>
 			<dict>
 				<key>action</key>
-				<string>editor</string>
-				<key>editor</key>
-				<string>com.github.atom</string>
+				<string>raw command</string>
 				<key>text</key>
-				<string></string>
+				<string>sh -c 'cd \5; /usr/local/bin/code -g \1:\2'</string>
 			</dict>
 			<key>Send Code When Idle</key>
 			<false/>
