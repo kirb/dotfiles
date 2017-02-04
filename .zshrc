@@ -10,7 +10,7 @@
 # path yo
 [[ -z "$THEOS" ]] && export THEOS=~/theos
 
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/opt/ruby/bin:/usr/bin:/bin:/usr/sbin:/sbin:$THEOS/bin:$HOME/.rvm/bin
+export PATH=$HOME/.dotfiles/bin:/usr/local/bin:/usr/local/sbin:/usr/local/opt/ruby/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.rvm/bin
 export MANPATH=/usr/local/share/man:$MANPATH
 
 # force terminal type
