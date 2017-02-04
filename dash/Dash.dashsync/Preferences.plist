@@ -165,7 +165,7 @@
 			<key>HTTP_Status_Codes</key>
 			<dict>
 				<key>date</key>
-				<date>2016-10-05T23:08:09Z</date>
+				<date>2016-11-22T11:39:39Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -247,12 +247,13 @@
 			<key>Mac_Startup_Keys</key>
 			<dict>
 				<key>date</key>
-				<date>2016-10-05T23:08:11Z</date>
+				<date>2017-01-27T05:55:50Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
 					<array>
 						<string>mac os x startup keys</string>
+						<string>macosx startup keys</string>
 					</array>
 					<key>name</key>
 					<string>Mac Startup Keys</string>
@@ -536,7 +537,7 @@
 			<key>iOS_Design</key>
 			<dict>
 				<key>date</key>
-				<date>2016-10-05T23:08:09Z</date>
+				<date>2017-01-05T05:49:48Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -899,7 +900,28 @@
 	<key>docsets</key>
 	<dict>
 		<key>keywords</key>
-		<dict/>
+		<dict>
+			<key>~/Library/Application Support/Dash/DocSets/ActionScript/ActionScript.docset</key>
+			<string>as</string>
+			<key>~/Library/Application Support/Dash/DocSets/Apple_API_Reference/Apple_API_Reference.docset</key>
+			<string>apple</string>
+			<key>~/Library/Application Support/Dash/DocSets/Bootstrap_4/Bootstrap 4.docset</key>
+			<string>bs</string>
+			<key>~/Library/Application Support/Dash/DocSets/Font_Awesome/Font_Awesome.docset</key>
+			<string>fa</string>
+			<key>~/Library/Application Support/Dash/DocSets/Jade/Jade.docset</key>
+			<string>pug</string>
+			<key>~/Library/Application Support/Dash/DocSets/JavaScript/JavaScript.docset</key>
+			<string>js</string>
+			<key>~/Library/Application Support/Dash/DocSets/Man_Pages/Man Pages.docset</key>
+			<string>man</string>
+			<key>~/Library/Application Support/Dash/DocSets/Markdown/Markdown.docset</key>
+			<string>md</string>
+			<key>~/Library/Application Support/Dash/DocSets/NodeJS/NodeJS.docset</key>
+			<string>node</string>
+			<key>~/Library/Application Support/Dash/DocSets/WordPress/WordPress.docset</key>
+			<string>wp</string>
+		</dict>
 	</dict>
 	<key>feeds</key>
 	<dict>
@@ -965,11 +987,6 @@
 				<key>date</key>
 				<date>2016-04-14T14:00:58Z</date>
 			</dict>
-			<key>http://kapeli.com/feeds/Jade.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2016-04-14T14:01:38Z</date>
-			</dict>
 			<key>http://kapeli.com/feeds/JavaScript.xml</key>
 			<dict>
 				<key>date</key>
@@ -1009,6 +1026,11 @@
 			<dict>
 				<key>date</key>
 				<date>2016-10-05T23:16:39Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Pug.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2017-01-18T12:26:39Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/SQLite.xml</key>
 			<dict>

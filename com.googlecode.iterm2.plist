@@ -673,42 +673,52 @@
 	<false/>
 	<key>NSScrollViewShouldScrollUnderTitlebar</key>
 	<false/>
-	<key>NSTableView Columns KeyBingingTable</key>
-	<array>
-		<data>
-		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
-		hAErATCG
-		</data>
-		<string>198</string>
-		<data>
-		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
-		hAErATGG
-		</data>
-		<string>322</string>
-	</array>
-	<key>NSTableView Hidden Columns KeyBingingTable</key>
-	<array/>
-	<key>NSTableView Sort Ordering KeyBingingTable</key>
-	<array/>
+	<key>NSTableView Columns v2 KeyBingingTable</key>
+	<data>
+	YnBsaXN0MDDUAQIDBAUGNjdYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
+	AAGGoK4HCA8aGxwdHh8gJjAxMlUkbnVsbNIJCgsOWk5TLm9iamVjdHNWJGNsYXNzogwN
+	gAKACoAN0xAJChEVGVdOUy5rZXlzoxITFIADgASABaMWFxiABoAHgAiACVpJZGVudGlm
+	aWVyVVdpZHRoVkhpZGRlblEwI0BowAAAAAAACNIhIiMkWiRjbGFzc25hbWVYJGNsYXNz
+	ZXNcTlNEaWN0aW9uYXJ5oiMlWE5TT2JqZWN00xAJCicrGaMSExSAA4AEgAWjLC0YgAuA
+	DIAIgAlRMSNAdCAAAAAAANIhIjM0Xk5TTXV0YWJsZUFycmF5ozM1JVdOU0FycmF5XxAP
+	TlNLZXllZEFyY2hpdmVy0Tg5VUFycmF5gAEACAARABoAIwAtADIANwBGAEwAUQBcAGMA
+	ZgBoAGoAbABzAHsAfwCBAIMAhQCJAIsAjQCPAJEAnACiAKkAqwC0ALUAugDFAM4A2wDe
+	AOcA7gDyAPQA9gD4APwA/gEAAQIBBAEGAQ8BFAEjAScBLwFBAUQBSgAAAAAAAAIBAAAA
+	AAAAADoAAAAAAAAAAAAAAAAAAAFM
+	</data>
+	<key>NSTableView Sort Ordering v2 KeyBingingTable</key>
+	<data>
+	YnBsaXN0MDDUAQIDBAUGFBVYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
+	AAGGoKMHCA1VJG51bGzSCQoLDFpOUy5vYmplY3RzViRjbGFzc6CAAtIODxARWiRjbGFz
+	c25hbWVYJGNsYXNzZXNeTlNNdXRhYmxlQXJyYXmjEBITV05TQXJyYXlYTlNPYmplY3Rf
+	EA9OU0tleWVkQXJjaGl2ZXLRFhdVQXJyYXmAAQgRGiMtMjc7QUZRWFlbYGt0g4ePmKqt
+	swAAAAAAAAEBAAAAAAAAABgAAAAAAAAAAAAAAAAAAAC1
+	</data>
+	<key>NSTableView Supports v2 KeyBingingTable</key>
+	<true/>
 	<key>NSToolbar Configuration com.apple.NSColorPanel</key>
 	<dict>
 		<key>TB Is Shown</key>
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>1050 328 612 292 0 0 1680 1050 </string>
+	<string>2258 -106 612 94 1920 -501 1050 1680 </string>
 	<key>NSWindow Frame Preferences</key>
 	<string>351 596 606 456 0 0 1920 1057 </string>
 	<key>NSWindow Frame SUAutomaticUpdateAlert</key>
-	<string>2152 974 616 174 1920 -335 1080 1920 </string>
+	<string>2137 628 616 174 1920 -501 1050 1680 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
 	<string>2560 720 400 129 1920 30 1680 1050 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>2410 404 700 551 1920 30 1680 1050 </string>
+	<key>NSWindow Frame SessionsPreferences</key>
+	<string>1920 -375 606 469 1920 -501 1050 1680 </string>
+	<key>NSWindow Frame SharedPreferences</key>
+	<string>2043 102 918 512 1920 -527 1050 1680 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
-	<string>127 138 778 889 0 0 1680 1027 </string>
+	<string>1958 759 1009 372 1920 -527 1050 1658 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>2029 116 794 606 1920 -335 1080 1897 </string>
+	<string>2017 -274 794 608 1920 -527 1050 1658 </string>
 	<key>NeverWarnAboutShortLivedSessions_6EE2510D-F7CA-4F05-AEE5-F7F9A420683A</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_6EE2510D-F7CA-4F05-AEE5-F7F9A420683A_selection</key>
@@ -1499,9 +1509,11 @@
 			<key>Semantic History</key>
 			<dict>
 				<key>action</key>
-				<string>raw command</string>
+				<string>command</string>
+				<key>editor</key>
+				<string>com.sublimetext.3</string>
 				<key>text</key>
-				<string>sh -c 'cd \5; /usr/local/bin/code -g \1:\2'</string>
+				<string>sh -c 'cd \5; code -g \1:\2'</string>
 			</dict>
 			<key>Send Code When Idle</key>
 			<false/>
@@ -1650,6 +1662,8 @@
 	<true/>
 	<key>NoSyncHaveWarnedAboutIncompatibleSoftware</key>
 	<true/>
+	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
+	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>17C98D43-CAD0-448C-B929-EA72CCFDCFEA</string>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
@@ -1662,6 +1676,8 @@
 	<true/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>482333930.66796201</real>
+	<key>NoSyncTurnOffMouseReportingOnHostChange</key>
+	<true/>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
 	<key>OpenArrangementAtStartup</key>
@@ -1730,7 +1746,7 @@
 	<key>SUFeedURL</key>
 	<string>https://iterm2.com/appcasts/nightly.xml?shard=73</string>
 	<key>SULastCheckTime</key>
-	<date>2016-08-13T06:50:21Z</date>
+	<date>2017-01-16T04:17:48Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -1773,7 +1789,7 @@
 	<key>TripleClickSelectsFullWrappedLines</key>
 	<false/>
 	<key>UKCrashReporterLastCrashReportDate</key>
-	<real>1464011136</real>
+	<real>1480256512</real>
 	<key>URLHandlersByGuid</key>
 	<dict>
 		<key>gopher</key>
@@ -1815,10 +1831,12 @@
 	<string>/-+\~_.</string>
 	<key>findIgnoreCase_iTerm</key>
 	<true/>
+	<key>findMode_iTerm</key>
+	<integer>0</integer>
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.20160804-nightly</string>
+	<string>3.0.20170106-nightly</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>6</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
