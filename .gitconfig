@@ -6,6 +6,7 @@
 
 	# insanely beautiful diffs
 	pager = diff-so-fancy | less -R -x2
+	editor = nano
 
 # use separate file for username / github token / etc
 [include]
@@ -94,12 +95,13 @@
 	branches = branch -a
 	remotes = remote -v
 
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 
 	# this is pretty useful
 	diff = diff --patch-with-stat
 
 	# literally my life
+	ad = add
 	og = log
 	lgo = log
 	cmomit = commit

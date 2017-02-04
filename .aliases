@@ -24,7 +24,8 @@ alias xcselect=xcode-select
 alias xcsel=xcode-select
 alias hop='hopper -e'
 alias io=optim
-alias ytdl=youtube-dl
+alias n=npm
+alias y=yarn
 
 # cross-platform normalisation
 if has afplay; then
