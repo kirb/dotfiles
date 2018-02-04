@@ -59,6 +59,12 @@ export PERL_MB_OPT="--install_base \"$HOME/.perl5\""
 export PERL_MM_OPT="INSTALL_BASE=$HOME/.perl5"
 export GOPATH=/usr/local/lib/go
 
+# well intentioned feature, but god it’s annoying. sorry
+export HOMEBREW_NO_AUTO_UPDATE=1
+
+# super useful for those `rm -r $DERIVED_DATA` moments
+export DERIVED_DATA=~/Library/Developer/Xcode/DerivedData
+
 # fix for homebrew zsh
 # see `brew info zsh`
 if [[ "$SHELL" != "/usr/bin/zsh" ]] && has brew; then
