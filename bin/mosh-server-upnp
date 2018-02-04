@@ -1,0 +1,4 @@
+#!/bin/bash
+export PATH=/usr/local/bin:$PATH
+export LANG=en_AU.UTF-8 LC_CTYPE=en_AU.UTF-8
+node "$(dirname "$0")"/../stuff/mosh-upnp-hole-puncher/mosh-wrapper.js

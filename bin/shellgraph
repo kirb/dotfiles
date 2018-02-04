@@ -1,0 +1,96 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# [note from kirb] i stole this from https://twitter.com/einaros/status/946475703620587521
+'''
+I still believe this to be useless, but if you think me wrong, let me know. 
+- @einaros
+
+Requires: Python 3, blessings
+Example: while true; do echo $(( $RANDOM / 1000 )); sleep .1; done | shellgraph
+
+The gradient table was somewhat lazyily constructed. Expand to cover your needs.
+  for i in range(256):
+    sys.stdout.write(term.on_color(i) + '{:3}'.format(i) + '   ')
+    if i % 6 == 0: sys.stdout.write('\n')
+'''
+import sys, time, argparse
+from collections import defaultdict
+from blessings import Terminal
+
+term = Terminal()
+gradient = [
+  196, 160, 202, 166, 208, 
+  214, 215, 216, 180, 179, 
+  178, 172, 173, 203, 204, 
+  198, 197, 161, 162, 167, 
+  168, 209, 210, 174]
+
+def draw_graph(keys, line_count, max_keys):
+  term_width = term.width
+  output = term.bold + 'Processed {lines} items\n'.format(lines=line_count) + term.normal
+  sorted_keys = sorted(keys, key=lambda k: keys[k], reverse=True)
+  output += term.bold + term.underline + 'Key distribution' + ' '*(term_width-16) + term.normal + '\n'
+  total = 0
+  for i, k in enumerate(sorted_keys):
+    v = keys[k]
+    total += v
+  max_len = 0
+  for i, k in enumerate(sorted_keys[:max_keys]):
+    v = keys[k]
+    if i == 0: max_len = len(str(v))
+    pct = round(term_width * (v / total))
+    txt = (' {v: >%s} | {k}'%(max_len)).format(k=k, v=v)
+    i = i + 1
+    color = term.on_color(gradient[(i-1)%len(gradient)])
+    output += term.clear_eol + term.black + color
+    if pct > len(txt):
+      output += txt + (' '*(pct-len(txt)))
+    else:
+      output += txt[:pct] + term.normal + txt[pct:]
+    output += '\n' + term.normal
+  return output
+
+class open_output:
+  def __init__(self, outfile):
+    if outfile is None:
+      self.outfile = sys.stdout
+      self.cleanup = False 
+    else:
+      self.outfile = open(outfile, 'w')
+      self.cleanup = True 
+  def __enter__(self):
+    return self.outfile
+  def __exit__(self, type, value, traceback):
+    if self.cleanup:
+      self.outfile.close()
+
+def main():
+  parser = argparse.ArgumentParser()
+  parser.add_argument('outfile', nargs='?', default=None)
+  parser.add_argument('-k', dest='max_keys', type=int, default=20, help='number of keys to include in output')
+  parser.add_argument('-t', dest='throttle', type=int, default=100, help='output throttle in ms (default: 100)')
+  args = parser.parse_args()
+  keys = defaultdict(int)
+  throttle = args.throttle / 1000.0
+  output_lines = 0
+  last_output = 0
+  for line_count, line in enumerate(sys.stdin):
+    keys[line.strip()] += 1
+    if time.time() - last_output < throttle: 
+      continue
+    with open_output(args.outfile) as out:
+      if args.outfile is None and output_lines > 0:
+        out.write(term.move_up*output_lines)
+      output = draw_graph(keys, 1+line_count, args.max_keys)
+      output_lines = output.count('\n')
+      out.write(output)
+      out.flush()
+      last_output = time.time()
+
+if __name__ == '__main__':
+  try:
+    sys.exit(main())
+  except FileNotFoundError:
+    sys.exit(1)
+  except KeyboardInterrupt:
+    sys.exit(0)
