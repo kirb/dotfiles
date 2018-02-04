@@ -57,6 +57,12 @@
 [difftool "code"]
 	cmd = code -wd $LOCAL $REMOTE
 
+[merge]
+	tool = code
+
+[mergetool "code"]
+	cmd = code -w $MERGED
+
 # clone up to 4 submodules at once
 [submodule]
 	fetchJobs = 4
@@ -137,3 +143,4 @@
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	required = true
+	process = git-lfs filter-process
