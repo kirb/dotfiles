@@ -297,7 +297,7 @@ if [[ ! -d ~/homebrew && ! -d /usr/local/Homebrew ]]; then
 	status "Installing Homebrew"
 
 	if [[ $has_sudo == 1 ]]; then
-		run bash -c 'curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install > /tmp/install_homebrew.rb'
+		run bash -c 'curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install -o /tmp/install_homebrew.rb'
 		echo "Confirm /tmp/install_homebrew.rb isn’t doing anything scary and press return to continue"
 		read
 		run ruby /tmp/install_homebrew.rb
