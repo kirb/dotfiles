@@ -1,5 +1,6 @@
 #!/bin/bash
 # config
+cd ~
 shopt -s dotglob
 
 # functions
@@ -66,52 +67,10 @@ read answer
 if [[ $answer == n ]]; then
 	xcode-select --install
 	wait_for_process "Install Command Line Developer Tools"
+else
+	# get the path to Xcode.app based on the xcode-select path
+	xcode="$(realpath "$(xcode-select --print-path)"/../..)"
 fi
-
-# 1: install homebrew
-if [[ ! -d ~/homebrew && ! -d /usr/local/.git ]]; then
-	status "Installing Homebrew"
-	run git clone https://github.com/Homebrew/homebrew.git ~/homebrew
-
-	if [[ $has_sudo == 1 ]]; then
-		run sudo mv ~/homebrew/* /usr/local
-		run rm -r ~/homebrew
-		run sudo chown $USER:staff /usr/local
-	fi
-fi
-
-if [[ $has_sudo == 0 ]]; then
-	run echo "export PATH=~/homebrew/bin:$PATH" >> ~/.zshrc
-fi
-
-brewdir=$(run brew --prefix)
-
-# 2: install bundle
-status "Installing Homebrew Bundle"
-run brew tap homebrew/bundle
-
-# 3: process brewfile
-status "Installing from Brewfile"
-run brew bundle
-
-# 4: force link certain formulae
-status "Force linking formulae"
-run brew link --force bzip2 curl perl sqlite3
-
-# TODO: class-dump is broken
-
-for i in $brewdir/opt/{coreutils,findutils,gnu-sed,gnu-tar,gnu-which,grep,make}/bin/g*; do
-	name=$(basename $i)
-	newname=$brewdir/bin/${name:1}
-
-	if [[ ! -f $newname ]]; then
-		run ln -s $i $newname
-	fi
-done
-
-# 5: install font
-status "Downloading Source Code Pro Powerline Awesome Regular (what a mouthful)"
-curl -# https://rawgit.com/gabrielelana/awesome-terminal-fonts/patching-strategy/patched/SourceCodePro+Powerline+Awesome+Regular.ttf -o ~/Library/Fonts/SourceCodePro+Powerline+Awesome+Regular.ttf
 
 # 6: clone dotfiles
 status "Cloning dotfiles"
@@ -127,7 +86,9 @@ done
 
 run echo "source ~/.dotfiles/.zshrc" >> ~/.zshrc
 
-run mkdir .ssh
+if [[ ! -d ~/.ssh ]]; then
+	run mkdir ~/.ssh
+fi
 
 # 7: clone theos
 if [[ ! -d ~/theos ]]; then
@@ -142,7 +103,7 @@ if [[ $has_sudo == 1 ]]; then
 	run sudo /usr/sbin/systemsetup -setnetworktimeserver au.pool.ntp.org
 fi
 # set the highlight color (green)
-run defaults write NSGlobalDomain AppleHighlightColor -string "0.482353 0.925490 0.254902"
+run defaults write NSGlobalDomain AppleHighlightColor -string "0.482353 0.925000 0.254902"
 # use 24 hour time
 run defaults write NSGlobalDomain AppleICUForce12HourTime -bool NO
 # use dark system theme
@@ -174,7 +135,7 @@ run defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool NO
 run defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool NO
 # don't use autocorrect
 run defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool NO
-# never save to icloud by default (is this still needed?)
+# never save to icloud by default
 run defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool NO
 # always expand save panel
 run defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool YES
@@ -211,10 +172,10 @@ run defaults write com.apple.dock mineffect -string suck
 # do not change sort order of spaces based on use
 run defaults write com.apple.dock mru-spaces -bool NO
 # put the dock on the left
-run defaults write com.apple.dock orientation -string left
+# run defaults write com.apple.dock orientation -string left
 # make icons reasonably small
 run defaults write com.apple.dock tilesize -int 32
-# configure buttons for mighty mouse
+# configure buttons for mighty mouse (set scroll velocity, add middle click, 360º scrolling)
 run defaults write com.apple.driver.AppleHIDMouse Button1 -int 1
 run defaults write com.apple.driver.AppleHIDMouse Button2 -int 2
 run defaults write com.apple.driver.AppleHIDMouse Button3 -int 3
@@ -252,8 +213,12 @@ run defaults write com.apple.ImageCapture disableHotPlug -bool YES
 run defaults write com.apple.loginwindow PowerButtonSleepsSystem -bool NO
 # when copying an email address, don't include the name
 run defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool NO
+# don’t bother me if an email can’t be sent, just keep trying. why isn’t this the default????
+run defaults write com.apple.mail SuppressDeliveryFailure -bool YES
 # set the format of the clock menu bar item
-run defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM  HH:mm"
+run defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM  HH:mm:ss"
+# enable airdrop over ethernet
+run defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool YES
 # reduce duration banners are displayed
 run defaults write com.apple.notificationcenterui bannerTime -int 4
 # quit printer app once jobs have finished
@@ -268,9 +233,8 @@ run defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -b
 run defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool YES
 # show full url in safari address bar
 run defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool YES
-# use a randomly picked screen saver
-run defaults write com.apple.screensaver moduleDict -dict moduleName Random path /System/Library/Screen\ Savers/Random.saver type 8
-run defaults -currentHost write com.apple.screensaver moduleDict -dict moduleName Random path /System/Library/Screen\ Savers/Random.saver type 8
+# save screen captures to /tmp instead of cluttering the desktop
+run defaults write com.apple.screencapture location /tmp
 # show clock on the screen saver
 run defaults write com.apple.screensaver showClock -bool YES
 run defaults -currentHost write com.apple.screensaver showClock -bool YES
@@ -307,7 +271,7 @@ run defaults write com.googlecode.iterm2 PrefsCustomFolder -string ~/.dotfiles
 run defaults write com.skype.skype SKShowWelcomeTour -bool NO
 # kill the vmware fusion menu bar item
 run defaults write com.vmware.fusion showStartMenu3 -int 0
-# extract to the same folder as te archive
+# extract to the same folder as the archive
 run defaults write cx.c3.theunarchiver extractionDestination -bool YES
 # make the folder have the timestamp of the archive
 run defaults write cx.c3.theunarchiver folderModifiedDate -int 2
@@ -323,17 +287,67 @@ run defaults write io.citruspi.Spotify-Notifications iconSelection -int 2
 run defaults write io.citruspi.Spotify-Notifications notificationSound -int 1
 # keep previous songs in the notification center – this is also inverted
 run defaults write io.citruspi.Spotify-Notifications onlycurrentsong -int 1
+# disable auto-opening of captive portal web pages
+if [[ $has_sudo == 1 ]]; then
+	run sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.captive.control Active -bool NO
+fi
+
+# 1: install homebrew
+if [[ ! -d ~/homebrew && ! -d /usr/local/Homebrew ]]; then
+	status "Installing Homebrew"
+
+	if [[ $has_sudo == 1 ]]; then
+		run bash -c 'curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install > /tmp/install_homebrew.rb'
+		echo "Confirm /tmp/install_homebrew.rb isn’t doing anything scary and press return to continue"
+		read
+		run ruby /tmp/install_homebrew.rb
+	else
+		run git clone https://github.com/Homebrew/brew.git ~/homebrew
+	fi
+fi
+
+if [[ $has_sudo == 0 ]]; then
+	run echo "export PATH=~/homebrew/bin:$PATH" >> ~/.zshrc
+fi
+
+brewdir=$(run brew --prefix)
+
+# 2: install bundle
+status "Installing Homebrew Bundle"
+run brew tap homebrew/bundle
+
+# 3: process brewfile
+status "Installing from Brewfile"
+run bash -c 'cd ~/.dotfiles; brew bundle --verbose'
+
+# 4: force link certain formulae
+status "Force linking formulae"
+# android-platform-tools is a dick and links its own sqlite3 for some reason. ugh
+[[ -h /usr/local/bin/sqlite3 ]] && run rm /usr/local/bin/sqlite3
+run brew link --force bzip2 curl perl sqlite3
+
+# TODO: class-dump is broken
+
+for i in $brewdir/opt/{coreutils,findutils,gnu-sed,gnu-tar,gnu-which,grep,make}/bin/g*; do
+	name=$(basename $i)
+	newname=$brewdir/bin/${name:1}
+
+	if [[ ! -f $newname ]]; then
+		run ln -s $i $newname
+	fi
+done
+
+# 5: install font
+status "Downloading Source Code Pro Powerline Awesome Regular (what a mouthful)"
+curl -# https://rawgit.com/gabrielelana/awesome-terminal-fonts/patching-strategy/patched/SourceCodePro+Powerline+Awesome+Regular.ttf -o ~/Library/Fonts/SourceCodePro+Powerline+Awesome+Regular.ttf
 
 # 9: set up apps
 status "Setting up apps"
 
 open_if_exists $brewdir/Caskroom/backblaze/latest/Backblaze Installer.app
-open_if_exists /Applications/Dropbox.app
-open_if_exists /Applications/Flux.app
-open_if_exists /Applications/Google\ Drive.app
-open_if_exists /Applications/Karabiner.app
+open_if_exists /Applications/Backup\ and\ Sync.app
+open_if_exists /Applications/Google\ Drive\ File\ Stream.app
 open_if_exists /Applications/RescueTime.app
-open_if_exists /Applications/Screenhero.app
 open_if_exists /Applications/Skype.app
 open_if_exists /Applications/Spotify.app
 open_if_exists /Applications/Spotify\ Notifications.app
@@ -341,7 +355,6 @@ open_if_exists /Applications/Textual.app
 open_if_exists /Applications/The\ Unarchiver.app
 open_if_exists /Applications/Tweetbot.app
 
-add_login_item /Applications/LastPass.app
 add_login_item /Applications/Mail.app
 add_login_item /Applications/Textual.app
 
@@ -349,30 +362,6 @@ add_login_item /Applications/Textual.app
 
 if [[ ! -d /Applications/Screen\ Sharing.app ]]; then
 	ln -s /System/Library/CoreServices/Applications/Screen\ Sharing.app /Applications/Screen\ Sharing.app
-fi
-
-if [[ ! -d /Applications/Atom.app ]]; then
-	ln -s Atom\ Beta.app /Applications/Atom.app
-fi
-
-if [[ ! -h ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User ]]; then
-	if [[ -d ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User ]]; then
-		echo -n "Replace Sublime Text preferences? [Yn] "
-		read answer
-
-		if [[ $answer != n ]]; then
-			rm -rf ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
-		fi
-	fi
-
-	mkdir -p ~/Library/Application\ Support/Sublime\ Text\ 3/Packages
-	ln -s ~/.dotfiles/sublime-text/Packages/User ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
-fi
-
-if [[ ! -f ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages/Package\ Control.sublime-package ]]; then
-	status "Downloading Package Control"
-	mkdir -p ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages
-	curl -# https://packagecontrol.io/Package%20Control.sublime-package -o ~/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages/Package\ Control.sublime-package
 fi
 
 # 10: set up the dock
@@ -383,24 +372,33 @@ if [[ $answer != n ]]; then
 	dockutil --remove all --no-restart
 	add_dock_item /Applications/Google\ Chrome.app
 	add_dock_item /Applications/iTerm.app
-	add_dock_item /Applications/Atom\ Beta.app
-	add_dock_item /Applications/Xcode.app
-	add_dock_item /Applications/Hopper\ Disassembler\ v3.app
+	add_dock_item /Applications/Visual\ Studio\ Code.app
+
+	if [[ ! -z "$xcode" ]]; then
+		add_dock_item "$xcode"
+		add_dock_item "$xcode"/Contents/Developer/Applications/Simulator.app
+	fi
+
+	add_dock_item /Applications/Hopper\ Disassembler\ v*.app
+	add_dock_item /Applications/Utilities/Console.app
 	add_dock_item /Applications/Mail.app
-	add_dock_item /Applications/Messages.app
 	add_dock_item /Applications/Slack.app
+	add_dock_item /Applications/Discord.app
 	add_dock_item /Applications/Textual.app
 	add_dock_item /Applications/Tweetbot.app
-	add_dock_item /Applications/Utilities/Activity\ Monitor.app
+	add_dock_item /Applications/Telegram.app
+	add_dock_item /Applications/Messages.app
 	add_dock_item /Applications/Adobe\ Photoshop\ */Adobe Photoshop\ *.app
 	add_dock_item /Applications/Adobe\ Premiere\ Pro\ */Adobe Premiere\ Pro\ *.app
-	add_dock_item /Applications/Adobe\ After\ Effects\ */Adobe After Effects\ *.app
+	add_dock_item /Applications/Adobe\ Audition\ */Adobe Audition\ *.app
 	add_dock_item /Applications/Final Cut Pro.app
 	add_dock_item /Applications/iTunes.app
 	add_dock_item /Applications/Spotify.app
-	add_dock_item /Applications/Screen\ Sharing.app
 	add_dock_item /Applications/Microsoft\ Remote\ Desktop\ Beta.app
-	add_dock_item /Applications/Skype.app
+	add_dock_item /Applications/Screen\ Sharing.app
+	add_dock_item /Applications/VMware\ Fusion.app
+	add_dock_item /Applications/Microsoft\ Word.app
+	add_dock_item /Applications/System\ Preferences.app
 fi
 
 # 11: set default shell
