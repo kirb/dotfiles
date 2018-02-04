@@ -1,0 +1,14 @@
+#!/bin/bash
+# based on https://gist.github.com/rxin/5085564
+
+case "$1" in
+  create)
+    sectors=$(($2 * 2048))
+    device=$(hdiutil attach -nomount ram://$sectors)
+    diskutil erasevolume HFS+ "ramdisk" $device
+    ;;
+
+  *)
+    echo "Usage: $(basename "$0") create [size-in-mb]"
+    ;;
+esac

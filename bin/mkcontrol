@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [[ ! -f "$1" ]]; then
+	echo "File doesn't exit?!"
+	exit 1
+fi
+
+dpkg-deb -f "$1"
+printf "Filename: debs/%s\nSHA256: %s\nMD5sum: %s\nSize: %s\n" \
+	"$(basename "$1")" \
+	"$(sha256sum "$1" | cut -d' ' -f1)" \
+	"$(md5sum "$1" | cut -d' ' -f1)" \
+	"$(stat -c %s "$1")"

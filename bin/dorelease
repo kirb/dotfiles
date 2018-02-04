@@ -1,0 +1,24 @@
+#!/bin/bash
+set -e
+
+if [[ -z $AZURE_STORAGE_CONNECTION_STRING ]]; then
+	echo "set \$AZURE_STORAGE_CONNECTION_STRING plz" >&2
+	exit 1
+fi
+
+pkg="$(cat .theos/last_package)"
+
+if [[ ! -f "$pkg" ]]; then
+	echo "package not found?" >&2
+	exit 1
+fi
+
+cp -i "$pkg" /Volumes/GoogleDrive/My\ Drive/Documents/Dev/debs/released/
+scp "$pkg" flexo:/var/www/cdn.hbang.ws/dl/debs/
+az storage blob upload --container-name hbangcdn --file "$pkg" --name dl/debs/"$(basename "$pkg")"
+
+control="$(mkcontrol "$pkg")"
+
+echo
+echo "$control"
+echo "$control" | pbcopy
