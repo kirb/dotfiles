@@ -1,2 +1,15 @@
-SDKVERSION = 9.2
-SYSROOT = $(THEOS)/sdks/iPhoneOS9.2.sdk
+ifeq ($(firstword $(subst :, ,$(TARGET))),simulator)
+	SDKVERSION = 11.1
+	SYSROOT = $(THEOS)/sdks/iPhoneSimulator11.1.sdk
+	TARGET_CODESIGN = codesign
+	TARGET_CODESIGN_FLAGS = --sign "Developer ID Application"
+else
+	SDKVERSION = 11.1
+	SYSROOT = $(THEOS)/sdks/iPhoneOS11.1.sdk
+	#SDKVERSION = 10.1
+	#SYSROOT = $(THEOS)/sdks/iPhoneOS10.1.sdk
+endif
+
+ifneq ($(ADDITIONAL_CFLAGS),-Wextra -Wno-unused-parameter)
+	ADDITIONAL_CFLAGS += -Wextra -Wno-unused-parameter
+endif
