@@ -1,3 +1,6 @@
 command alias fdn expr @import Foundation
 command alias uik expr @import UIKit
 command regex fw 's/(.+)/expr -l objc++ -O -- @import %1/'
+command alias ios platform select remote-ios
+command alias iosc process connect connect://localhost:1234
+command alias iosd process detach
