@@ -6,7 +6,6 @@
 
 	# insanely beautiful diffs
 	pager = diff-so-fancy | less -R -x2
-	editor = nano
 
 # use separate file for username / github token / etc
 [include]
