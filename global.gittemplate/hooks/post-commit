@@ -1,0 +1,2 @@
+#!/bin/bash
+source ~/.dotfiles/global.post-commit

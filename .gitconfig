@@ -1,8 +1,8 @@
 # mostly stolen from paul irish’s dotfiles
 
 [core]
-	excludesfile = ~/.dotfiles/.gitignore
-	attributesfile = ~/.dotfiles/.gitattributes
+	excludesfile = ~/.dotfiles/global.gitignore
+	attributesfile = ~/.dotfiles/global.gitattributes
 
 	# insanely beautiful diffs
 	pager = diff-so-fancy | less -R -x2

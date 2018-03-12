@@ -75,8 +75,8 @@ if [[ "$SHELL" != "/usr/bin/zsh" ]] && has brew; then
 fi
 
 # additional stuff
-safe_source $(dirname $0)/.aliases
-safe_source $(dirname $0)/.functions
+safe_source $(dirname $0)/zsh-aliases
+safe_source $(dirname $0)/zsh-functions
 safe_source ~/.iterm2_shell_integration.zsh
 
 # this must be sourced last
