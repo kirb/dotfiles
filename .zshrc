@@ -53,7 +53,7 @@ export SDKVERSION= SIMVERSION=
 export EDITOR='code -wr'
 
 # if this is an ssh session, use nano instead
-[[ ! -z "$SSH_CLIENT" ]] && export EDITOR=nano
+[[ ! -z "$SSH_CLIENT" ]] && export EDITOR=vim
 
 export PERL_MB_OPT="--install_base \"$HOME/.perl5\""
 export PERL_MM_OPT="INSTALL_BASE=$HOME/.perl5"
