@@ -4,3 +4,6 @@
 [submodule "stuff/mosh-upnp-hole-puncher"]
 	path = stuff/mosh-upnp-hole-puncher
 	url = https://github.com/gcochard/mosh-upnp-hole-puncher.git
+[submodule "stuff/adb-sync"]
+	path = stuff/adb-sync
+	url = https://github.com/google/adb-sync.git
