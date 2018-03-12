@@ -1,5 +1,5 @@
 set brackets ""')>]}"
-set const
+set constantshow
 set historylog
 set morespace
 unset nowrap
