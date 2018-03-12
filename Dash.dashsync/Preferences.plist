@@ -911,8 +911,6 @@
 			<string>bs:</string>
 			<key>~/Library/Application Support/Dash/DocSets/Font_Awesome/Font_Awesome.docset</key>
 			<string>fa</string>
-			<key>~/Library/Application Support/Dash/DocSets/Jade/Jade.docset</key>
-			<string>pug</string>
 			<key>~/Library/Application Support/Dash/DocSets/JavaScript/JavaScript.docset</key>
 			<string>js</string>
 			<key>~/Library/Application Support/Dash/DocSets/Java_SE8/Java.docset</key>
