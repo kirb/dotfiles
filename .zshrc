@@ -30,7 +30,8 @@ DISABLE_AUTO_UPDATE=true
 COMPLETION_WAITING_DOTS=true
 ENABLE_CORRECTION=true
 DEFAULT_USER=kirb
-plugins=(battery brew gpg-agent osx pod safe-paste ssh-agent tmux)
+ZSH_TMUX_FIXTERM=true
+plugins=(battery brew gpg-agent osx pod safe-paste ssh-agent tmux wakatime)
 
 ZSH=$(dirname $0)/.oh-my-zsh
 
