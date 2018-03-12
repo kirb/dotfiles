@@ -479,7 +479,7 @@
 			<key>Xcode_Shortcuts</key>
 			<dict>
 				<key>date</key>
-				<date>2017-08-13T15:33:43Z</date>
+				<date>2018-02-09T05:11:16Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -905,8 +905,10 @@
 			<string>as</string>
 			<key>~/Library/Application Support/Dash/DocSets/Apple_API_Reference/Apple_API_Reference.docset</key>
 			<string>ios</string>
+			<key>~/Library/Application Support/Dash/DocSets/Bootstrap_3/Bootstrap 3.docset</key>
+			<string>bs3:</string>
 			<key>~/Library/Application Support/Dash/DocSets/Bootstrap_4/Bootstrap 4.docset</key>
-			<string>bs</string>
+			<string>bs:</string>
 			<key>~/Library/Application Support/Dash/DocSets/Font_Awesome/Font_Awesome.docset</key>
 			<string>fa</string>
 			<key>~/Library/Application Support/Dash/DocSets/Jade/Jade.docset</key>
