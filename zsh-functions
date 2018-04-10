@@ -1,18 +1,13 @@
 #!/usr/bin/env zsh
 
 # handle command not found by displaying packages that contain the command
-command_not_found_handler() {
-	# lazy load the proper handler on the first run
-	if has brew && brew command command-not-found-init >/dev/null; then
-		eval "$(brew command-not-found-init)"
-		command_not_found_handler $*
-	elif [[ -x /etc/zsh_command_not_found ]]; then
+if [[ -x /etc/zsh_command_not_found ]]; then
+	command_not_found_handler() {
+		# lazy load the proper handler on the first run
 		source /etc/zsh_command_not_found
 		command_not_found_handler $*
-	else
-		return 127
-	fi
-}
+	}
+fi
 
 # convenience to set THEOS_DEVICE_IP. used to do a lot more than this, but theos
 # has now removed all need for anything special, and it's stuck in muscle memory

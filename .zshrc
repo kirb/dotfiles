@@ -3,7 +3,6 @@
 # == REQUIRES: ==
 # git clone --recursive https://github.com/kirb/dotfiles.git ~/.dotfiles
 # ln -s .dotfiles/.zshrc ~/.zshrc
-# brew tap homebrew/command-not-found
 # brew install zsh-syntax-highlighting
 # iTerm2 –> Install Shell Integration
 
