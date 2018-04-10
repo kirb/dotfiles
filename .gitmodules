@@ -7,3 +7,6 @@
 [submodule "stuff/adb-sync"]
 	path = stuff/adb-sync
 	url = https://github.com/google/adb-sync.git
+[submodule "stuff/rmate"]
+	path = stuff/rmate
+	url = https://github.com/aurora/rmate.git
