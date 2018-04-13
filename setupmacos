@@ -92,7 +92,9 @@ for i in .gitconfig .htoprc .lldbinit .nanorc .nicrc .theosrc .timidity.cfg; do
 	fi
 done
 
-run echo "source ~/.dotfiles/.zshrc" >> ~/.zshrc
+if ! grep -q dotfiles ~/.zshrc; then
+	run echo "source ~/.dotfiles/.zshrc" >> ~/.zshrc
+fi
 
 if [[ ! -d ~/.ssh ]]; then
 	run mkdir ~/.ssh
