@@ -42,6 +42,10 @@ add_dock_item() {
 	[[ -d "$1" ]] && run dockutil --add "$1" --no-restart
 }
 
+add_dock_spacer() {
+	run dockutil --add "" --type spacer --section apps --no-restart
+}
+
 open_if_exists() {
 	[[ -d "$1" ]] && run open "$1"
 }
@@ -178,7 +182,7 @@ run defaults write com.apple.dock mru-spaces -bool NO
 # put the dock on the left
 # run defaults write com.apple.dock orientation -string left
 # make icons reasonably small
-run defaults write com.apple.dock tilesize -int 32
+run defaults write com.apple.dock tilesize -int 38
 # configure buttons for mighty mouse (set scroll velocity, add middle click, 360º scrolling)
 run defaults write com.apple.driver.AppleHIDMouse Button1 -int 1
 run defaults write com.apple.driver.AppleHIDMouse Button2 -int 2
@@ -366,8 +370,10 @@ curl -# https://rawgit.com/gabrielelana/awesome-terminal-fonts/patching-strategy
 status "Setting up apps"
 
 open_if_exists $brewdir/Caskroom/backblaze/latest/Backblaze Installer.app
+open_if_exists $brewdir/Caskroom/lastpass/latest/LastPass\ Installer/LastPass\ Installer.app
 open_if_exists /Applications/Backup\ and\ Sync.app
 open_if_exists /Applications/Google\ Drive\ File\ Stream.app
+open_if_exists /Applications/iStat\ Menus.app
 open_if_exists /Applications/RescueTime.app
 open_if_exists /Applications/Skype.app
 open_if_exists /Applications/Spotify.app
@@ -376,8 +382,7 @@ open_if_exists /Applications/Textual.app
 open_if_exists /Applications/The\ Unarchiver.app
 open_if_exists /Applications/Tweetbot.app
 
-add_login_item /Applications/Mail.app
-add_login_item /Applications/Textual.app
+add_login_item /Applications/Mail.app --hide
 
 # TODO: kill spotify from the login items list after it launches
 
@@ -391,7 +396,8 @@ read answer
 
 if [[ $answer != n ]]; then
 	dockutil --remove all --no-restart
-	add_dock_item /Applications/Google\ Chrome.app
+	add_dock_item /Applications/Firefox\ Developer\ Edition.app
+	add_dock_spacer
 	add_dock_item /Applications/iTerm.app
 	add_dock_item /Applications/Visual\ Studio\ Code.app
 
@@ -402,24 +408,29 @@ if [[ $answer != n ]]; then
 
 	add_dock_item /Applications/Hopper\ Disassembler\ v*.app
 	add_dock_item /Applications/Utilities/Console.app
+	add_dock_spacer
 	add_dock_item /Applications/Mail.app
-	add_dock_item /Applications/Slack.app
+	add_dock_item /Applications/IRCCloud.app
 	add_dock_item /Applications/Discord.app
-	add_dock_item /Applications/Textual.app
 	add_dock_item /Applications/Tweetbot.app
 	add_dock_item /Applications/Telegram.app
 	add_dock_item /Applications/Messages.app
+	add_dock_spacer
 	add_dock_item /Applications/Adobe\ Photoshop\ */Adobe Photoshop\ *.app
 	add_dock_item /Applications/Adobe\ Premiere\ Pro\ */Adobe Premiere\ Pro\ *.app
 	add_dock_item /Applications/Adobe\ Audition\ */Adobe Audition\ *.app
+	add_dock_item /Applications/Pixelmator.app
 	add_dock_item /Applications/Final Cut Pro.app
+	add_dock_spacer
 	add_dock_item /Applications/iTunes.app
 	add_dock_item /Applications/Spotify.app
 	add_dock_item /Applications/Microsoft\ Remote\ Desktop\ Beta.app
 	add_dock_item /Applications/Screen\ Sharing.app
 	add_dock_item /Applications/VMware\ Fusion.app
 	add_dock_item /Applications/Microsoft\ Word.app
+	add_dock_spacer
 	add_dock_item /Applications/System\ Preferences.app
+	add_dock_item /Applications/Utilities/Activity\ Monitor.app
 fi
 
 # 11: set default shell
