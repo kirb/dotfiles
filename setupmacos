@@ -8,12 +8,16 @@ status() {
 	printf "\e[0;32m==> \e[1;39m%s…\e[m\n" "$1" >&2
 }
 
-run() {
+unsafe_run() {
 	printf "\e[0;36m==> \e[1;39m%s\e[m\n" "$*" >&2
 	"$@"
+}
 
+run() {
+	unsafe_run "$@"
 	result=$?
-	if [[ "$result" != "0" ]]; then
+
+	if [[ $result != 0 ]]; then
 		printf "\e[0;31m==> \e[1;31mError:\e[m %s\n" "Return code $result"
 		exit $result
 	fi
@@ -320,6 +324,21 @@ run brew tap homebrew/bundle
 
 # 3: process brewfile
 status "Installing from Brewfile"
+# run two instances of brew bundle at once for teh speed; make sure both finish before continuing
+run osascript -e 'tell application "Terminal" to do script "cd ~/.dotfiles; brew bundle --verbose & echo $! > /tmp/setupmacos_brew_pid"'
+unsafe_run bash -c 'cd ~/.dotfiles; brew bundle --verbose'
+
+other_brew_pid=$(cat /tmp/setupmacos_brew_pid)
+
+if kill -0 $other_brew_pid 2>/dev/null; then
+	echo "Waiting for other brew task to complete…"
+
+	while kill -0 $other_brew_pid 2>/dev/null; do
+		sleep 5
+	done
+fi
+
+# run it one more time to ensure we haven’t missed anything, especially due to pkgconfig locks
 run bash -c 'cd ~/.dotfiles; brew bundle --verbose'
 
 # 4: force link certain formulae
