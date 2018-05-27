@@ -9,6 +9,8 @@ alias ssh='nocorrect ssh'
 alias strings='strings -a'
 alias youtube-dl='youtube-dl --merge-output-format mp4 --audio-format m4a'
 alias pv='pv -W'
+alias ip='ip --color'
+alias ipb='ip --color --brief'
 
 if [[ $VENDOR == apple ]]; then
 	alias ping='ping --apple-time'
