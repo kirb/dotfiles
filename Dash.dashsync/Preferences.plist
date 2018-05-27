@@ -925,6 +925,10 @@
 			<string>ts</string>
 			<key>~/Library/Application Support/Dash/DocSets/WordPress/WordPress.docset</key>
 			<string>wp</string>
+			<key>~/Library/Application Support/Dash/DocSets/jQuery/jQuery.docset</key>
+			<string>jq</string>
+			<key>~/Library/Application Support/Dash/DocSets/msdn/MSDN.docset</key>
+			<string>msdn</string>
 		</dict>
 	</dict>
 	<key>feeds</key>
@@ -945,6 +949,11 @@
 			<dict>
 				<key>date</key>
 				<date>2018-04-08T13:10:42Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/AppleScript.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2018-05-03T12:05:26Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/Apple_API_Reference.xml</key>
 			<dict>
