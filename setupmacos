@@ -219,6 +219,8 @@ run defaults write com.apple.finder ShowPathbar -bool YES
 run defaults write com.apple.finder ShowStatusBar -bool YES
 # DO NOT OPEN THE FRIGGIN PHOTOS APP WHEN I PLUG IN A DEVICE
 run defaults write com.apple.ImageCapture disableHotPlug -bool YES
+# enable full screen in ios simulator
+run defaults write com.apple.iphonesimulator AllowFullscreenMode -bool YES
 # disable pressing power button to sleep
 run defaults write com.apple.loginwindow PowerButtonSleepsSystem -bool NO
 # when copying an email address, don't include the name
