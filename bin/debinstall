@@ -1,0 +1,21 @@
+#!/bin/bash
+# Deb package transfer and install script
+# By Adam Demasi <https://kirb.me/>
+# Licensed under the Apache License 2.0 <https://www.apache.org/licenses/LICENSE-2.0.html>
+
+if [[ "$@" == "" || "$1" == "" ]]; then
+	echo "Usage: $(basename "$0") the.deb [deviceip]"
+	echo "Default IP is your \$THEOS_DEVICE_IP, which is currently \"$THEOS_DEVICE_IP\"."
+	exit 1
+elif [[ ! -f "$1" ]]; then
+	echo "$1: no such file or directory"
+	exit 2
+elif [[ $1 =~ \.deb$ ]]; then
+	[[ "$2" == "" ]] && ip="$THEOS_DEVICE_IP" || ip="$2"
+	[[ -z "$THEOS_DEVICE_PORT" ]] && port="$THEOS_DEVICE_PORT" || port=22
+	scp "$1" root@"$ip": || exit 3
+	ssh root@"$ip" "dpkg -i './$(basename "$1")'"
+else
+	echo "$1: not a deb"
+	exit 4
+fi

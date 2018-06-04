@@ -1,0 +1,23 @@
+#!/bin/bash
+# Cydia Substrate dylib disabler
+# By Adam Demasi <https://kirb.me/>
+# Licensed under the Apache License 2.0 <https://www.apache.org/licenses/LICENSE-2.0.html>
+
+if [[ "$@" == "" || "$1" == "--help" ]]; then
+	echo "Usage: $(basename "$0") <names of dylibs, space delimited>"
+	exit 1
+fi
+
+for i in "$@"; do
+	if [[ "$i" == "MobileSafety" ]]; then
+		echo "I'm sorry, Dave. I'm afraid I can't do that." >&2
+	elif [[ -f "/Library/MobileSubstrate/DynamicLibraries/$i.dylib" ]]; then
+		mv "/Library/MobileSubstrate/DynamicLibraries/$i.dylib" "/Library/MobileSubstrate/DynamicLibraries/$i.disabled" && \
+		echo "$i disabled."
+	elif [[ -f "/Library/MobileSubstrate/DynamicLibraries/$i.disabled" ]]; then
+		mv "/Library/MobileSubstrate/DynamicLibraries/$i.disabled" "/Library/MobileSubstrate/DynamicLibraries/$i.dylib" && \
+		echo "$i enabled."
+	else
+		echo "I can't see the dylib \"$i\" here." >&2
+	fi
+done

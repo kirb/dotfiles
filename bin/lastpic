@@ -1,0 +1,19 @@
+#!/bin/bash
+# Transfer last picture in camera roll
+# By Adam Demasi <https://kirb.me/>
+# Licensed under the Apache License 2.0 <https://www.apache.org/licenses/LICENSE-2.0.html>
+
+if [[ "$1" == "--help" ]]; then
+	echo "Usage: $(basename "$0") [deviceip]"
+	echo "Image is saved to your current directory."
+	echo "Default IP is your \$THEOS_DEVICE_IP, which is currently \"$THEOS_DEVICE_IP\"."
+	exit 1
+else
+	[[ "$1" == "" ]] && ip="$THEOS_DEVICE_IP" || ip="$1"
+	[[ -z "$THEOS_DEVICE_PORT" ]] && port="$THEOS_DEVICE_PORT" || port=22
+
+	lastplist=/var/mobile/Media/PhotoData/MISC/DCIM_APPLE.plist
+	IFS=' ' read -r lastdir lastfile < <(ssh -p "$port" root@"$ip" "plutil -key DCIMLastDirectoryNumber \"$lastplist\" && plutil -key DCIMLastFileNumber \"$lastplist\"" | tr $'\n' ' ')
+
+	scp -P "$port" root@"$ip":/var/mobile/Media/DCIM/"$lastdir"APPLE/IMG_$(printf "%04d" "$lastfile").* . || exit 2
+fi
