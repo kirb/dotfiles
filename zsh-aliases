@@ -43,9 +43,8 @@ fi
 alias pbcopy=clipcopy
 alias pbpaste=clippaste
 
-# if we have hub, alias git to it
+# if we have hub, alias git completion to it
 if has hub; then
-	alias git=hub
 	compdef hub=git
 fi
 

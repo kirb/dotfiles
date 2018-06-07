@@ -100,10 +100,19 @@
 	branches = branch -a
 	remotes = remote -v
 
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-
 	# this is pretty useful
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	diff = diff --patch-with-stat
+
+	# hub commands
+	pull-request = !hub pull-request
+	fork = !hub fork
+	create = !hub create
+	browse = !hub browse
+	compare = !hub compare
+	release = !hub release
+	issue = !hub issue
+	ci-status = !hub ci-status
 
 	# literally my life
 	ad = add
