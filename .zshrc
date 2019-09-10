@@ -18,9 +18,9 @@ export TERM=xterm-256color
 # language
 export LANG=en_AU.UTF-8 LC_CTYPE=en_AU.UTF-8
 
-# tmux
-if [[ ! -z "$SSH_CLIENT" && -z "$TMUX" ]]; then
-	tmux attach || tmux
+# launch tmux now if in root tty of an SSH session
+if [[ ! -z $SSH_CLIENT && -z $TMUX ]]; then
+	tmux attach -CC || tmux -CC -f ~/.dotfiles/tmux.conf
 fi
 
 # oh my zsh
