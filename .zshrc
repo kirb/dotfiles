@@ -7,16 +7,14 @@
 # iTerm2 –> Install Shell Integration
 
 # path yo
-[[ -z "$THEOS" ]] && export THEOS=~/theos
+[[ -z $THEOS ]] && export THEOS=~/theos
 
-export PATH=$HOME/.dotfiles/bin:/usr/local/bin:/usr/local/sbin:/usr/local/opt/ruby/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.rvm/bin
+export PATH=$HOME/.local/bin:$HOME/.dotfiles/bin:/usr/local/bin:/usr/local/sbin:/usr/local/opt/ruby/bin:/snap/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.rvm/bin
 export MANPATH=/usr/local/share/man:$MANPATH
 
-# force terminal type
-export TERM=xterm-256color
-
-# language
-export LANG=en_AU.UTF-8 LC_CTYPE=en_AU.UTF-8
+if [[ -z $LANG || -z $LC_CTYPE ]]; then
+	export LANG=en_AU.UTF-8 LC_CTYPE=en_AU.UTF-8
+fi
 
 # launch tmux now if in root tty of an SSH session
 if [[ ! -z $SSH_CLIENT && -z $TMUX ]]; then
@@ -42,7 +40,7 @@ has() {
 }
 
 safe_source() {
-	[[ -f "$1" ]] && source "$1"
+	[[ -f $1 ]] && source "$1"
 }
 
 # exports
@@ -53,7 +51,7 @@ export SDKVERSION= SIMVERSION=
 export EDITOR='code -wr'
 
 # if this is an ssh session, use nano instead
-[[ ! -z "$SSH_CLIENT" ]] && export EDITOR=nano
+[[ ! -z $SSH_CLIENT ]] && export EDITOR=nano
 
 export PERL_MB_OPT="--install_base \"$HOME/.perl5\""
 export PERL_MM_OPT="INSTALL_BASE=$HOME/.perl5"
@@ -67,7 +65,7 @@ export DERIVED_DATA=~/Library/Developer/Xcode/DerivedData
 
 # fix for homebrew zsh
 # see `brew info zsh`
-if [[ "$SHELL" != "/usr/bin/zsh" ]] && has brew; then
+if [[ $SHELL != /usr/bin/zsh ]] && has brew; then
 	unalias run-help 2>/dev/null
 	autoload run-help
 	HELPDIR=/usr/local/share/zsh/help
@@ -76,7 +74,7 @@ fi
 # additional stuff
 safe_source $(dirname $0)/zsh-aliases
 safe_source $(dirname $0)/zsh-functions
-safe_source ~/.iterm2_shell_integration.zsh
+# safe_source ~/.iterm2_shell_integration.zsh
 
 # this must be sourced last
 safe_source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
