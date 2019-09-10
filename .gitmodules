@@ -13,3 +13,6 @@
 [submodule "stuff/diff-so-fancy"]
 	path = stuff/diff-so-fancy
 	url = https://github.com/so-fancy/diff-so-fancy.git
+[submodule "stuff/git-repo"]
+	path = stuff/git-repo
+	url = https://gerrit.googlesource.com/git-repo
