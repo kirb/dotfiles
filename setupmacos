@@ -367,7 +367,14 @@ for i in $brewdir/opt/{coreutils,findutils,gnu-sed,gnu-tar,gnu-which,grep,make}/
 done
 
 # 5: install font
-status "Downloading Source Code Pro Powerline Awesome Regular (what a mouthful)"
+status "Setting up fonts"
+
+if [[ -f /Applications/Utilities/Terminal.app/Contents/Resources/Fonts/SFMono-* && ! -f ~/Library/Fonts/SFMono-* ]]; then
+	cp /Applications/Utilities/Terminal.app/Contents/Resources/Fonts/SFMono-* ~/Library/Fonts/
+elif [[ -f /System/Applications/Utilities/Terminal.app/Contents/Resources/Fonts/SFMono-* && ! -f ~/Library/Fonts/SFMono-* ]]; then
+  cp /System/Applications/Utilities/Terminal.app/Contents/Resources/Fonts/SFMono-* ~/Library/Fonts/
+fi
+
 curl -# https://rawgit.com/gabrielelana/awesome-terminal-fonts/patching-strategy/patched/SourceCodePro+Powerline+Awesome+Regular.ttf -o ~/Library/Fonts/SourceCodePro+Powerline+Awesome+Regular.ttf
 
 # 9: set up apps
