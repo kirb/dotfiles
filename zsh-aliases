@@ -21,7 +21,7 @@ fi
 # kinda-sorta functions
 alias filesize='stat -c %s'
 alias finder='open -R'
-alias reload='. ~/.zshrc'
+alias logcat='logcat-color --stay-connected -v threadtime'
 
 # shorter names
 alias vboxmanage=VBoxManage
@@ -37,12 +37,6 @@ alias y=yarn
 alias io=imageoptim
 
 # cross-platform normalisation
-if has afplay; then
-	alias play=afplay
-elif has aplay; then
-	alias play=aplay
-fi
-
 alias pbcopy=clipcopy
 alias pbpaste=clippaste
 
