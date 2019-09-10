@@ -1,0 +1,12 @@
+#!/bin/bash
+if [[ $@ == "" ]]; then
+	origin="$(git remote get-url origin 2>/dev/null)"
+	if [[ $origin =~ bitbucket\.org ]]; then
+		path=$(echo "$origin" | perl -pe 's-^(https?://|git://|.*@)(ssh\.)?bitbucket\.org[:/]--;s-\.git$--')
+		if [[ $path != $origin ]]; then
+			exec open https://bitbucket.org/$path
+		fi
+	fi
+fi
+exec hub browse "$@"
+
