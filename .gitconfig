@@ -62,6 +62,10 @@
 [mergetool "code"]
 	cmd = code -w $MERGED
 
+# use the newer git protocol where available
+[protocol]
+	version = 2
+
 # clone up to 4 submodules at once
 [submodule]
 	fetchJobs = 4
