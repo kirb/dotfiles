@@ -11,6 +11,8 @@ alias youtube-dl='youtube-dl --merge-output-format mp4 --audio-format m4a'
 alias pv='pv -W'
 alias ip='ip --color'
 alias ipb='ip --color --brief'
+alias du='du --apparent-size'
+# alias rsync='rsync -EX' # TODO: bad idea? not sure…
 
 if [[ $VENDOR == apple ]]; then
 	alias ping='ping --apple-time'
@@ -32,6 +34,7 @@ alias hop='hopperv4 -e'
 alias io=optim
 alias n=npm
 alias y=yarn
+alias io=imageoptim
 
 # cross-platform normalisation
 if has afplay; then
@@ -56,15 +59,11 @@ alias nicify='$THEOS/bin/nicify.pl'
 alias denicify='$THEOS/bin/denicify.pl'
 
 # apps
-alias tview='open /Applications/TeamViewer.app'
-alias pxm='open -b com.pixelmatorteam.pixelmator'
-alias psd='open -b com.adobe.Photoshop'
-alias xcode='open -b com.apple.dt.xcode'
-alias cr='open -b com.google.Chrome'
-alias vlc='open -b org.videolan.vlc'
-alias optim='open -b net.pornel.ImageOptim'
-alias alpha='open -b net.pornel.ImageAlpha'
-alias subl=atom
+if [[ $VENDOR == apple ]]; then
+	alias pxm='open -b com.pixelmatorteam.pixelmator'
+	alias psd='open -b com.adobe.Photoshop'
+	alias vlc='open -b org.videolan.vlc'
+fi
 
 # typos
 alias kilall=killall
