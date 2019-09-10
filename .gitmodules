@@ -10,3 +10,6 @@
 [submodule "stuff/rmate"]
 	path = stuff/rmate
 	url = https://github.com/aurora/rmate.git
+[submodule "stuff/diff-so-fancy"]
+	path = stuff/diff-so-fancy
+	url = https://github.com/so-fancy/diff-so-fancy.git
