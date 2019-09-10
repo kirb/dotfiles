@@ -9,7 +9,7 @@
 			<key>ASCII_Tables</key>
 			<dict>
 				<key>date</key>
-				<date>2018-04-08T13:10:26Z</date>
+				<date>2019-01-06T12:13:37Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -25,7 +25,7 @@
 			<key>CSS_Device_Media_Queries</key>
 			<dict>
 				<key>date</key>
-				<date>2018-04-08T13:10:26Z</date>
+				<date>2019-08-03T10:50:57Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -41,7 +41,7 @@
 			<key>CSS_Named_Colors</key>
 			<dict>
 				<key>date</key>
-				<date>2018-04-08T13:10:33Z</date>
+				<date>2019-01-06T12:13:47Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -57,7 +57,7 @@
 			<key>Chrome_Dev_Tools</key>
 			<dict>
 				<key>date</key>
-				<date>2018-04-08T13:10:26Z</date>
+				<date>2019-01-06T12:13:31Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -75,7 +75,7 @@
 			<key>Emoji</key>
 			<dict>
 				<key>date</key>
-				<date>2018-04-08T13:10:27Z</date>
+				<date>2019-01-06T12:13:54Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -91,7 +91,7 @@
 			<key>Git</key>
 			<dict>
 				<key>date</key>
-				<date>2018-04-08T13:10:26Z</date>
+				<date>2019-01-28T09:35:33Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -112,7 +112,7 @@
 			<key>Git_Flow</key>
 			<dict>
 				<key>date</key>
-				<date>2018-04-08T13:10:28Z</date>
+				<date>2019-01-06T12:13:51Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -133,7 +133,7 @@
 			<key>HTML_Entities</key>
 			<dict>
 				<key>date</key>
-				<date>2018-04-08T13:10:31Z</date>
+				<date>2019-01-06T12:14:08Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -149,7 +149,7 @@
 			<key>HTTP_Header_Fields</key>
 			<dict>
 				<key>date</key>
-				<date>2018-04-08T13:10:26Z</date>
+				<date>2019-01-06T12:13:41Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -165,7 +165,7 @@
 			<key>HTTP_Status_Codes</key>
 			<dict>
 				<key>date</key>
-				<date>2018-04-08T13:10:27Z</date>
+				<date>2019-01-06T12:13:53Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -181,7 +181,7 @@
 			<key>Hub</key>
 			<dict>
 				<key>date</key>
-				<date>2018-04-08T13:10:32Z</date>
+				<date>2019-01-06T12:14:07Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -199,7 +199,7 @@
 			<key>Keybase.io</key>
 			<dict>
 				<key>date</key>
-				<date>2018-04-08T13:10:26Z</date>
+				<date>2019-01-06T12:13:25Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -215,7 +215,7 @@
 			<key>Licenses</key>
 			<dict>
 				<key>date</key>
-				<date>2018-04-08T13:10:28Z</date>
+				<date>2019-01-06T12:13:55Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -231,7 +231,7 @@
 			<key>MIME_Types</key>
 			<dict>
 				<key>date</key>
-				<date>2018-04-08T13:10:31Z</date>
+				<date>2019-01-06T12:14:08Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -247,7 +247,7 @@
 			<key>Mac_Startup_Keys</key>
 			<dict>
 				<key>date</key>
-				<date>2018-04-08T13:10:32Z</date>
+				<date>2019-01-06T12:13:49Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -266,7 +266,7 @@
 			<key>NSDateFormatter</key>
 			<dict>
 				<key>date</key>
-				<date>2018-04-08T13:10:26Z</date>
+				<date>2019-01-06T12:13:36Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -295,7 +295,7 @@
 			<key>NSPredicate</key>
 			<dict>
 				<key>date</key>
-				<date>2018-04-08T13:10:27Z</date>
+				<date>2019-01-06T12:13:37Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -324,7 +324,7 @@
 			<key>Objective-C</key>
 			<dict>
 				<key>date</key>
-				<date>2018-04-08T13:10:29Z</date>
+				<date>2019-01-06T12:14:02Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -352,7 +352,7 @@
 			<key>Objective-C_Blocks</key>
 			<dict>
 				<key>date</key>
-				<date>2018-04-08T13:10:27Z</date>
+				<date>2019-01-06T12:13:54Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -380,7 +380,7 @@
 			<key>Regular_Expressions</key>
 			<dict>
 				<key>date</key>
-				<date>2018-04-08T13:10:26Z</date>
+				<date>2019-01-06T12:13:43Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -399,7 +399,7 @@
 			<key>SQLite</key>
 			<dict>
 				<key>date</key>
-				<date>2018-04-08T13:10:28Z</date>
+				<date>2019-01-06T12:13:49Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -415,7 +415,7 @@
 			<key>Sketch</key>
 			<dict>
 				<key>date</key>
-				<date>2018-04-08T13:10:31Z</date>
+				<date>2019-01-06T12:14:06Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -433,7 +433,7 @@
 			<key>Swift</key>
 			<dict>
 				<key>date</key>
-				<date>2018-04-08T13:10:29Z</date>
+				<date>2019-01-06T12:14:09Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -463,7 +463,7 @@
 			<key>Trello</key>
 			<dict>
 				<key>date</key>
-				<date>2018-04-08T13:10:27Z</date>
+				<date>2019-01-06T12:13:54Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -479,7 +479,7 @@
 			<key>Xcode_Shortcuts</key>
 			<dict>
 				<key>date</key>
-				<date>2018-04-08T13:10:32Z</date>
+				<date>2019-01-06T12:14:11Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -508,7 +508,7 @@
 			<key>Xcode_UI_Testing</key>
 			<dict>
 				<key>date</key>
-				<date>2018-04-08T13:10:29Z</date>
+				<date>2019-01-06T12:14:07Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -537,7 +537,7 @@
 			<key>iOS_Design</key>
 			<dict>
 				<key>date</key>
-				<date>2018-04-08T13:10:26Z</date>
+				<date>2019-01-06T12:13:21Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -564,7 +564,7 @@
 			<key>iTerm2</key>
 			<dict>
 				<key>date</key>
-				<date>2018-04-08T13:10:32Z</date>
+				<date>2019-01-06T12:14:00Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -585,7 +585,7 @@
 			<key>npm</key>
 			<dict>
 				<key>date</key>
-				<date>2018-04-08T13:10:30Z</date>
+				<date>2019-01-06T12:14:02Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -605,7 +605,7 @@
 			<key>strftime_Format_Codes</key>
 			<dict>
 				<key>date</key>
-				<date>2018-04-08T13:10:30Z</date>
+				<date>2019-01-06T12:14:04Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -621,7 +621,7 @@
 			<key>tmux</key>
 			<dict>
 				<key>date</key>
-				<date>2018-04-08T13:10:26Z</date>
+				<date>2019-01-06T12:13:29Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -718,9 +718,81 @@
 	<key>DHCocoaRepo</key>
 	<dict>
 		<key>installed</key>
-		<dict/>
+		<dict>
+			<key>AFNetworking</key>
+			<dict>
+				<key>date</key>
+				<date>2019-01-06T12:14:10Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>AFNetworking</string>
+					<key>platform</key>
+					<string>cocoapods</string>
+					<key>uniqueIdentifier</key>
+					<string>AFNetworking</string>
+				</dict>
+			</dict>
+			<key>MBProgressHUD</key>
+			<dict>
+				<key>date</key>
+				<date>2019-01-06T12:13:49Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>MBProgressHUD</string>
+					<key>platform</key>
+					<string>cocoapods</string>
+					<key>uniqueIdentifier</key>
+					<string>MBProgressHUD</string>
+				</dict>
+			</dict>
+			<key>OCMapper</key>
+			<dict>
+				<key>date</key>
+				<date>2019-01-06T12:13:32Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>OCMapper</string>
+					<key>platform</key>
+					<string>cocoapods</string>
+					<key>uniqueIdentifier</key>
+					<string>OCMapper</string>
+				</dict>
+			</dict>
+			<key>SDWebImage</key>
+			<dict>
+				<key>date</key>
+				<date>2019-01-06T12:14:12Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>SDWebImage</string>
+					<key>platform</key>
+					<string>cocoapods</string>
+					<key>uniqueIdentifier</key>
+					<string>SDWebImage</string>
+				</dict>
+			</dict>
+		</dict>
 		<key>uninstalled</key>
-		<dict/>
+		<dict>
+			<key>AFNetwork</key>
+			<dict>
+				<key>date</key>
+				<date>2019-01-18T03:43:38Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>AFNetwork</string>
+					<key>platform</key>
+					<string>cocoapods</string>
+					<key>uniqueIdentifier</key>
+					<string>AFNetwork</string>
+				</dict>
+			</dict>
+		</dict>
 	</dict>
 	<key>DHDartRepo</key>
 	<dict>
@@ -734,7 +806,22 @@
 		<key>installed</key>
 		<dict/>
 		<key>uninstalled</key>
-		<dict/>
+		<dict>
+			<key>hbang/libcephei</key>
+			<dict>
+				<key>date</key>
+				<date>2018-07-11T10:58:40Z</date>
+				<key>entry</key>
+				<dict>
+					<key>name</key>
+					<string>hbang/libcephei</string>
+					<key>platform</key>
+					<string>github</string>
+					<key>uniqueIdentifier</key>
+					<string>hbang/libcephei</string>
+				</dict>
+			</dict>
+		</dict>
 	</dict>
 	<key>DHGoRepo</key>
 	<dict>
@@ -796,10 +883,34 @@
 	<dict>
 		<key>installed</key>
 		<dict>
+			<key>CanIUse</key>
+			<dict>
+				<key>date</key>
+				<date>2019-02-03T07:05:51Z</date>
+				<key>entry</key>
+				<dict>
+					<key>aliases</key>
+					<array>
+						<string>Can I use</string>
+						<string>CanIUse</string>
+						<string>caniuse.com</string>
+					</array>
+					<key>authorLinkHref</key>
+					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/CanIUse#readme</string>
+					<key>authorLinkText</key>
+					<string>Paweł Golonko</string>
+					<key>name</key>
+					<string>Can I use…</string>
+					<key>platform</key>
+					<string>usercontribCanIUse</string>
+					<key>uniqueIdentifier</key>
+					<string>CanIUse</string>
+				</dict>
+			</dict>
 			<key>Chrome_Extensions_API</key>
 			<dict>
 				<key>date</key>
-				<date>2018-04-08T13:11:55Z</date>
+				<date>2019-01-06T12:15:43Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -819,7 +930,7 @@
 			<key>GNU_Make</key>
 			<dict>
 				<key>date</key>
-				<date>2018-04-08T13:10:42Z</date>
+				<date>2019-01-06T12:15:42Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -842,7 +953,7 @@
 			<key>MEANJS</key>
 			<dict>
 				<key>date</key>
-				<date>2018-04-08T13:10:34Z</date>
+				<date>2019-01-06T12:15:41Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -869,7 +980,7 @@
 			<key>npm</key>
 			<dict>
 				<key>date</key>
-				<date>2018-04-08T13:11:55Z</date>
+				<date>2019-01-06T12:15:45Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -894,15 +1005,27 @@
 		<dict/>
 	</dict>
 	<key>DHWebViewIsDark</key>
-	<false/>
-	<key>annotationsAreShown</key>
 	<true/>
+	<key>annotationsAreShown</key>
+	<false/>
 	<key>docsets</key>
 	<dict>
 		<key>keywords</key>
 		<dict>
+			<key>~/Downloads/loopback.docset</key>
+			<string>lb</string>
+			<key>~/Library/Application Support/Dash/Cocoa DocSets/AFNetwork/com.cocoadocs.afnetwork.AFNetwork.docset</key>
+			<string>ios</string>
+			<key>~/Library/Application Support/Dash/Cocoa DocSets/MBProgressHUD/com.cocoadocs.mbprogresshud.MBProgressHUD.docset</key>
+			<string>ios</string>
+			<key>~/Library/Application Support/Dash/Cocoa DocSets/OCMapper/com.cocoadocs.ocmapper.OCMapper.docset</key>
+			<string>ios</string>
+			<key>~/Library/Application Support/Dash/Cocoa DocSets/SDWebImage/com.cocoadocs.sdwebimage.SDWebImage.docset</key>
+			<string>ios</string>
 			<key>~/Library/Application Support/Dash/DocSets/ActionScript/ActionScript.docset</key>
 			<string>as</string>
+			<key>~/Library/Application Support/Dash/DocSets/Android/Android.docset</key>
+			<string>and:</string>
 			<key>~/Library/Application Support/Dash/DocSets/Apple_API_Reference/Apple_API_Reference.docset</key>
 			<string>ios</string>
 			<key>~/Library/Application Support/Dash/DocSets/Bootstrap_3/Bootstrap 3.docset</key>
@@ -938,225 +1061,235 @@
 			<key>http://kapeli.com/feeds/ActionScript.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2018-04-08T13:14:30Z</date>
+				<date>2019-01-06T12:36:35Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/Android.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2018-04-08T13:38:27Z</date>
+				<date>2019-01-09T10:00:02Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/Apache_HTTP_Server.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2018-04-08T13:10:42Z</date>
+				<date>2019-01-06T12:49:07Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/AppleScript.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2018-05-03T12:05:26Z</date>
+				<date>2019-01-06T12:28:00Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/Apple_API_Reference.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2018-04-09T02:39:06Z</date>
+				<date>2019-01-06T12:27:57Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/Bash.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2018-04-08T13:10:32Z</date>
+				<date>2019-01-06T12:48:35Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/Bootstrap_3.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2018-04-08T13:11:57Z</date>
+				<date>2019-01-06T12:48:40Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/Bootstrap_4.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2018-04-08T13:11:57Z</date>
+				<date>2019-01-08T07:50:53Z</date>
 			</dict>
-			<key>http://kapeli.com/feeds/CSS.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2018-04-08T13:12:53Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Docker.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2018-04-08T13:16:29Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Express.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2018-04-08T13:11:57Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Font_Awesome.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2018-04-08T13:11:57Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Grunt.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2018-04-08T13:15:06Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Gulp.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2018-04-08T13:11:56Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/HTML.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2018-04-08T13:13:31Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/JavaScript.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2018-04-08T13:28:32Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Java_SE8.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2018-04-08T13:23:26Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Man_Pages.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2018-04-08T13:18:55Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Markdown.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2018-04-08T13:18:55Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/MomentJS.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2018-04-08T13:14:35Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/MongoDB.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2018-04-08T13:22:44Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Mongoose.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2018-04-08T13:20:13Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/MySQL.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2018-04-08T13:29:10Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Nginx.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2018-04-08T13:16:02Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/NodeJS.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2018-04-08T13:20:30Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/PHP.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2018-04-08T13:24:34Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Perl.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2018-04-08T13:15:01Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Pug.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2018-04-08T13:14:59Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Python_2.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2018-04-08T13:16:28Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Python_3.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2018-04-08T13:23:22Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Redis.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2018-04-08T13:15:00Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/SQLite.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2018-04-08T13:19:37Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/SVG.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2018-04-08T13:23:52Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Sass.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2018-04-08T13:16:29Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Swift.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2018-04-08T13:16:46Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/TypeScript.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2018-04-08T13:16:53Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/WordPress.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2018-04-08T13:36:35Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/jQuery.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2018-04-08T13:16:00Z</date>
-			</dict>
-			<key>http://rotemy.com/dash/msdn/msdn.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2018-04-10T11:42:06Z</date>
-			</dict>
-			<key>https://hbang.github.io/TypeStatus/docsets/TypeStatus.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2018-04-08T13:16:56Z</date>
-			</dict>
-			<key>https://hbang.github.io/libcephei/docsets/Cephei.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2018-04-08T13:28:37Z</date>
-			</dict>
-			<key>https://hbang.github.io/libopener/docsets/Opener.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2018-04-08T13:16:33Z</date>
-			</dict>
-		</dict>
-		<key>uninstalled</key>
-		<dict>
 			<key>http://kapeli.com/feeds/C++.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2016-10-05T23:08:09Z</date>
+				<date>2019-01-14T02:11:42Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/C.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2016-10-05T23:08:11Z</date>
+				<date>2019-01-14T02:11:58Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/CSS.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2019-01-08T07:53:25Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Docker.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2019-01-06T13:15:16Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Express.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2019-01-08T08:00:55Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Font_Awesome.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2019-01-08T07:53:50Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Grunt.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2019-01-08T07:54:24Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Gulp.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2019-01-08T07:54:23Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/HTML.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2019-01-06T12:44:22Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/JavaScript.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2019-01-08T08:03:21Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Java_SE8.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2019-01-06T12:46:28Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Jekyll.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2019-01-14T02:14:40Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Lo-Dash.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2019-01-14T01:43:10Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Man_Pages.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2019-01-08T07:54:23Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Markdown.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2019-01-08T07:54:24Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/MomentJS.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2019-01-08T07:54:26Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/MongoDB.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2019-01-08T07:56:31Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Mongoose.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2019-01-08T07:55:00Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/MySQL.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2019-01-08T07:54:13Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Nginx.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2019-01-08T07:54:23Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/NodeJS.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2019-01-08T08:00:56Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/PHP.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2019-01-08T08:00:21Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Perl.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2019-01-08T08:01:13Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Pug.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2019-01-08T07:57:47Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Python_2.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2019-01-08T07:57:39Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Python_3.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2019-01-08T08:01:30Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Redis.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2019-01-08T07:54:28Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/SQLite.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2019-01-08T07:58:11Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/SVG.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2019-01-06T12:54:20Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Sass.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2019-01-06T12:49:11Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/Swift.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2019-01-06T12:16:05Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/TypeScript.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2019-01-08T08:01:03Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/WordPress.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2019-01-09T09:54:26Z</date>
+			</dict>
+			<key>http://kapeli.com/feeds/jQuery.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2019-01-08T07:52:36Z</date>
+			</dict>
+			<key>https://hbang.github.io/TypeStatus/docsets/TypeStatus.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2019-01-08T08:00:27Z</date>
+			</dict>
+			<key>https://hbang.github.io/libcephei/docsets/Cephei.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2019-01-08T07:50:47Z</date>
+			</dict>
+			<key>https://hbang.github.io/libopener/docsets/Opener.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2019-01-08T07:54:17Z</date>
+			</dict>
+		</dict>
+		<key>uninstalled</key>
+		<dict>
+			<key>http://rotemy.com/dash/msdn/msdn.xml</key>
+			<dict>
+				<key>date</key>
+				<date>2018-06-16T13:46:38Z</date>
 			</dict>
 			<key>https://hbang.github.io/libcephei/xcode-docset.atom</key>
 			<dict>
@@ -1166,7 +1299,7 @@
 		</dict>
 	</dict>
 	<key>isPinned</key>
-	<false/>
+	<true/>
 	<key>menuIconBehavior</key>
 	<integer>1</integer>
 	<key>placeholderDelimiter</key>
@@ -1202,7 +1335,7 @@
 	<key>shouldRestoreTabs</key>
 	<true/>
 	<key>shouldShowStatusIcon</key>
-	<true/>
+	<false/>
 	<key>shouldStartAtLogin</key>
 	<true/>
 	<key>shouldSyncBookmarks</key>
@@ -1314,7 +1447,7 @@
 				<key>13.0.0</key>
 				<dict>
 					<key>date</key>
-					<date>2018-04-08T13:11:56Z</date>
+					<date>2019-01-06T12:17:31Z</date>
 					<key>entry</key>
 					<dict>
 						<key>aliases</key>
