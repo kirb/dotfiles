@@ -2,7 +2,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AddNewTabAtEndOfTabs</key>
+	<false/>
 	<key>AdjustWindowForFontSizeChange</key>
+	<true/>
+	<key>AlertsIndicateShortcuts</key>
 	<true/>
 	<key>AllowClipboardAccess</key>
 	<false/>
@@ -24,8 +28,18 @@
 	<true/>
 	<key>ClosingHotkeySwitchesSpaces</key>
 	<false/>
+	<key>ClosingTmuxTabKillsTmuxWindows</key>
+	<true/>
+	<key>ClosingTmuxTabKillsTmuxWindows_selection</key>
+	<integer>1</integer>
+	<key>ClosingTmuxWindowKillsTmuxWindows</key>
+	<true/>
+	<key>ClosingTmuxWindowKillsTmuxWindows_selection</key>
+	<integer>1</integer>
 	<key>CommandSelection</key>
 	<true/>
+	<key>CompactMinimalTabBarHeight</key>
+	<real>24</real>
 	<key>Control</key>
 	<integer>1</integer>
 	<key>CopyLastNewline</key>
@@ -949,25 +963,31 @@
 	<key>Default Toolbelt Width</key>
 	<real>196</real>
 	<key>DimBackgroundWindows</key>
-	<false/>
+	<true/>
 	<key>DimInactiveSplitPanes</key>
 	<true/>
 	<key>DimOnlyText</key>
-	<false/>
+	<true/>
 	<key>DisableAppNap</key>
 	<true/>
 	<key>DisableFullscreenTransparency</key>
 	<true/>
+	<key>DisableWindowShadowWhenTransparencyOnMojave</key>
+	<false/>
 	<key>DoubleClickPerformsSmartSelection</key>
+	<false/>
+	<key>EliminateCloseButtons</key>
 	<false/>
 	<key>EnableProxyIcon</key>
 	<true/>
 	<key>EnableRendezvous</key>
-	<true/>
+	<false/>
 	<key>FocusFollowsMouse</key>
 	<false/>
 	<key>FsTabDelay</key>
 	<real>0.10000000000000001</real>
+	<key>HapticFeedbackForEsc</key>
+	<false/>
 	<key>HiddenAFRStrokeThickness</key>
 	<real>0.0</real>
 	<key>HiddenAdvancedFontRendering</key>
@@ -1002,20 +1022,32 @@
 	<integer>524288</integer>
 	<key>IRMemory</key>
 	<integer>4</integer>
+	<key>IdleTimeSeconds</key>
+	<real>10</real>
 	<key>IgnoreHardNewlinesInURLs</key>
 	<true/>
+	<key>InvalidateShadowTimesPerSecond</key>
+	<real>100</real>
 	<key>JobName</key>
 	<true/>
 	<key>LeftCommand</key>
 	<integer>7</integer>
 	<key>LeftOption</key>
 	<integer>2</integer>
+	<key>LoadFromFindPasteboard</key>
+	<false/>
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>MaxVertically</key>
 	<false/>
+	<key>MojaveVisualEffectView</key>
+	<true/>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/.dotfiles</string>
+	<string>~/Documents</string>
+	<key>NSNavLastUserSetHideExtensionButtonState</key>
+	<false/>
+	<key>NSNavPanelExpandedSizeForOpenMode</key>
+	<string>{712, 448}</string>
 	<key>NSNavPanelExpandedSizeForSaveMode</key>
 	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -1026,6 +1058,11 @@
 	<false/>
 	<key>NSScrollViewShouldScrollUnderTitlebar</key>
 	<false/>
+	<key>NSSplitView Subview Frames NSColorPanelSplitView</key>
+	<array>
+		<string>0.000000, 0.000000, 224.000000, 258.000000, NO, NO</string>
+		<string>0.000000, 259.000000, 224.000000, 48.000000, NO, NO</string>
+	</array>
 	<key>NSTableView Columns v2 KeyBingingTable</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGNjdYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
@@ -1054,16 +1091,27 @@
 		<key>TB Is Shown</key>
 		<integer>1</integer>
 	</dict>
+	<key>NSUserKeyEquivalents</key>
+	<dict>
+		<key>Bury Session</key>
+		<string>@b</string>
+		<key>Screen</key>
+		<string>@~^$p</string>
+	</dict>
+	<key>NSWindow Frame NSColorPanel</key>
+	<string>0 138 224 275 0 0 2560 1417 </string>
+	<key>NSWindow Frame NSFontPanel</key>
+	<string>1089 304 445 205 0 0 2560 1417 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
-	<string>0 895 400 129 0 0 1920 1058 </string>
+	<string>1080 979 400 129 0 0 2560 1417 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>610 417 700 622 0 0 1920 1178 </string>
+	<string>930 643 700 559 0 0 2560 1417 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
-	<string>269 152 606 469 0 0 1920 1178 </string>
+	<string>269 128 606 469 0 0 2560 1417 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>311 650 928 394 0 0 1920 1178 </string>
+	<string>390 450 918 471 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>203 411 794 608 0 0 1920 1178 </string>
+	<string>512 337 794 648 0 0 2560 1417 </string>
 	<key>NeverWarnAboutShortLivedSessions_6EE2510D-F7CA-4F05-AEE5-F7F9A420683A</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_6EE2510D-F7CA-4F05-AEE5-F7F9A420683A_selection</key>
@@ -1111,26 +1159,26 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.19215686619281769</real>
+				<real>0.14901960784313725</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.19215686619281769</real>
+				<real>0.078431372549019607</real>
 				<key>Red Component</key>
-				<real>0.80392158031463623</real>
+				<real>0.87450980392156863</real>
 			</dict>
 			<key>Ansi 10 Color</key>
 			<dict>
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.54509806632995605</real>
+				<real>0.52156862745098043</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.81960785388946533</real>
+				<real>0.83529411764705885</real>
 				<key>Red Component</key>
-				<real>0.13725490868091583</real>
+				<real>0.0</real>
 			</dict>
 			<key>Ansi 11 Color</key>
 			<dict>
@@ -1202,26 +1250,26 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.47450980544090271</real>
+				<real>0.45098039215686275</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.73725491762161255</real>
+				<real>0.74901960784313726</real>
 				<key>Red Component</key>
-				<real>0.050980392843484879</real>
+				<real>0.0</real>
 			</dict>
 			<key>Ansi 3 Color</key>
 			<dict>
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.062745101749897003</real>
+				<real>0.0</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.89803922176361084</real>
+				<real>0.89803921568627454</real>
 				<key>Red Component</key>
-				<real>0.89803922176361084</real>
+				<real>0.89803921568627454</real>
 			</dict>
 			<key>Ansi 4 Color</key>
 			<dict>
@@ -1304,7 +1352,7 @@
 			<key>Automatically Log</key>
 			<false/>
 			<key>BM Growl</key>
-			<false/>
+			<true/>
 			<key>Background Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -1342,7 +1390,7 @@
 			<key>Blinking Cursor</key>
 			<true/>
 			<key>Blur</key>
-			<false/>
+			<true/>
 			<key>Blur Radius</key>
 			<real>30</real>
 			<key>Bold Color</key>
@@ -1421,6 +1469,8 @@
 			<false/>
 			<key>Disable Window Resizing</key>
 			<true/>
+			<key>Draw Powerline Glyphs</key>
+			<false/>
 			<key>Flashing Bell</key>
 			<false/>
 			<key>Foreground Color</key>
@@ -1428,13 +1478,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>1</real>
+				<real>0.93725490196078431</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>1</real>
+				<real>0.93725490196078431</real>
 				<key>Red Component</key>
-				<real>1</real>
+				<real>0.93725490196078431</real>
 			</dict>
 			<key>Guid</key>
 			<string>6EE2510D-F7CA-4F05-AEE5-F7F9A420683A</string>
@@ -1912,7 +1962,7 @@
 			<key>Screen</key>
 			<integer>-1</integer>
 			<key>Scrollback Lines</key>
-			<integer>10000</integer>
+			<integer>100000</integer>
 			<key>Scrollback With Status Bar</key>
 			<true/>
 			<key>Scrollback in Alternate Screen</key>
@@ -1954,8 +2004,10 @@
 			</dict>
 			<key>Send Code When Idle</key>
 			<false/>
+			<key>Send Idle Alert</key>
+			<false/>
 			<key>Send New Output Alert</key>
-			<true/>
+			<false/>
 			<key>Send Session Ended Alert</key>
 			<false/>
 			<key>Session Close Undo Timeout</key>
@@ -1964,6 +2016,8 @@
 			<true/>
 			<key>Shortcut</key>
 			<string></string>
+			<key>Show Status Bar</key>
+			<false/>
 			<key>Silence Bell</key>
 			<false/>
 			<key>Smart Cursor Color</key>
@@ -2059,6 +2113,270 @@
 					<string>\btelnet:([a-z0-9A-Z_]+@)?([a-zA-Z0-9\-]+\.)*[a-zA-Z0-9\-]+\b</string>
 				</dict>
 			</array>
+			<key>Status Bar Layout</key>
+			<dict>
+				<key>advanced configuration</key>
+				<dict>
+					<key>algorithm</key>
+					<integer>1</integer>
+					<key>default text color</key>
+					<dict>
+						<key>Alpha Component</key>
+						<real>1</real>
+						<key>Blue Component</key>
+						<real>0.80000001192092896</real>
+						<key>Color Space</key>
+						<string>sRGB</string>
+						<key>Green Component</key>
+						<real>0.80000001192092896</real>
+						<key>Red Component</key>
+						<real>0.80000001192092896</real>
+					</dict>
+					<key>font</key>
+					<string>FiraCode-Retina 12</string>
+					<key>separator color</key>
+					<dict>
+						<key>Alpha Component</key>
+						<real>0.25</real>
+						<key>Blue Component</key>
+						<real>0.0</real>
+						<key>Color Space</key>
+						<string>sRGB</string>
+						<key>Green Component</key>
+						<real>0.0</real>
+						<key>Red Component</key>
+						<real>0.0</real>
+					</dict>
+				</dict>
+				<key>components</key>
+				<array>
+					<dict>
+						<key>class</key>
+						<string>iTermStatusBarWorkingDirectoryComponent</string>
+						<key>configuration</key>
+						<dict>
+							<key>knobs</key>
+							<dict>
+								<key>base: compression resistance</key>
+								<real>1</real>
+								<key>base: priority</key>
+								<real>5</real>
+								<key>maxwidth</key>
+								<real>+infinity</real>
+								<key>minwidth</key>
+								<real>0.0</real>
+								<key>path</key>
+								<string>path</string>
+							</dict>
+							<key>layout advanced configuration dictionary value</key>
+							<dict>
+								<key>algorithm</key>
+								<integer>1</integer>
+								<key>default text color</key>
+								<dict>
+									<key>Alpha Component</key>
+									<real>1</real>
+									<key>Blue Component</key>
+									<real>0.80000001192092896</real>
+									<key>Color Space</key>
+									<string>sRGB</string>
+									<key>Green Component</key>
+									<real>0.80000001192092896</real>
+									<key>Red Component</key>
+									<real>0.80000001192092896</real>
+								</dict>
+								<key>font</key>
+								<string>FiraCode-Retina 12</string>
+								<key>separator color</key>
+								<dict>
+									<key>Alpha Component</key>
+									<real>0.25</real>
+									<key>Blue Component</key>
+									<real>0.0</real>
+									<key>Color Space</key>
+									<string>sRGB</string>
+									<key>Green Component</key>
+									<real>0.0</real>
+									<key>Red Component</key>
+									<real>0.0</real>
+								</dict>
+							</dict>
+						</dict>
+					</dict>
+					<dict>
+						<key>class</key>
+						<string>iTermStatusBarGitComponent</string>
+						<key>configuration</key>
+						<dict>
+							<key>knobs</key>
+							<dict>
+								<key>base: compression resistance</key>
+								<real>1</real>
+								<key>base: priority</key>
+								<real>5</real>
+								<key>iTermStatusBarGitComponentPollingIntervalKey</key>
+								<real>2</real>
+								<key>maxwidth</key>
+								<real>+infinity</real>
+								<key>minwidth</key>
+								<integer>0</integer>
+							</dict>
+							<key>layout advanced configuration dictionary value</key>
+							<dict>
+								<key>algorithm</key>
+								<integer>1</integer>
+								<key>default text color</key>
+								<dict>
+									<key>Alpha Component</key>
+									<real>1</real>
+									<key>Blue Component</key>
+									<real>0.80000001192092896</real>
+									<key>Color Space</key>
+									<string>sRGB</string>
+									<key>Green Component</key>
+									<real>0.80000001192092896</real>
+									<key>Red Component</key>
+									<real>0.80000001192092896</real>
+								</dict>
+								<key>font</key>
+								<string>FiraCode-Retina 12</string>
+								<key>separator color</key>
+								<dict>
+									<key>Alpha Component</key>
+									<real>0.25</real>
+									<key>Blue Component</key>
+									<real>0.0</real>
+									<key>Color Space</key>
+									<string>sRGB</string>
+									<key>Green Component</key>
+									<real>0.0</real>
+									<key>Red Component</key>
+									<real>0.0</real>
+								</dict>
+							</dict>
+						</dict>
+					</dict>
+					<dict>
+						<key>class</key>
+						<string>iTermStatusBarSpringComponent</string>
+						<key>configuration</key>
+						<dict>
+							<key>knobs</key>
+							<dict>
+								<key>base: compression resistance</key>
+								<integer>1</integer>
+								<key>base: priority</key>
+								<real>5</real>
+								<key>iTermStatusBarSpringComponentSizeMultipleKey</key>
+								<integer>1</integer>
+								<key>iTermStatusBarSpringComponentSpringConstantKey</key>
+								<real>0.01</real>
+							</dict>
+							<key>layout advanced configuration dictionary value</key>
+							<dict>
+								<key>algorithm</key>
+								<integer>1</integer>
+							</dict>
+						</dict>
+					</dict>
+					<dict>
+						<key>class</key>
+						<string>iTermStatusBarClockComponent</string>
+						<key>configuration</key>
+						<dict>
+							<key>knobs</key>
+							<dict>
+								<key>base: compression resistance</key>
+								<integer>1</integer>
+								<key>base: priority</key>
+								<real>5</real>
+								<key>format</key>
+								<string>EEE HH:mm:ss</string>
+							</dict>
+							<key>layout advanced configuration dictionary value</key>
+							<dict>
+								<key>algorithm</key>
+								<integer>1</integer>
+								<key>default text color</key>
+								<dict>
+									<key>Alpha Component</key>
+									<real>1</real>
+									<key>Blue Component</key>
+									<real>0.80000001192092896</real>
+									<key>Color Space</key>
+									<string>sRGB</string>
+									<key>Green Component</key>
+									<real>0.80000001192092896</real>
+									<key>Red Component</key>
+									<real>0.80000001192092896</real>
+								</dict>
+								<key>font</key>
+								<string>FiraCode-Retina 12</string>
+								<key>separator color</key>
+								<dict>
+									<key>Alpha Component</key>
+									<real>0.25</real>
+									<key>Blue Component</key>
+									<real>0.0</real>
+									<key>Color Space</key>
+									<string>sRGB</string>
+									<key>Green Component</key>
+									<real>0.0</real>
+									<key>Red Component</key>
+									<real>0.0</real>
+								</dict>
+							</dict>
+						</dict>
+					</dict>
+					<dict>
+						<key>class</key>
+						<string>iTermStatusBarSearchFieldComponent</string>
+						<key>configuration</key>
+						<dict>
+							<key>knobs</key>
+							<dict>
+								<key>base: compression resistance</key>
+								<integer>1</integer>
+								<key>base: priority</key>
+								<real>5</real>
+							</dict>
+							<key>layout advanced configuration dictionary value</key>
+							<dict>
+								<key>algorithm</key>
+								<integer>1</integer>
+								<key>default text color</key>
+								<dict>
+									<key>Alpha Component</key>
+									<real>1</real>
+									<key>Blue Component</key>
+									<real>0.80000001192092896</real>
+									<key>Color Space</key>
+									<string>sRGB</string>
+									<key>Green Component</key>
+									<real>0.80000001192092896</real>
+									<key>Red Component</key>
+									<real>0.80000001192092896</real>
+								</dict>
+								<key>font</key>
+								<string>FiraCode-Retina 12</string>
+								<key>separator color</key>
+								<dict>
+									<key>Alpha Component</key>
+									<real>0.25</real>
+									<key>Blue Component</key>
+									<real>0.0</real>
+									<key>Color Space</key>
+									<string>sRGB</string>
+									<key>Green Component</key>
+									<real>0.0</real>
+									<key>Red Component</key>
+									<real>0.0</real>
+								</dict>
+							</dict>
+						</dict>
+					</dict>
+				</array>
+			</dict>
 			<key>Sync Title</key>
 			<false/>
 			<key>Tags</key>
@@ -2066,9 +2384,11 @@
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Thin Strokes</key>
-			<integer>3</integer>
+			<integer>4</integer>
+			<key>Title Components</key>
+			<integer>1</integer>
 			<key>Transparency</key>
-			<real>0.09400656434911242</real>
+			<real>0.24338118654822333</real>
 			<key>Triggers</key>
 			<array/>
 			<key>Unicode Normalization</key>
@@ -2096,29 +2416,788 @@
 			<key>Visual Bell</key>
 			<true/>
 			<key>Window Type</key>
-			<integer>0</integer>
+			<integer>13</integer>
 			<key>Working Directory</key>
 			<string>/Users/kirb</string>
 		</dict>
 	</array>
+	<key>NoSyncAllAppVersions</key>
+	<array>
+		<string>3.3.3beta1</string>
+		<string>3.3.2beta1</string>
+		<string>3.3.0beta12</string>
+		<string>3.3.0beta13</string>
+		<string>3.3.0beta14</string>
+		<string>3.3.1beta1</string>
+		<string>3.3.0beta15</string>
+		<string>3.3.3beta2</string>
+		<string>3.3.0beta16</string>
+		<string>3.3.2beta2</string>
+		<string>3.3.4beta1</string>
+		<string>3.3.0beta5</string>
+	</array>
+	<key>NoSyncAutoBurialReveal</key>
+	<true/>
+	<key>NoSyncBFPRecents</key>
+	<array>
+		<string>SourceCodePro+Powerline+Awesome Regular</string>
+		<string>MesloLGS NF</string>
+	</array>
 	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
 	<true/>
-	<key>NoSyncHaveUsedCopyMode</key>
-	<true/>
+	<key>NoSyncFrame_SharedPreferences</key>
+	<dict>
+		<key>screenFrame</key>
+		<string>{{0, 0}, {2560, 1440}}</string>
+		<key>topLeft</key>
+		<string>{297, 890}</string>
+	</dict>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
-	<string>2C3A2688-E9E2-492E-88CF-942635EB6E6B</string>
+	<string>52395016-2676-480C-96EA-B82D93A91D23</string>
+	<key>NoSyncLaunchExperienceControllerRunCount</key>
+	<integer>127</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
 	<integer>0</integer>
-	<key>NoSyncNewWindowOrTabFromTmuxOpensTmux</key>
+	<key>NoSyncNewTabFromTmuxOpensTmux</key>
+	<true/>
+	<key>NoSyncNewTabFromTmuxOpensTmux_selection</key>
+	<integer>0</integer>
+	<key>NoSyncNextAnnoyanceTime</key>
+	<real>573092241.97593999</real>
+	<key>NoSyncOnboardingWindowHasBeenShown</key>
 	<true/>
 	<key>NoSyncPermissionToShowTip</key>
 	<false/>
+	<key>NoSyncRecordedVariables</key>
+	<dict>
+		<key>0</key>
+		<array>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>id</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string></string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+		</array>
+		<key>1</key>
+		<array>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>presentationName</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>tmuxRole</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>lastCommand</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>profileName</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>termid</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>tmuxWindowTitle</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>id</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>jobName</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>columns</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>tab.tmuxWindowTitle</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>hostname</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>tmuxClientName</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>path</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>triggerName</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>terminalIconName</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>tmuxWindowPane</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>tmuxStatusRight</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>mouseReportingMode</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>name</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<false/>
+				<key>name</key>
+				<string>iterm2</string>
+				<key>nonterminalContext</key>
+				<integer>4</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>tmuxPaneTitle</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>rows</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>username</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>tty</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>autoLogId</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>badge</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>tab.tmuxWindowName</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<false/>
+				<key>name</key>
+				<string>tab</string>
+				<key>nonterminalContext</key>
+				<integer>2</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>tmuxStatusLeft</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>autoNameFormat</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>autoName</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>commandLine</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>creationTimeString</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>terminalWindowName</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>jobPid</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>pid</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+		</array>
+		<key>16</key>
+		<array>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentTab.currentSession.presentationName</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentTab.iterm2.localhostName</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>style</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>frame</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentTab.currentSession.pid</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentTab.currentSession.termid</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentTab.currentSession.tmuxClientName</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentTab.currentSession.tmuxRole</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentTab.tmuxWindowName</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentTab.currentSession.terminalIconName</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentTab.currentSession.terminalWindowName</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentTab.currentSession.lastCommand</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<false/>
+				<key>name</key>
+				<string>currentTab</string>
+				<key>nonterminalContext</key>
+				<integer>2</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentTab.currentSession.tmuxPaneTitle</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentTab.currentSession</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentTab.window</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>titleOverride</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentTab.currentSession.name</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>id</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentTab.currentSession.path</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentTab.currentSession.commandLine</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>number</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentTab.currentSession.hostname</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentTab.currentSession.tty</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentTab.currentSession.username</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<false/>
+				<key>name</key>
+				<string>iterm2</string>
+				<key>nonterminalContext</key>
+				<integer>4</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>titleOverrideFormat</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentTab.currentSession.jobName</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+		</array>
+		<key>2</key>
+		<array>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>id</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>titleOverrideFormat</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<false/>
+				<key>name</key>
+				<string>currentSession</string>
+				<key>nonterminalContext</key>
+				<integer>1</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>titleOverride</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentSession</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>tmuxWindowTitle</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentSession.terminalWindowName</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentSession.pid</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentSession.jobName</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentSession.presentationName</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>tmuxWindowName</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>iterm2.localhostName</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>window</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<false/>
+				<key>name</key>
+				<string>window</string>
+				<key>nonterminalContext</key>
+				<integer>16</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<false/>
+				<key>name</key>
+				<string>iterm2</string>
+				<key>nonterminalContext</key>
+				<integer>4</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>tmuxWindow</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentSession.jobPid</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentSession.terminalIconName</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentSession.path</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+		</array>
+		<key>4</key>
+		<array>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>pid</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>localhostName</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>effectiveTheme</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+		</array>
+	</dict>
+	<key>NoSyncSaveDocumentAsPathSet_saveDocumentAs:</key>
+	<true/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>523673491.82234401</real>
+	<real>553394046.87615097</real>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
 	<key>OpenArrangementAtStartup</key>
@@ -2188,16 +3267,26 @@
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/testing.xml?shard=21</string>
+	<string>https://iterm2.com/appcasts/testing_new.xml?shard=1</string>
+	<key>SUHasLaunchedBefore</key>
+	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-04-02T08:02:50Z</date>
+	<date>2019-09-10T00:24:13Z</date>
 	<key>SUSendProfileInfo</key>
+	<false/>
+	<key>SUUpdateRelaunchingMarker</key>
 	<false/>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>SearchCommand</key>
 	<string>https://encrypted.google.com/search?q=%@</string>
+	<key>Secure Input</key>
+	<false/>
+	<key>Selection Respects Soft Boundaries</key>
+	<true/>
 	<key>SensitiveScrollWheel</key>
+	<false/>
+	<key>SeparateStatusBarsPerPane</key>
 	<false/>
 	<key>Show Toolbelt</key>
 	<false/>
@@ -2213,20 +3302,28 @@
 	<integer>4</integer>
 	<key>SmartPlacement</key>
 	<true/>
+	<key>SoundForEsc</key>
+	<false/>
 	<key>SplitPaneDimmingAmount</key>
 	<real>0.10000000000000001</real>
+	<key>StatusBarPosition</key>
+	<integer>1</integer>
 	<key>StretchTabsToFillBar</key>
 	<false/>
 	<key>SwitchPaneModifier</key>
-	<integer>6</integer>
+	<integer>4</integer>
 	<key>SwitchTabModifier</key>
 	<integer>4</integer>
 	<key>SwitchWindowModifier</key>
 	<integer>9</integer>
 	<key>TabStyle</key>
 	<integer>1</integer>
+	<key>TabStyleWithAutomaticOption</key>
+	<integer>5</integer>
 	<key>TabViewType</key>
 	<integer>0</integer>
+	<key>TabsHaveCloseButton</key>
+	<true/>
 	<key>ThreeFingerEmulates</key>
 	<false/>
 	<key>TmuxDashboardLimit</key>
@@ -2267,9 +3364,13 @@
 	<true/>
 	<key>UseLionStyleFullscreen</key>
 	<true/>
+	<key>UseModernScrollWheelAccumulator</key>
+	<true/>
 	<key>UseSystemCursorWhenPossible</key>
 	<false/>
 	<key>UseUnevenTabs</key>
+	<false/>
+	<key>VisualIndicatorForEsc</key>
 	<false/>
 	<key>WebKitDefaultFontSize</key>
 	<integer>11</integer>
@@ -2283,6 +3384,8 @@
 	<integer>0</integer>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
+	<key>disableMetalWhenUnplugged</key>
+	<false/>
 	<key>findIgnoreCase_iTerm</key>
 	<true/>
 	<key>findMode_iTerm</key>
@@ -2290,7 +3393,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.1.6beta5</string>
+	<string>3.3.4beta1</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>6</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
