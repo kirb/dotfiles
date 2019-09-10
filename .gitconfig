@@ -9,7 +9,7 @@
 
 # use separate file for username / github token / etc
 [include]
-  path = ~/.dotfiles/.gitconfig.private
+	path = ~/.dotfiles/.gitconfig.private
 
 # rewrites of repo paths
 [url "git@github.com:"]
@@ -70,6 +70,9 @@
 [submodule]
 	fetchJobs = 4
 
+[stash]
+	showPatch = 1
+
 # so much color
 [color]
 	ui = auto
@@ -105,14 +108,33 @@
 	remotes = remote -v
 
 	# this is pretty useful
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	a = add
+	c = commit
+	ca = commit --amend
+	cf = commit --amend --no-edit
+	cd = !git commit --amend --date=\"$(date)\"
+	co = checkout
 	diff = diff --patch-with-stat
+	d = diff --patch-with-stat
+	dc = diff --cached --patch-with-stat
+	l = log
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	s = status
+	ss = stash show --patch-with-stat
+	nb = checkout -b
+	r = rebase
+	rb = rebase
+	rc = rebase --continue
+	ra = rebase --abort
+	rs = rebase --skip
+	cp = cherry-pick
+	comp = cherry --abbrev=8 -v
 
 	# hub commands
 	pull-request = !hub pull-request
 	fork = !hub fork
 	create = !hub create
-	browse = !hub browse
+	browse = !~/.dotfiles/bin/git-browse
 	compare = !hub compare
 	release = !hub release
 	issue = !hub issue
@@ -143,8 +165,13 @@
 	stats = status
 	satus = status
 	stts = status
+	stat = status
 	st = status
-
+	sta = stash
+	rst = reset
+	dff = diff
+	dif = diff
+	
 # filtery stuff. i don’t have a clue what any of this does
 [filter "media"]
 	clean = git media clean %f
