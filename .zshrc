@@ -30,7 +30,7 @@ DEFAULT_USER=kirb
 ZSH_TMUX_FIXTERM=true
 plugins=(battery brew gpg-agent osx pod safe-paste ssh-agent)
 
-ZSH=$(dirname $0)/.oh-my-zsh
+ZSH=$(dirname $0)/stuff/oh-my-zsh
 
 source $ZSH/oh-my-zsh.sh
 

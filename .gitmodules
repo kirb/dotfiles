@@ -1,5 +1,5 @@
-[submodule ".oh-my-zsh"]
-	path = .oh-my-zsh
+[submodule "oh-my-zsh"]
+	path = stuff/oh-my-zsh
 	url = https://github.com/kirb/oh-my-zsh.git
 [submodule "stuff/mosh-upnp-hole-puncher"]
 	path = stuff/mosh-upnp-hole-puncher
@@ -16,3 +16,6 @@
 [submodule "stuff/git-repo"]
 	path = stuff/git-repo
 	url = https://gerrit.googlesource.com/git-repo
+[submodule "stuff/oh-my-zsh"]
+	path = stuff/oh-my-zsh
+	url = https://github.com/kirb/oh-my-zsh.git
