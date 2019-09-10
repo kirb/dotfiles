@@ -10,7 +10,7 @@ if [[ "$1" == "--help" ]]; then
 	exit 1
 else
 	[[ "$1" == "" ]] && ip="$THEOS_DEVICE_IP" || ip="$1"
-	[[ -z "$THEOS_DEVICE_PORT" ]] && port="$THEOS_DEVICE_PORT" || port=22
+	[[ -z "$THEOS_DEVICE_PORT" ]] && port=22 || port="$THEOS_DEVICE_PORT"
 
 	lastplist=/var/mobile/Media/PhotoData/MISC/DCIM_APPLE.plist
 	IFS=' ' read -r lastdir lastfile < <(ssh -p "$port" root@"$ip" "plutil -key DCIMLastDirectoryNumber \"$lastplist\" && plutil -key DCIMLastFileNumber \"$lastplist\"" | tr $'\n' ' ')
