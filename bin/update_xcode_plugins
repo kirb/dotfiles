@@ -1,0 +1,32 @@
+#!/bin/sh
+
+PLIST_BUDDY=/usr/libexec/PlistBuddy
+
+function add_compatibility() {
+  "$PLIST_BUDDY" -c "Add DVTPlugInCompatibilityUUIDs:10 string $2" \
+    "$1/Contents/Info.plist"
+}
+
+function has_compatibility() {
+  $PLIST_BUDDY -c 'Print DVTPlugInCompatibilityUUIDs' \
+    "$1/Contents/Info.plist"|grep -q "$2"
+  return $?
+}
+
+if [[ -z "$1" ]]; then
+  xcode_path="$(xcode-select --print-path)"/../..
+else
+  xcode_path="$1"
+fi
+
+xcode_uuid=$("$PLIST_BUDDY" -c 'Print DVTPlugInCompatibilityUUID' \
+   "$xcode_path"/Contents/Info.plist)
+
+cd "$HOME/Library/Application Support/Developer/Shared/Xcode/Plug-ins"
+
+for file in *; do
+  if [[ -d "$file" ]] && ! $(has_compatibility "$file" "$xcode_uuid"); then
+    add_compatibility "$file" "$xcode_uuid"
+    echo "Plugin $file is now compatible with your current Xcode version"
+  fi
+done
