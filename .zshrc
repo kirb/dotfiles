@@ -18,7 +18,7 @@ fi
 
 # launch tmux now if in root tty of an SSH session
 if [[ ! -z $SSH_CLIENT && -z $TMUX ]]; then
-	tmux attach -CC || tmux -CC -f ~/.dotfiles/tmux.conf
+	tmux -f ~/.dotfiles/tmux.conf -CC attach
 fi
 
 # oh my zsh
