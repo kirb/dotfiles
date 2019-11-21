@@ -19,3 +19,6 @@
 [submodule "stuff/oh-my-zsh"]
 	path = stuff/oh-my-zsh
 	url = https://github.com/kirb/oh-my-zsh.git
+[submodule "stuff/q"]
+	path = stuff/q
+	url = https://github.com/harelba/q.git
