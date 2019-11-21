@@ -74,8 +74,10 @@ fi
 # additional stuff
 safe_source $(dirname $0)/zsh-aliases
 safe_source $(dirname $0)/zsh-functions
+safe_source $(dirname $0)/zsh-weather
 # safe_source ~/.iterm2_shell_integration.zsh
 
 # this must be sourced last
 safe_source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 safe_source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+

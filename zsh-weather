@@ -1,0 +1,21 @@
+weather() {
+	needs_update=1
+	if [[ -f ~/.cache/weather ]]; then
+		delta=$(($(date +%s) - $(date -r ~/.cache/weather +%s)))
+		if [[ $delta -lt 1800 ]]; then
+			needs_update=0
+		fi
+		if [[ $delta -lt 5400 ]]; then
+			cat ~/.cache/weather
+		fi
+	fi
+	if [[ $needs_update == 1 ]]; then
+		mkdir -p ~/.cache
+		rm -f ~/.cache/weather
+		{ curl -fsSL --connect-timeout 10 -o ~/.cache/weather \
+			'https://wttr.in/Adelaide?format=%l:+%c++%C+%t+|+%h+|+%w+|+%p+%o' &| } >/dev/null 2>/dev/null
+	fi
+}
+
+weather
+
