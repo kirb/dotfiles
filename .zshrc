@@ -18,7 +18,8 @@ fi
 
 # launch tmux now if in root tty of an SSH session
 if [[ ! -z $SSH_CLIENT && -z $TMUX ]]; then
-	tmux -f ~/.dotfiles/tmux.conf -CC attach
+	[[ $LC_TERMINAL == iTerm ]] && TMUX_CC_FLAG=-CC
+	tmux -f ~/.dotfiles/tmux.conf $TMUX_CC_FLAG attach
 fi
 
 # oh my zsh
@@ -27,8 +28,7 @@ DISABLE_AUTO_UPDATE=true
 COMPLETION_WAITING_DOTS=true
 ENABLE_CORRECTION=true
 DEFAULT_USER=kirb
-ZSH_TMUX_FIXTERM=true
-plugins=(battery brew gpg-agent osx pod safe-paste ssh-agent)
+plugins=(brew gpg-agent osx pod safe-paste ssh-agent)
 
 ZSH=$(dirname $0)/stuff/oh-my-zsh
 
