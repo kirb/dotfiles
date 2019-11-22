@@ -55,7 +55,7 @@ alias denicify='$THEOS/bin/denicify.pl'
 
 # apps
 if [[ $VENDOR == apple ]]; then
-	alias pxm='open -b com.pixelmatorteam.pixelmator'
+	alias pxm='open -b com.pixelmatorteam.pixelmator.x'
 	alias psd='open -b com.adobe.Photoshop'
 	alias vlc='open -b org.videolan.vlc'
 fi
