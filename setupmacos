@@ -86,11 +86,16 @@ if [[ ! -d ~/.dotfiles ]]; then
 	run git clone --recursive https://github.com/kirb/dotfiles.git ~/.dotfiles
 fi
 
-for i in .gitconfig .htoprc .lldbinit .nanorc .nicrc .theosrc .timidity.cfg; do
+for i in .gitconfig .lldbinit .nanorc .nicrc .theosrc .timidity.cfg; do
 	if [[ ! -f ~/$i ]]; then
 		run ln -s .dotfiles/$i ~/$i
 	fi
 done
+
+if [[ ! -f ~/.config/htop/htoprc ]]; then
+	run mkdir -p ~/.config/htop
+	run ln -s ../../.dotfiles/.htoprc ~/.config/htop/htoprc
+fi
 
 if ! grep -q dotfiles ~/.zshrc; then
 	run echo "source ~/.dotfiles/.zshrc" >> ~/.zshrc
@@ -372,7 +377,7 @@ status "Setting up fonts"
 if [[ -f /Applications/Utilities/Terminal.app/Contents/Resources/Fonts/SFMono-* && ! -f ~/Library/Fonts/SFMono-* ]]; then
 	cp /Applications/Utilities/Terminal.app/Contents/Resources/Fonts/SFMono-* ~/Library/Fonts/
 elif [[ -f /System/Applications/Utilities/Terminal.app/Contents/Resources/Fonts/SFMono-* && ! -f ~/Library/Fonts/SFMono-* ]]; then
-  cp /System/Applications/Utilities/Terminal.app/Contents/Resources/Fonts/SFMono-* ~/Library/Fonts/
+	cp /System/Applications/Utilities/Terminal.app/Contents/Resources/Fonts/SFMono-* ~/Library/Fonts/
 fi
 
 curl -# https://rawgit.com/gabrielelana/awesome-terminal-fonts/patching-strategy/patched/SourceCodePro+Powerline+Awesome+Regular.ttf -o ~/Library/Fonts/SourceCodePro+Powerline+Awesome+Regular.ttf
