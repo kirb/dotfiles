@@ -22,9 +22,13 @@ if [[ ! -z $SSH_CLIENT && -z $TMUX ]]; then
 	tmux -f ~/.dotfiles/tmux.conf $TMUX_CC_FLAG attach
 fi
 
+ZSH=$(dirname $0)/stuff/oh-my-zsh
+source $ZSH/plugins/ssh-agent/ssh-agent.plugin.zsh
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
+POWERLEVEL9K_INSTANT_PROMPT=quiet
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
 	source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
@@ -35,9 +39,8 @@ DISABLE_AUTO_UPDATE=true
 COMPLETION_WAITING_DOTS=true
 ENABLE_CORRECTION=true
 DEFAULT_USER=kirb
-plugins=(brew gpg-agent osx pod safe-paste ssh-agent)
-
-ZSH=$(dirname $0)/stuff/oh-my-zsh
+ZSH_WAKATIME_PROJECT_DETECTION=true
+plugins=(adb brew gpg-agent osx pod safe-paste zsh-wakatime)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -81,10 +84,8 @@ fi
 # additional stuff
 safe_source $(dirname $0)/zsh-aliases
 safe_source $(dirname $0)/zsh-functions
-safe_source $(dirname $0)/zsh-weather
 # safe_source ~/.iterm2_shell_integration.zsh
 
 # this must be sourced last
 safe_source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 safe_source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
