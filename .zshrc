@@ -40,7 +40,10 @@ COMPLETION_WAITING_DOTS=true
 ENABLE_CORRECTION=true
 DEFAULT_USER=kirb
 ZSH_WAKATIME_PROJECT_DETECTION=true
-plugins=(adb brew gpg-agent osx pod safe-paste zsh-wakatime)
+plugins=(adb gpg-agent safe-paste)
+[[ $VENDOR == apple ]]   && plugins+=(brew osx pod)
+[[ -f ~/.wakatime.cfg ]] && plugins+=(zsh-wakatime)
+ZSH=$(dirname $0)/stuff/oh-my-zsh
 
 source $ZSH/oh-my-zsh.sh
 
