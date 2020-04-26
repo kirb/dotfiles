@@ -13,7 +13,7 @@ export PATH=$HOME/.local/bin:$HOME/.dotfiles/bin:/usr/local/bin:/usr/local/sbin:
 export MANPATH=/usr/local/share/man:$MANPATH
 
 if [[ -z $LANG || -z $LC_CTYPE ]]; then
-	export LANG=en_AU.UTF-8 LC_CTYPE=en_AU.UTF-8
+	export LANG=en_US.UTF-8 LC_CTYPE=en_US.UTF-8
 fi
 
 # launch tmux now if in root tty of an SSH session
