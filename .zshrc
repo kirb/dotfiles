@@ -18,7 +18,7 @@ fi
 
 # launch tmux now if in root tty of an SSH session
 if [[ ! -z $SSH_CLIENT && -z $TMUX ]]; then
-	[[ $LC_TERMINAL == iTerm ]] && TMUX_CC_FLAG=-CC
+	[[ $LC_TERMINAL == iTerm2 ]] && TMUX_CC_FLAG=-CC
 	tmux -f ~/.dotfiles/tmux.conf $TMUX_CC_FLAG attach
 fi
 
