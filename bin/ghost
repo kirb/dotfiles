@@ -91,7 +91,7 @@ while getopts "d:e:FhIiLlpS:s:t:Uu:x:" o; do
 			;;
 	esac
 done
-server=${server:-${proto:-https}://ghostbin.com}
+server=${server:-${proto:-https}://ghostbin.co}
 
 # Look for a newer version of the script (but don't interrupt the user.)
 upgrade=$(mktemp /tmp/ghost.XXXXXX)
