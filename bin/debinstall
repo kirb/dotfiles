@@ -3,19 +3,27 @@
 # By Adam Demasi <https://kirb.me/>
 # Licensed under the Apache License 2.0 <https://www.apache.org/licenses/LICENSE-2.0.html>
 
+set -e
+
 if [[ "$@" == "" || "$1" == "" ]]; then
 	echo "Usage: $(basename "$0") the.deb [deviceip]"
 	echo "Default IP is your \$THEOS_DEVICE_IP, which is currently \"$THEOS_DEVICE_IP\"."
 	exit 1
 elif [[ ! -f "$1" ]]; then
-	echo "$1: no such file or directory"
+	echo "$1: No such file or directory"
 	exit 2
 elif [[ $1 =~ \.deb$ ]]; then
 	[[ "$2" == "" ]] && ip="$THEOS_DEVICE_IP" || ip="$2"
-	[[ -z "$THEOS_DEVICE_PORT" ]] && port="$THEOS_DEVICE_PORT" || port=22
-	scp "$1" root@"$ip": || exit 3
-	ssh root@"$ip" "dpkg -i './$(basename "$1")'"
+	if [[ ! -z "$THEOS_DEVICE_PORT" ]]; then
+		port=-p "$THEOS_DEVICE_PORT"
+	fi
+	name="$(basename "$1")"
+	pv=cat
+	if hash pv 2>/dev/null; then
+		pv=pv
+	fi
+	$pv "$1" | ssh $port root@"$ip" "cat > '$name'; dpkg -i './$name'"
 else
-	echo "$1: not a deb"
+	echo "$1: Not a deb?"
 	exit 4
 fi
