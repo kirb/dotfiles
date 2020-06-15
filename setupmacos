@@ -202,6 +202,8 @@ run defaults write com.apple.driver.AppleHIDMouse ScrollH -int 1
 run defaults write com.apple.driver.AppleHIDMouse ScrollS -int 0
 run defaults write com.apple.driver.AppleHIDMouse ScrollSSize -int 30
 run defaults write com.apple.driver.AppleHIDMouse ScrollV -int 1
+# don’t open Finder when connecting an iOS device
+run defaults write com.apple.AMPDevicesAgent dontAutomaticallySyncIPods -bool YES
 # use tabs for indentation in xcode
 run defaults write com.apple.dt.Xcode DVTTextIndentUsingTabs -bool YES
 # searches occur in the current folder, not everywhere
