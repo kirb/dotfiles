@@ -6,7 +6,13 @@ if [[ $@ == "" ]]; then
 		if [[ $path != $origin ]]; then
 			exec open https://bitbucket.org/$path
 		fi
+	else
+		host="$(echo "$origin" | cut -d: -f1)"
+		path="$(echo "$origin" | cut -d: -f2 | sed s/\.git//)"
+		mapping="$(git config browsehostmapping.$host 2>/dev/null)"
+		if [[ $mapping != "" ]]; then
+			exec open $mapping/$path
+		fi
 	fi
 fi
 exec hub browse "$@"
-
