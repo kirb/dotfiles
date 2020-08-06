@@ -86,7 +86,7 @@ if [[ ! -d ~/.dotfiles ]]; then
 	run git clone --recursive https://github.com/kirb/dotfiles.git ~/.dotfiles
 fi
 
-for i in .gitconfig .lldbinit .nanorc .nicrc .theosrc .timidity.cfg; do
+for i in .gitconfig .lldbinit .nanorc .nicrc .theosrc .timidity.cfg .tmux.conf; do
 	if [[ ! -f ~/$i ]]; then
 		run ln -s .dotfiles/$i ~/$i
 	fi
