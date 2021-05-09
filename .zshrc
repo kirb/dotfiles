@@ -2,26 +2,46 @@
 
 # == REQUIRES: ==
 # git clone --recursive https://github.com/kirb/dotfiles.git ~/.dotfiles
-# ln -s .dotfiles/.zshrc ~/.zshrc
-# brew install zsh-syntax-highlighting
+# echo 'source ~/.dotfiles/.zshrc' >> ~/.zshrc
+# sudo apt install zsh-syntax-highlighting zsh-autosuggestions
 # iTerm2 –> Install Shell Integration
 
 # path yo
-[[ -z $THEOS ]] && export THEOS=~/theos
-
-export PATH=$HOME/.local/bin:$HOME/.dotfiles/bin:/usr/local/bin:/usr/local/sbin:/usr/local/opt/ruby/bin:/snap/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.rvm/bin
-export MANPATH=/usr/local/share/man:$MANPATH
+PATH=$HOME/.local/bin:$HOME/.dotfiles/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
 if [[ -z $LANG || -z $LC_CTYPE ]]; then
 	export LANG=en_US.UTF-8 LC_CTYPE=en_US.UTF-8
 fi
 
-# launch tmux now if in root tty of an SSH session
-if [[ ! -z $SSH_CLIENT && -z $TMUX ]]; then
-	[[ $LC_TERMINAL == iTerm2 ]] && TMUX_CC_FLAG=-CC
-	tmux -f ~/.dotfiles/tmux.conf $TMUX_CC_FLAG attach
+if [[ -d /opt/homebrew ]]; then
+	# ARM Homebrew, because, I don’t even know why
+	PATH=/opt/homebrew/bin:$PATH
+	MANPATH=/opt/homebrew/share/man:$MANPATH
+elif [[ -d /usr/local/Library/Homebrew ]]; then
+	# x86 Homebrew, which to be fair, I don’t even know why either
+	MANPATH=/usr/local/share/man:$MANPATH
 fi
 
+# Da Procursus
+if [[ -d /opt/procursus ]]; then
+	PATH=/opt/procursus/bin:$PATH
+	MANPATH=/opt/procursus/share/man:$MANPATH
+fi
+
+if has ruby && has gem; then
+	PATH+=:$(ruby -r rubygems -e 'puts Gem.user_dir')/bin
+fi
+
+# Launch tmux now if in root tty of an SSH session
+if [[ ! -z $SSH_CLIENT && -z $TMUX ]] && has tmux; then
+	[[ $LC_TERMINAL == iTerm2 ]] && TMUX_CC_FLAG=-CC
+	tmux -2f ~/.dotfiles/tmux.conf $TMUX_CC_FLAG attach
+fi
+
+# Fix tmux 256 color
+[[ ! -z $TMUX && $TERM == screen ]] && TERM=screen-256color
+
+# Do this before we source instant prompt, because it might interactively prompt for passphrase
 ZSH=$(dirname $0)/stuff/oh-my-zsh
 source $ZSH/plugins/ssh-agent/ssh-agent.plugin.zsh
 
@@ -38,57 +58,44 @@ ZSH_THEME=kirb-powerlevel
 DISABLE_AUTO_UPDATE=true
 COMPLETION_WAITING_DOTS=true
 ENABLE_CORRECTION=true
-DEFAULT_USER=kirb
-ZSH_WAKATIME_PROJECT_DETECTION=true
-plugins=(adb gpg-agent safe-paste)
+DEFAULT_USER=adamdemasi
+plugins=(adb safe-paste)
+has gpgconf              && plugins+=(gpg-agent)
 [[ $VENDOR == apple ]]   && plugins+=(brew osx pod)
-[[ -f ~/.wakatime.cfg ]] && plugins+=(zsh-wakatime)
 ZSH=$(dirname $0)/stuff/oh-my-zsh
 
 source $ZSH/oh-my-zsh.sh
 
-# important functions
+# Important functions
 has() {
-	type "$1" >/dev/null 2>/dev/null
+	[[ $+commands[$1] == 1 ]]
 }
 
 safe_source() {
-	[[ -f $1 ]] && source "$1"
+	if [[ -f $1 ]]; then
+		source "$1"
+	fi
 }
-
-# exports
-export PROJ=~/Documents/Projects
+# Exports
+export PROJ=~/Developer
+export THEOS=~/theos
 export THEOS_DEVICE_IP=local
-export SDKVERSION= SIMVERSION=
 
 export EDITOR='code -wr'
-
-# if this is an ssh session, use nano instead
 [[ ! -z $SSH_CLIENT ]] && export EDITOR=nano
 
 export PERL_MB_OPT="--install_base \"$HOME/.perl5\""
 export PERL_MM_OPT="INSTALL_BASE=$HOME/.perl5"
 export GOPATH=/usr/local/lib/go
 
-# well intentioned feature, but god it’s annoying. sorry
 export HOMEBREW_NO_AUTO_UPDATE=1
 
-# super useful for those `rm -r $DERIVED_DATA` moments
-export DERIVED_DATA=~/Library/Developer/Xcode/DerivedData
-
-# fix for homebrew zsh
-# see `brew info zsh`
-if [[ $SHELL != /usr/bin/zsh ]] && has brew; then
-	unalias run-help 2>/dev/null
-	autoload run-help
-	HELPDIR=/usr/local/share/zsh/help
-fi
-
-# additional stuff
+# Additional stuff
 safe_source $(dirname $0)/zsh-aliases
 safe_source $(dirname $0)/zsh-functions
-# safe_source ~/.iterm2_shell_integration.zsh
 
-# this must be sourced last
-safe_source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-safe_source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# This must be sourced last
+safe_source /opt/procursus/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh || \
+	safe_source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh || \
+	safe_source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+safe_source /opt/procursus/share/zsh-autosuggestions/zsh-autosuggestions.zsh

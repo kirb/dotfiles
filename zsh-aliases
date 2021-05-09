@@ -1,9 +1,9 @@
 #!/usr/bin/env zsh
 
-# defaults
+# Defaults
 alias ls='ls -blaphtF --color'
 alias less='less -x2'
-alias grep='grep --color -in --exclude-dir={.bzr,.cvs,.git,.hg,.svn,.theos}'
+alias grep='grep --color -in --exclude-dir={.bzr,.cvs,.git,.hg,.svn,.theos} --exclude=\*.map'
 alias wget='wget --content-disposition'
 alias ssh='nocorrect ssh'
 alias strings='strings -a'
@@ -13,18 +13,18 @@ alias ip='ip --color'
 alias ipb='ip --color --brief'
 alias du='du --apparent-size'
 # alias rsync='rsync -EX' # TODO: bad idea? not sure…
-alias tmux='tmux -f ~/.dotfiles/tmux.conf $TMUX_CC_FLAG'
+alias tmux='tmux -2f ~/.dotfiles/tmux.conf $TMUX_CC_FLAG'
 
 if [[ $VENDOR == apple ]]; then
 	alias ping='ping --apple-time'
 fi
 
-# kinda-sorta functions
+# Kinda-sorta functions
 alias filesize='stat -c %s'
 alias finder='open -R'
 alias logcat='logcat-color --stay-connected -v threadtime'
 
-# shorter names
+# Shorter names
 alias vboxmanage=VBoxManage
 alias vbox=VBoxManage
 alias plistbuddy=/usr/libexec/PlistBuddy
@@ -32,35 +32,44 @@ alias plbuddy=/usr/libexec/PlistBuddy
 alias xcselect=xcode-select
 alias xcsel=xcode-select
 alias hop='hopperv4 -e'
-alias io=optim
 alias n=npm
 alias y=yarn
-alias io=imageoptim
 
-# cross-platform normalisation
+# Cross-platform normalisation
 alias pbcopy=clipcopy
 alias pbpaste=clippaste
 
-# if we have hub, alias git completion to it
+# If we have hub, alias git completion to it
 if has hub; then
 	compdef hub=git
 fi
 
-# theos
+# Theos
 alias nic='$THEOS/bin/nic.pl'
 alias logify='$THEOS/bin/logify.pl'
 alias logos='$THEOS/bin/logos.pl'
 alias nicify='$THEOS/bin/nicify.pl'
 alias denicify='$THEOS/bin/denicify.pl'
 
-# apps
+# Apps
 if [[ $VENDOR == apple ]]; then
+	alias iterm='open -b com.googlecode.iterm2'
+	alias it=iterm
+	alias it2=iterm
 	alias pxm='open -b com.pixelmatorteam.pixelmator.x'
 	alias psd='open -b com.adobe.Photoshop'
 	alias vlc='open -b org.videolan.vlc'
+	alias io='open -b net.pornel.ImageOptim'
 fi
 
-# typos
+# Apple Silicon
+if [[ $VENDOR == apple && $MACHTYPE == aarch64 && $CPUTYPE == arm64 ]]; then
+	alias x86='arch -x86_64'
+	alias sudox86='sudo arch -x86_64'
+	alias xy='arch -x86_64 yarn'
+fi
+
+# Typos
 alias kilall=killall
 alias kilalll=killall
 alias killlal=killall
