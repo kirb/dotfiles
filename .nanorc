@@ -1,7 +1,6 @@
 set brackets ""')>]}"
 set constantshow
 set historylog
-set morespace
 unset nowrap
 set regexp
 set smarthome
