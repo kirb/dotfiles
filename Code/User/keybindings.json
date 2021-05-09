@@ -131,5 +131,18 @@
 		"key": "cmd+k",
 		"command": "-workbench.action.terminal.clear",
 		"when": "terminalFocus"
+	},
+	{
+		"key": "shift+cmd+d",
+		"command": "workbench.action.splitEditorDown"
+	},
+	{
+		"key": "cmd+d",
+		"command": "-editor.action.addSelectionToNextFindMatch",
+		"when": "editorFocus"
+	},
+	{
+		"key": "cmd+d",
+		"command": "workbench.action.splitEditorRight"
 	}
 ]
