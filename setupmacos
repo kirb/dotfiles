@@ -31,13 +31,6 @@ wait_for_process() {
 	done
 }
 
-add_login_item() {
-	hide=false
-	[[ $2 == --hide ]] && hide=true
-
-	run osascript -e 'tell application "System Events" to make login item at end with properties {path:"'$1'", hidden:'$hide'}'
-}
-
 add_dock_item() {
 	[[ -d "$1" ]] && run dockutil --add "$1" --no-restart
 }
@@ -77,7 +70,7 @@ if [[ $answer == n ]]; then
 	wait_for_process "Install Command Line Developer Tools"
 else
 	# get the path to Xcode.app based on the xcode-select path
-	xcode="$(realpath "$(xcode-select --print-path)"/../..)"
+	xcode="$(cd "$(xcode-select --print-path)"/../..; pwd -P)"
 fi
 
 # 6: clone dotfiles
@@ -113,16 +106,8 @@ fi
 
 # 8: set defaults
 status "Setting preferences"
-if [[ $has_sudo == 1 ]]; then
-	# use ntp.org as the time server
-	run sudo /usr/sbin/systemsetup -setnetworktimeserver au.pool.ntp.org
-fi
-# set the highlight color (green)
-run defaults write NSGlobalDomain AppleHighlightColor -string "0.482353 0.925000 0.254902"
 # use 24 hour time
 run defaults write NSGlobalDomain AppleICUForce12HourTime -bool NO
-# use dark system theme
-run defaults write NSGlobalDomain AppleInterfaceStyle -string Dark
 # allow tabbing through UI elements
 run defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 # double click window title bar to minimise
@@ -135,6 +120,8 @@ run defaults write NSGlobalDomain AppleShowAllExtensions -bool YES
 run defaults write NSGlobalDomain AppleShowAllFiles -bool YES
 # use overlay-style scrollbars
 run defaults write NSGlobalDomain AppleShowScrollBars -string WhenScrolling
+# prefer making tabs for new windows
+run defaults write NSGlobalDomain AppleWindowTabbingMode -string always
 # use tap to click
 run defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 run defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
@@ -157,6 +144,8 @@ run defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool YES
 run defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool YES
 # show control characters for non-ascii chars
 run defaults write NSGlobalDomain NSTextShowsControlCharacters -bool YES
+# halve animation duration of the title bar proxy (file icon)
+run defaults write NSGlobalDomain NSToolbarTitleViewRolloverDelay -float 0
 # halve animation duration of panels
 run defaults write NSGlobalDomain NSWindowResizeTime -float 0.1
 # always expand print panel
@@ -176,8 +165,6 @@ run defaults write com.apple.ActivityMonitor NetworkGraphType -int 1
 run defaults write com.apple.ActivityMonitor UpdatePeriod -int 2
 # enable firewall
 run defaults -currentHost write com.apple.alf globalstate -int 1
-# destroy dashboard (actually not needed on elcap!)
-run defaults write com.apple.dashboard mcx-disabled -bool YES
 # the infamous don’t create .DS_Store in network drives preference
 run defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool YES
 # remove delay before showing/hiding dock
@@ -206,6 +193,10 @@ run defaults write com.apple.driver.AppleHIDMouse ScrollV -int 1
 run defaults write com.apple.AMPDevicesAgent dontAutomaticallySyncIPods -bool YES
 # use tabs for indentation in xcode
 run defaults write com.apple.dt.Xcode DVTTextIndentUsingTabs -bool YES
+# kill the silly folding accordion animation on rename
+run defaults write com.apple.dt.Xcode CodeFoldingAnimationSpeed -int 0
+# show build times in the status bar
+run defaults write com.apple.dt.Xcode ShowBuildOperationDuration -bool YES
 # searches occur in the current folder, not everywhere
 run defaults write com.apple.finder FXDefaultSearchScope -string SCcf
 # set finder to use column view by default
@@ -235,8 +226,8 @@ run defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool NO
 # don’t bother me if an email can’t be sent, just keep trying. why isn’t this the default????
 run defaults write com.apple.mail SuppressDeliveryFailure -bool YES
 # set the format of the clock menu bar item
-run defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM  HH:mm:ss"
-# enable airdrop over ethernet
+run defaults write com.apple.menuextra.clock DateFormat -string "EEE HH:mm"
+# enable airdrop over ethernet (does this still work?)
 run defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool YES
 # reduce duration banners are displayed
 run defaults write com.apple.notificationcenterui bannerTime -int 4
@@ -256,9 +247,6 @@ run defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.
 run defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool YES
 # save screen captures to /tmp instead of cluttering the desktop
 run defaults write com.apple.screencapture location /tmp
-# show clock on the screen saver
-run defaults write com.apple.screensaver showClock -bool YES
-run defaults -currentHost write com.apple.screensaver showClock -bool YES
 # require password when coming back from screen saver
 run defaults write com.apple.screensaver askForPassword -bool YES
 # but only after 5 seconds
@@ -267,16 +255,10 @@ run defaults write com.apple.screensaver askForPasswordDelay -int 5
 run defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 # don't reopen previous windows on next login
 run defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool NO
-# use sosumi as system beep
-run defaults write com.apple.systemsound com.apple.sound.beep.sound -string /System/Library/Sounds/Sosumi.aiff
+# RIP Sosumi 1991-2020
+run defaults write com.apple.systemsound com.apple.sound.beep.sound -string /System/Library/Sounds/Sonumi.aiff
 # don’t show time machine prompt on connecting an external hdd
 run defaults -currentHost write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool YES
-# allow ctrl-scroll to zoom
-run defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool YES
-# don't smoothen the image when zooming
-run defaults write com.apple.universalaccess closeViewSmoothImages -bool NO
-# follow keyboard focus while zoomed
-run defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool YES
 # set highlight command line flags for QLColorCode
 run defaults write org.n8gray.QLColorCode extraHLFlags '-lV -t2'
 # use fira code for QLColorCode
@@ -308,6 +290,12 @@ run defaults write io.citruspi.Spotify-Notifications iconSelection -int 2
 run defaults write io.citruspi.Spotify-Notifications notificationSound -int 1
 # keep previous songs in the notification center – this is also inverted
 run defaults write io.citruspi.Spotify-Notifications onlycurrentsong -int 1
+# disable windows-to-tabs for IntelliJ, which still hasn’t figured out how to not break on this
+run defaults write com.google.android.studio AppleWindowTabbingMode -string never
+run defaults write com.jetbrains.WebStorm AppleWindowTabbingMode -string never
+run defaults write com.jetbrains.datagrip AppleWindowTabbingMode -string never
+run defaults write com.jetbrains.AppCode AppleWindowTabbingMode -string never
+run defaults write ch.sudo.cyberduck AppleWindowTabbingMode -string never
 # disable auto-opening of captive portal web pages
 if [[ $has_sudo == 1 ]]; then
 	run sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.captive.control Active -bool NO
@@ -318,10 +306,10 @@ if [[ ! -d ~/homebrew && ! -d /usr/local/Homebrew ]]; then
 	status "Installing Homebrew"
 
 	if [[ $has_sudo == 1 ]]; then
-		run bash -c 'curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install -o /tmp/install_homebrew.rb'
-		echo "Confirm /tmp/install_homebrew.rb isn’t doing anything scary and press return to continue"
+		run bash -c 'curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh -o /tmp/install_homebrew.sh'
+		echo "Confirm /tmp/install_homebrew.sh isn’t doing anything scary and press return to continue"
 		read
-		run ruby /tmp/install_homebrew.rb
+		run bash /tmp/install_homebrew.sh
 	else
 		run git clone https://github.com/Homebrew/brew.git ~/homebrew
 	fi
@@ -358,11 +346,6 @@ run bash -c 'cd ~/.dotfiles; brew bundle --verbose'
 
 # 4: force link certain formulae
 status "Force linking formulae"
-# android-platform-tools is a dick and links its own sqlite3 for some reason. ugh
-[[ -h /usr/local/bin/sqlite3 ]] && run rm /usr/local/bin/sqlite3
-run brew link --force bzip2 curl perl sqlite3
-
-# TODO: class-dump is broken
 
 for i in $brewdir/opt/{coreutils,findutils,gnu-sed,gnu-tar,gnu-which,grep,make}/bin/g*; do
 	name=$(basename $i)
@@ -376,10 +359,8 @@ done
 # 5: install font
 status "Setting up fonts"
 
-if [[ -f /Applications/Utilities/Terminal.app/Contents/Resources/Fonts/SFMono-* && ! -f ~/Library/Fonts/SFMono-* ]]; then
-	cp /Applications/Utilities/Terminal.app/Contents/Resources/Fonts/SFMono-* ~/Library/Fonts/
-elif [[ -f /System/Applications/Utilities/Terminal.app/Contents/Resources/Fonts/SFMono-* && ! -f ~/Library/Fonts/SFMono-* ]]; then
-	cp /System/Applications/Utilities/Terminal.app/Contents/Resources/Fonts/SFMono-* ~/Library/Fonts/
+if [[ -f /System/Applications/Utilities/Terminal.app/Contents/Resources/Fonts/SF-Mono-* && ! -f ~/Library/Fonts/SF-Mono-* ]]; then
+	cp /System/Applications/Utilities/Terminal.app/Contents/Resources/Fonts/SF-Mono-* ~/Library/Fonts/
 fi
 
 curl -# https://rawgit.com/gabrielelana/awesome-terminal-fonts/patching-strategy/patched/SourceCodePro+Powerline+Awesome+Regular.ttf -o ~/Library/Fonts/SourceCodePro+Powerline+Awesome+Regular.ttf
@@ -387,26 +368,22 @@ curl -# https://rawgit.com/gabrielelana/awesome-terminal-fonts/patching-strategy
 # 9: set up apps
 status "Setting up apps"
 
+if [[ -d /Applications/Firefox\ Developer\ Edition.app && ! -d /Applications/Firefox.app ]]; then
+	mv /Applications/Firefox\ Developer\ Edition.app /Applications/Firefox.app
+fi
+
 open_if_exists $brewdir/Caskroom/backblaze/latest/Backblaze Installer.app
-open_if_exists $brewdir/Caskroom/lastpass/latest/LastPass\ Installer/LastPass\ Installer.app
-open_if_exists /Applications/Backup\ and\ Sync.app
 open_if_exists /Applications/Google\ Drive\ File\ Stream.app
 open_if_exists /Applications/iStat\ Menus.app
-open_if_exists /Applications/RescueTime.app
-open_if_exists /Applications/Skype.app
+open_if_exists /Applications/Firefox.app
 open_if_exists /Applications/Spotify.app
 open_if_exists /Applications/Spotify\ Notifications.app
-open_if_exists /Applications/Textual.app
 open_if_exists /Applications/The\ Unarchiver.app
-open_if_exists /Applications/Tweetbot.app
-
-add_login_item /Applications/Mail.app --hide
+open_if_exists /Applications/Slack.app
+open_if_exists /Applications/Discord.app
+open_if_exists /Applications/Telegram.app
 
 # TODO: kill spotify from the login items list after it launches
-
-if [[ ! -d /Applications/Screen\ Sharing.app ]]; then
-	ln -s /System/Library/CoreServices/Applications/Screen\ Sharing.app /Applications/Screen\ Sharing.app
-fi
 
 # 10: set up the dock
 echo -n "Reset the Dock? [Yn] "
@@ -414,41 +391,20 @@ read answer
 
 if [[ $answer != n ]]; then
 	dockutil --remove all --no-restart
-	add_dock_item /Applications/Firefox\ Developer\ Edition.app
-	add_dock_spacer
+	add_dock_item /Applications/Firefox.app
 	add_dock_item /Applications/iTerm.app
 	add_dock_item /Applications/Visual\ Studio\ Code.app
 
 	if [[ ! -z "$xcode" ]]; then
 		add_dock_item "$xcode"
-		add_dock_item "$xcode"/Contents/Developer/Applications/Simulator.app
 	fi
 
-	add_dock_item /Applications/Hopper\ Disassembler\ v*.app
-	add_dock_item /Applications/Utilities/Console.app
-	add_dock_spacer
 	add_dock_item /Applications/Mail.app
-	add_dock_item /Applications/IRCCloud.app
+	add_dock_item /Applications/Pixelmator\ Pro.app
+	add_dock_item /Applications/Overcast.app
+	add_dock_item /Applications/Jira.app
 	add_dock_item /Applications/Discord.app
-	add_dock_item /Applications/Tweetbot.app
-	add_dock_item /Applications/Telegram.app
-	add_dock_item /Applications/Messages.app
-	add_dock_spacer
-	add_dock_item /Applications/Adobe\ Photoshop\ */Adobe Photoshop\ *.app
-	add_dock_item /Applications/Adobe\ Premiere\ Pro\ */Adobe Premiere\ Pro\ *.app
-	add_dock_item /Applications/Adobe\ Audition\ */Adobe Audition\ *.app
-	add_dock_item /Applications/Pixelmator.app
-	add_dock_item /Applications/Final Cut Pro.app
-	add_dock_spacer
-	add_dock_item /Applications/iTunes.app
-	add_dock_item /Applications/Spotify.app
-	add_dock_item /Applications/Microsoft\ Remote\ Desktop\ Beta.app
-	add_dock_item /Applications/Screen\ Sharing.app
-	add_dock_item /Applications/VMware\ Fusion.app
-	add_dock_item /Applications/Microsoft\ Word.app
-	add_dock_spacer
-	add_dock_item /Applications/System\ Preferences.app
-	add_dock_item /Applications/Utilities/Activity\ Monitor.app
+	add_dock_item /Applications/Slack.app
 fi
 
 # 11: set default shell
