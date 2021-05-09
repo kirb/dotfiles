@@ -5,3 +5,7 @@
 # theos shit
 debs/
 .theos/
+
+# nano shit
+*~
+.*.swp
