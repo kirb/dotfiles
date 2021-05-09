@@ -6,6 +6,7 @@
 
 	# insanely beautiful diffs
 	pager = diff-so-fancy | less -R -x2
+	editor = nano
 
 # use separate file for username / github token / etc
 [include]
@@ -106,6 +107,7 @@
 	tags = tag -l
 	branches = branch -a
 	remotes = remote -v
+	diff = diff --patch-with-stat --compact-summary
 
 	# this is pretty useful
 	a = add
@@ -114,19 +116,18 @@
 	cf = commit --amend --no-edit
 	cd = !git commit --amend --date=\"$(date)\"
 	co = checkout
-	diff = diff --patch-with-stat
-	d = diff --patch-with-stat
-	dc = diff --cached --patch-with-stat
+	diff = diff --patch-with-stat --compact-summary
+	d = diff --patch-with-stat --compact-summary
+	dc = diff --cached --patch-with-stat --compact-summary
 	l = log
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	s = status
-	ss = stash show --patch-with-stat
+	ss = stash show --patch-with-stat --compact-summary
+	show = show --patch-with-stat --compact-summary
 	nb = checkout -b
-	r = rebase
 	rb = rebase
-	rc = rebase --continue
-	ra = rebase --abort
-	rs = rebase --skip
+	rs = reset
+	rv = revert
 	cp = cherry-pick
 	comp = cherry --abbrev=8 -v
 
@@ -141,6 +142,8 @@
 	ci-status = !hub ci-status
 
 	# literally my life
+	g = !git
+	git = !git
 	ad = add
 	og = log
 	lgo = log
