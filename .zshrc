@@ -24,17 +24,21 @@ if [[ -z $LANG || -z $LC_CTYPE ]]; then
 	export LANG=en_US.UTF-8 LC_CTYPE=en_US.UTF-8
 fi
 
+PACKAGE_MANAGER=/usr
 if [[ -d /opt/homebrew ]]; then
 	# ARM Homebrew, because, I don’t even know why
+	PACKAGE_MANAGER=/opt/homebrew
 	PATH=/opt/homebrew/bin:$PATH
 	MANPATH=/opt/homebrew/share/man:$MANPATH
 elif [[ -d /usr/local/Library/Homebrew ]]; then
 	# x86 Homebrew, which to be fair, I don’t even know why either
+	PACKAGE_MANAGER=/usr/local
 	MANPATH=/usr/local/share/man:$MANPATH
 fi
 
 # Da Procursus
 if [[ -d /opt/procursus ]]; then
+	PACKAGE_MANAGER=/opt/procursus
 	PATH=/opt/procursus/bin:$PATH
 	MANPATH=/opt/procursus/share/man:$MANPATH
 fi
@@ -96,7 +100,5 @@ safe_source $(dirname $0)/zsh-aliases
 safe_source $(dirname $0)/zsh-functions
 
 # This must be sourced last
-safe_source /opt/procursus/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh || \
-	safe_source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh || \
-	safe_source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-safe_source /opt/procursus/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+safe_source $PACKAGE_MANAGER/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+safe_source $PACKAGE_MANAGER/share/zsh-autosuggestions/zsh-autosuggestions.zsh
