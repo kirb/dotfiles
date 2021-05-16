@@ -13,13 +13,16 @@ fi
 # has now removed all need for anything special, and it's stuck in muscle memory
 setdevice() {
 	export THEOS_DEVICE_IP=$1
+	[[ -z $1 ]] && THEOS_DEVICE_IP=local
 	echo "$THEOS_DEVICE_IP"
 }
 
 # convenience to switch xcode versions
 xcswitch() {
-	sudo xcode-select -switch "/Applications/Xcode$1.app/Contents/Developer" && \
-		echo "Switched to $(xcsel -print-path)"
+	app=
+	[[ ! -z $1 ]] && app=-$1
+	sudo xcode-select -switch "/Applications/Xcode$app.app/Contents/Developer" && \
+		echo "Switched to $(xcode-select -print-path)"
 }
 
 # highlighted man pages!!
@@ -28,9 +31,12 @@ unalias man
 
 man() {
 	env \
-		LESS_TERMCAP_mb=$'\e[1;31m' LESS_TERMCAP_md=$'\e[1;31m' \
-		LESS_TERMCAP_me=$'\e[0m' LESS_TERMCAP_se=$'\e[0m' \
-		LESS_TERMCAP_so=$'\e[1;44;33m' LESS_TERMCAP_ue=$'\e[0m' \
+		LESS_TERMCAP_mb=$'\e[1;31m' \
+		LESS_TERMCAP_md=$'\e[1;31m' \
+		LESS_TERMCAP_me=$'\e[0m' \
+		LESS_TERMCAP_se=$'\e[0m' \
+		LESS_TERMCAP_so=$'\e[1;44;33m' \
+		LESS_TERMCAP_ue=$'\e[0m' \
 		LESS_TERMCAP_us=$'\e[1;32m' \
 		man "$@"
 }

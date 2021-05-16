@@ -18,11 +18,11 @@ safe_source() {
 }
 
 # path yo
-PATH=$HOME/.local/bin:$HOME/.dotfiles/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+DOTFILES=${0:h}
+PATH=$HOME/.local/bin:$DOTFILES/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
-if [[ -z $LANG || -z $LC_CTYPE ]]; then
-	export LANG=en_US.UTF-8 LC_CTYPE=en_US.UTF-8
-fi
+export LANG=${LANG:-en_US.UTF-8}
+export LC_CTYPE=${LC_CTYPE:-$LANG}
 
 PACKAGE_MANAGER=/usr
 if [[ -d /opt/homebrew ]]; then
@@ -57,7 +57,7 @@ fi
 [[ ! -z $TMUX && $TERM == screen ]] && TERM=screen-256color
 
 # Do this before we source instant prompt, because it might interactively prompt for passphrase
-ZSH=$(dirname $0)/stuff/oh-my-zsh
+ZSH=$DOTFILES/stuff/oh-my-zsh
 source $ZSH/plugins/ssh-agent/ssh-agent.plugin.zsh
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -77,8 +77,6 @@ DEFAULT_USER=adamdemasi
 plugins=(adb safe-paste)
 has gpgconf              && plugins+=(gpg-agent)
 [[ $VENDOR == apple ]]   && plugins+=(brew osx pod)
-ZSH=$(dirname $0)/stuff/oh-my-zsh
-
 source $ZSH/oh-my-zsh.sh
 
 # Exports
@@ -91,13 +89,13 @@ export EDITOR='code -wr'
 
 export PERL_MB_OPT="--install_base \"$HOME/.perl5\""
 export PERL_MM_OPT="INSTALL_BASE=$HOME/.perl5"
-export GOPATH=/usr/local/lib/go
+export GOPATH=$PACKAGE_MANAGER/lib/go
 
 export HOMEBREW_NO_AUTO_UPDATE=1
 
 # Additional stuff
-safe_source $(dirname $0)/zsh-aliases
-safe_source $(dirname $0)/zsh-functions
+safe_source $DOTFILES/zsh-aliases
+safe_source $DOTFILES/zsh-functions
 
 # This must be sourced last
 safe_source $PACKAGE_MANAGER/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
