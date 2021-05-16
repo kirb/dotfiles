@@ -6,6 +6,17 @@
 # sudo apt install zsh-syntax-highlighting zsh-autosuggestions
 # iTerm2 –> Install Shell Integration
 
+# Important functions
+has() {
+	[[ $+commands[$1] == 1 ]]
+}
+
+safe_source() {
+	if [[ -f $1 ]]; then
+		source "$1"
+	fi
+}
+
 # path yo
 PATH=$HOME/.local/bin:$HOME/.dotfiles/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
@@ -66,16 +77,6 @@ ZSH=$(dirname $0)/stuff/oh-my-zsh
 
 source $ZSH/oh-my-zsh.sh
 
-# Important functions
-has() {
-	[[ $+commands[$1] == 1 ]]
-}
-
-safe_source() {
-	if [[ -f $1 ]]; then
-		source "$1"
-	fi
-}
 # Exports
 export PROJ=~/Developer
 export THEOS=~/theos
