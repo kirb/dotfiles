@@ -13,7 +13,7 @@ alias ip='ip --color'
 alias ipb='ip --color --brief'
 alias du='du --apparent-size'
 # alias rsync='rsync -EX' # TODO: bad idea? not sure…
-alias tmux='tmux -2f ~/.dotfiles/tmux.conf $TMUX_CC_FLAG'
+alias tmux='tmux -2f ~/.dotfiles/.tmux.conf $TMUX_CC_FLAG'
 
 if [[ $VENDOR == apple ]]; then
 	alias ping='ping --apple-time'

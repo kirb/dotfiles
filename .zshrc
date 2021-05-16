@@ -46,7 +46,7 @@ fi
 # Launch tmux now if in root tty of an SSH session
 if [[ ! -z $SSH_CLIENT && -z $TMUX ]] && has tmux; then
 	[[ $LC_TERMINAL == iTerm2 ]] && TMUX_CC_FLAG=-CC
-	tmux -2f ~/.dotfiles/tmux.conf $TMUX_CC_FLAG attach
+	tmux -2f ~/.dotfiles/.tmux.conf $TMUX_CC_FLAG attach
 fi
 
 # Fix tmux 256 color
