@@ -58,7 +58,8 @@ fi
 
 # Do this before we source instant prompt, because it might interactively prompt for passphrase
 ZSH=$DOTFILES/stuff/oh-my-zsh
-source $ZSH/plugins/ssh-agent/ssh-agent.plugin.zsh
+ZSH_CUSTOM=$DOTFILES/oh-my-zsh/custom
+source $ZSH_CUSTOM/plugins/ssh-agent/ssh-agent.plugin.zsh
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
