@@ -1,10 +1,9 @@
-# os x shit
+# NOTE: This is the .gitignore of the dotfiles repo, not the global one!
+# See global.gitignore instead if that’s what you want.
+
+# macOS
 .DS_Store
 ._*
 
-# theos shit
-debs/
-.theos/
-
-# specific to this repo
+# Specific to this repo
 *.private

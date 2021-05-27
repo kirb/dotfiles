@@ -1,11 +1,11 @@
-# os x shit
+# macOS
 .DS_Store
 ._*
 
-# theos shit
-debs/
+# Theos
+/packages/
 .theos/
 
-# nano shit
+# nano
 *~
 .*.swp
