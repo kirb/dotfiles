@@ -4,7 +4,7 @@
 	"debug.inlineValues": true,
 	"debug.toolBarLocation": "docked",
 	"diffEditor.renderSideBySide": false,
-	"docker.context": "ssh://nebula",
+	"docker.context": "nebula",
 	"editor.acceptSuggestionOnEnter": "smart",
 	"editor.accessibilitySupport": "off",
 	"editor.bracketPairColorization.enabled": true,
