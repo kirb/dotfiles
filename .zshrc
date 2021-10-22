@@ -18,7 +18,8 @@ safe_source() {
 }
 
 # path yo
-DOTFILES=${0:h}
+DOTFILES=${0:h:A}
+[[ $DOTFILES == $HOME ]] && DOTFILES=$HOME/.dotfiles
 PATH=$HOME/.local/bin:$DOTFILES/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
 export LANG=${LANG:-en_US.UTF-8}
@@ -30,7 +31,7 @@ if [[ -d /opt/homebrew ]]; then
 	PACKAGE_MANAGER=/opt/homebrew
 	PATH=/opt/homebrew/bin:$PATH
 	MANPATH=/opt/homebrew/share/man:$MANPATH
-elif [[ -d /usr/local/Library/Homebrew ]]; then
+elif [[ -d /usr/local/Homebrew ]]; then
 	# x86 Homebrew, which to be fair, I don’t even know why either
 	PACKAGE_MANAGER=/usr/local
 	MANPATH=/usr/local/share/man:$MANPATH
@@ -56,10 +57,15 @@ fi
 # Fix tmux 256 color
 [[ ! -z $TMUX && $TERM == screen ]] && TERM=screen-256color
 
+# Check for IntelliJ’s printenv command because anything interactive/blocking will break it
+# detecting environment at startup.
+# https://youtrack.jetbrains.com/articles/IDEA-A-19/Shell-Environment-Loading
+[[ ! -z $INTELLIJ_ENVIRONMENT_READER ]] && NOT_ACTUALLY_INTERACTIVE=1
+
 # Do this before we source instant prompt, because it might interactively prompt for passphrase
 ZSH=$DOTFILES/stuff/oh-my-zsh
 ZSH_CUSTOM=$DOTFILES/oh-my-zsh/custom
-source $ZSH_CUSTOM/plugins/ssh-agent/ssh-agent.plugin.zsh
+[[ -z $NOT_ACTUALLY_INTERACTIVE ]] && source $ZSH_CUSTOM/plugins/ssh-agent/ssh-agent.plugin.zsh
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -93,6 +99,8 @@ export PERL_MM_OPT="INSTALL_BASE=$HOME/.perl5"
 export GOPATH=$PACKAGE_MANAGER/lib/go
 
 export HOMEBREW_NO_AUTO_UPDATE=1
+
+export FZF_DEFAULT_COMMAND=fd
 
 # Additional stuff
 safe_source $DOTFILES/zsh-aliases
