@@ -107,7 +107,9 @@ fi
 
 # 4: Configure user groups
 status "Adding user to docker group"
-run $SUDO usermod -aG docker $USER
+if [[ $UID != 0 ]]; then
+	run $SUDO usermod -aG docker $USER
+fi
 
 # 5: Set login shell
 status "Setting shell to zsh"
