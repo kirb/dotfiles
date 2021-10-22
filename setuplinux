@@ -1,0 +1,100 @@
+#!/bin/bash
+# Config
+cd ~
+shopt -s dotglob
+
+# Functions
+status() {
+	printf "\e[0;32m==> \e[1;39m%s…\e[m\n" "$1" >&2
+}
+
+unsafe_run() {
+	printf "\e[0;36m==> \e[1;39m%s\e[m\n" "$*" >&2
+	"$@"
+}
+
+run() {
+	unsafe_run "$@"
+	result=$?
+
+	if [[ $result != 0 ]]; then
+		printf "\e[0;31m==> \e[1;31mError:\e[m %s\n" "Return code $result"
+		exit $result
+	fi
+}
+
+wait_for_process() {
+	status "Waiting for $1"
+
+	while pgrep "$1" >/dev/null 2>/dev/null; do
+		sleep 5
+	done
+}
+
+open_if_exists() {
+	[[ -d "$1" ]] && run open "$1"
+}
+
+# -1: Sanity check the distro
+[[ -f /etc/lsb-release ]] && source /etc/lsb-release
+
+if [[ $DISTRIB_ID != Ubuntu ]]; then
+	echo "This script is only tested on Ubuntu. Aborting." >&2
+	exit 1
+fi
+
+# 0: Initial setup
+status "Configuring APT"
+run sudo sed -Ei sX'^# (deb http://archive\.ubuntu\.com)'X'\1'Xg /etc/apt/sources.list
+run sudo sed -i sX'archive\.ubuntu\.com'X'mirror.internode.on.net/pub/ubuntu'Xg /etc/apt/sources.list
+
+# 1: Add repos
+status "Adding repos"
+DEB_HOST_ARCH=$(dpkg-architecture -qDEB_HOST_ARCH)
+
+# apt-fast
+run curl -fsSL 'https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x1ee2ff37ca8da16b' | gpg --dearmor | sudo tee /usr/share/keyrings/apt-fast.gpg >/dev/null
+run printf 'deb [signed-by=%s] %s %s main\n' /usr/share/keyrings/apt-fast.gpg http://ppa.launchpad.net/apt-fast/stable/ubuntu/ $DISTRIB_CODENAME | sudo tee /etc/apt/sources.list.d/apt-fast.list
+
+# node.js
+run curl -fsSL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | gpg --dearmor | sudo tee /usr/share/keyrings/nodesource.gpg >/dev/null
+run printf 'deb [arch=%s signed-by=%s] %s %s main\n' $DEB_HOST_ARCH /usr/share/keyrings/nodesource.gpg https://deb.nodesource.com/node_16.x $DISTRIB_CODENAME | sudo tee /etc/apt/sources.list.d/nodesource.list
+
+# Docker
+run curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor | sudo tee /usr/share/keyrings/docker-archive-keyring.gpg >/dev/null
+run printf 'deb [arch=%s signed-by=%s] %s %s stable\n' $DEB_HOST_ARCH /usr/share/keyrings/docker-archive-keyring.gpg https://download.docker.com/linux/ubuntu $DISTRIB_CODENAME | sudo tee /etc/apt/sources.list.d/docker.list
+
+# 2: Install stuff
+status "Installing packages"
+export DEBIAN_FRONTEND=noninteractive
+run sudo apt-get update
+run sudo apt-get install -yq apt-fast
+run sudo apt-fast dist-upgrade -yq
+run sudo apt-fast install -yq \
+	build-essential dpkg-dev git fontconfig \
+	zsh zsh-autosuggestions zsh-syntax-highlighting \
+	htop iotop iftop powertop tmux \
+	bat exa fzf \
+	nano imagemagick jq p7zip-full zip unzip zstd openssh-client rsync curl wget aria2 optipng \
+	android-sdk-platform-tools \
+	libimobiledevice-utils usbmuxd libplist-utils \
+	fonts-roboto fonts-jetbrains-mono fonts-noto-color-emoji ttf-mscorefonts-installer \
+	nodejs \
+	docker-ce docker-ce-cli containerd.io
+run sudo apt-fast autoremove -yq
+run sudo apt-fast clean -q
+
+# 3: Install pnpm
+status "Installing pnpm"
+curl -f https://get.pnpm.io/v6.16.js | node - add --global pnpm
+
+# 4: Configure user groups
+status "Adding user to docker group"
+run sudo usermod -aG docker $USER
+
+# 5: Set login shell
+status "Setting shell to zsh"
+run sudo chsh -s $(which zsh) $USER
+
+# 6: Done
+status "Done! Reboot now"

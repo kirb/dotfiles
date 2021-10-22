@@ -14,9 +14,18 @@ alias ipb='ip --color --brief'
 alias du='du --apparent-size'
 # alias rsync='rsync -EX' # TODO: bad idea? not sure…
 alias tmux='tmux -2f ~/.dotfiles/.tmux.conf $TMUX_CC_FLAG'
+alias fzf=fzf-tmux
 
 if [[ $VENDOR == apple ]]; then
 	alias ping='ping --apple-time'
+fi
+
+if has bat; then
+	alias less=bat
+fi
+
+if has exa; then
+	alias l='exa -blah -tmodified'
 fi
 
 # Kinda-sorta functions
@@ -32,8 +41,9 @@ alias plbuddy=/usr/libexec/PlistBuddy
 alias xcselect=xcode-select
 alias xcsel=xcode-select
 alias hop='hopperv4 -e'
-alias n=npm
-alias y=yarn
+alias f=fzf
+alias n=pnpm
+alias y=pnpm
 
 # Cross-platform normalisation
 alias pbcopy=clipcopy
@@ -80,7 +90,6 @@ alias sl=ls
 alias ks=ls
 alias lks=ls
 alias kls=ls
-alias l=ls
 alias s=ls
 alias dc=cd
 alias c=cd
