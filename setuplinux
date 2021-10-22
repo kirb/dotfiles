@@ -79,6 +79,8 @@ fi
 # 2: Install stuff
 status "Installing packages"
 export DEBIAN_FRONTEND=noninteractive
+# Accept the Microsoft TrueType Core Fonts for the Web EULA
+echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | debconf-set-selections
 run $SUDO apt-get update
 run $SUDO apt-get install -yq apt-fast
 run $SUDO apt-fast dist-upgrade -yq
