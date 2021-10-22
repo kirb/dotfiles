@@ -45,7 +45,14 @@ function _add_identities() {
 		fi
 	done
 
-	[[ -n "$not_loaded" ]] && /usr/bin/ssh-add ${^not_loaded}
+	if [[ -n $not_loaded ]]; then
+		if [[ $VENDOR == apple ]]; then
+			export APPLE_SSH_ADD_BEHAVIOR=macos
+			flags=-qAK
+			alias ssh-add="ssh-add -AK"
+		fi
+		/usr/bin/ssh-add $flags ${^not_loaded}
+	fi
 }
 
 # Get the filename to store/lookup the environment from
@@ -54,17 +61,19 @@ _ssh_env_cache="$HOME/.ssh/environment-$SHORT_HOST"
 # test if agent-forwarding is enabled
 zstyle -b :omz:plugins:ssh-agent agent-forwarding _agent_forwarding
 
-if [[ $_agent_forwarding == "yes" && -n "$SSH_AUTH_SOCK" ]]; then
-	# Add a nifty symlink for screen/tmux if agent forwarding
-	[[ -L $SSH_AUTH_SOCK ]] || ln -sf "$SSH_AUTH_SOCK" /tmp/ssh-agent-$USER-screen
-elif [[ -f "$_ssh_env_cache" ]]; then
-	# Source SSH settings, if applicable
-	. $_ssh_env_cache > /dev/null
-	if ! pgrep -U $UID ssh-agent | command grep -q $SSH_AGENT_PID; then
+if [[ $VENDOR != apple ]]; then
+	if [[ $_agent_forwarding == "yes" && -n "$SSH_AUTH_SOCK" ]]; then
+		# Add a nifty symlink for screen/tmux if agent forwarding
+		[[ -L $SSH_AUTH_SOCK ]] || ln -sf "$SSH_AUTH_SOCK" /tmp/ssh-agent-$USER-screen
+	elif [[ -f "$_ssh_env_cache" ]]; then
+		# Source SSH settings, if applicable
+		. $_ssh_env_cache > /dev/null
+		if ! pgrep -U $UID ssh-agent | command grep -q $SSH_AGENT_PID; then
+			_start_agent
+		fi
+	else
 		_start_agent
 	fi
-else
-	_start_agent
 fi
 
 _add_identities
