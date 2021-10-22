@@ -76,13 +76,16 @@ run $SUDO apt-fast install -yq \
 	build-essential dpkg-dev git fontconfig \
 	zsh zsh-autosuggestions zsh-syntax-highlighting \
 	htop iotop iftop powertop tmux \
-	bat exa fzf \
+	bat fzf \
 	nano imagemagick jq p7zip-full zip unzip zstd openssh-client rsync curl wget aria2 optipng \
 	android-sdk-platform-tools \
 	libimobiledevice-utils usbmuxd libplist-utils \
-	fonts-roboto fonts-jetbrains-mono fonts-noto-color-emoji ttf-mscorefonts-installer \
+	fonts-roboto fonts-noto-color-emoji ttf-mscorefonts-installer \
 	nodejs \
 	docker-ce docker-ce-cli containerd.io
+# Extra packages only available later than focal
+[[ $DISTRIB_RELEASE -ge 21.10 ]] && run $SUDO apt-fast install -yq \
+	exa fonts-jetbrains-mono
 run $SUDO apt-fast autoremove -yq
 run $SUDO apt-fast clean -q
 
