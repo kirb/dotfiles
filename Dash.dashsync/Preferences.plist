@@ -1202,8 +1202,10 @@
 	</dict>
 	<key>DHWebViewIsDark</key>
 	<true/>
-	<key>annotationsAreShown</key>
+	<key>actuallyDarkWebView</key>
 	<true/>
+	<key>annotationsAreShown</key>
+	<false/>
 	<key>docsets</key>
 	<dict>
 		<key>keywords</key>
@@ -1519,12 +1521,12 @@
 			<key>http://kapeli.com/feeds/ActionScript.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2020-09-14T11:08:13Z</date>
+				<date>2021-06-08T06:46:24Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/AppleScript.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2020-09-14T11:08:18Z</date>
+				<date>2021-06-08T06:46:24Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/Apple_API_Reference.xml</key>
 			<dict>
@@ -1554,7 +1556,7 @@
 			<key>http://kapeli.com/feeds/WordPress.xml</key>
 			<dict>
 				<key>date</key>
-				<date>2020-09-14T11:08:03Z</date>
+				<date>2021-06-08T06:46:24Z</date>
 			</dict>
 			<key>http://rotemy.com/dash/msdn/msdn.xml</key>
 			<dict>
@@ -1602,6 +1604,13 @@
 		<key>modifiers</key>
 		<integer>2560</integer>
 	</dict>
+	<key>searchUsingSelectedTextKey</key>
+	<dict>
+		<key>keyCode</key>
+		<integer>-1</integer>
+		<key>modifiers</key>
+		<integer>8395520</integer>
+	</dict>
 	<key>shouldRestoreTabs</key>
 	<true/>
 	<key>shouldShowStatusIcon</key>
@@ -1611,7 +1620,7 @@
 	<key>shouldSyncBookmarks</key>
 	<false/>
 	<key>shouldSyncDocsets</key>
-	<true/>
+	<false/>
 	<key>shouldSyncGeneral</key>
 	<true/>
 	<key>shouldSyncView</key>
