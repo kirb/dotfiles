@@ -84,7 +84,7 @@ run $SUDO apt-fast install -yq \
 	nodejs \
 	docker-ce docker-ce-cli containerd.io
 # Extra packages only available later than focal
-[[ $DISTRIB_RELEASE -ge 21.10 ]] && run $SUDO apt-fast install -yq \
+[[ ${DISTRIB_RELEASE%.*} -ge 21 ]] && run $SUDO apt-fast install -yq \
 	exa fonts-jetbrains-mono
 run $SUDO apt-fast autoremove -yq
 run $SUDO apt-fast clean -q
