@@ -31,6 +31,10 @@ wait_for_process() {
 	done
 }
 
+has() {
+	hash "$1" 2>/dev/null
+}
+
 open_if_exists() {
 	[[ -d "$1" ]] && run open "$1"
 }
@@ -55,16 +59,22 @@ status "Adding repos"
 DEB_HOST_ARCH=$(dpkg-architecture -qDEB_HOST_ARCH)
 
 # apt-fast
-run curl -fsSL 'https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x1ee2ff37ca8da16b' | gpg --dearmor | $SUDO tee /usr/share/keyrings/apt-fast.gpg >/dev/null
-run printf 'deb [signed-by=%s] %s %s main\n' /usr/share/keyrings/apt-fast.gpg http://ppa.launchpad.net/apt-fast/stable/ubuntu/ $DISTRIB_CODENAME | $SUDO tee /etc/apt/sources.list.d/apt-fast.list
+if ! has apt-fast; then
+	run curl -fsSL 'https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x1ee2ff37ca8da16b' | gpg --dearmor | $SUDO tee /usr/share/keyrings/apt-fast.gpg >/dev/null
+	run printf 'deb [signed-by=%s] %s %s main\n' /usr/share/keyrings/apt-fast.gpg http://ppa.launchpad.net/apt-fast/stable/ubuntu/ $DISTRIB_CODENAME | $SUDO tee /etc/apt/sources.list.d/apt-fast.list
+fi
 
 # node.js
-run curl -fsSL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | gpg --dearmor | $SUDO tee /usr/share/keyrings/nodesource.gpg >/dev/null
-run printf 'deb [arch=%s signed-by=%s] %s %s main\n' $DEB_HOST_ARCH /usr/share/keyrings/nodesource.gpg https://deb.nodesource.com/node_16.x $DISTRIB_CODENAME | $SUDO tee /etc/apt/sources.list.d/nodesource.list
+if ! has node; then
+	run curl -fsSL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | gpg --dearmor | $SUDO tee /usr/share/keyrings/nodesource.gpg >/dev/null
+	run printf 'deb [arch=%s signed-by=%s] %s %s main\n' $DEB_HOST_ARCH /usr/share/keyrings/nodesource.gpg https://deb.nodesource.com/node_16.x $DISTRIB_CODENAME | $SUDO tee /etc/apt/sources.list.d/nodesource.list
+fi
 
 # Docker
-run curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor | $SUDO tee /usr/share/keyrings/docker-archive-keyring.gpg >/dev/null
-run printf 'deb [arch=%s signed-by=%s] %s %s stable\n' $DEB_HOST_ARCH /usr/share/keyrings/docker-archive-keyring.gpg https://download.docker.com/linux/ubuntu $DISTRIB_CODENAME | $SUDO tee /etc/apt/sources.list.d/docker.list
+if ! has docker; then
+	run curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor | $SUDO tee /usr/share/keyrings/docker-archive-keyring.gpg >/dev/null
+	run printf 'deb [arch=%s signed-by=%s] %s %s stable\n' $DEB_HOST_ARCH /usr/share/keyrings/docker-archive-keyring.gpg https://download.docker.com/linux/ubuntu $DISTRIB_CODENAME | $SUDO tee /etc/apt/sources.list.d/docker.list
+fi
 
 # 2: Install stuff
 status "Installing packages"
@@ -91,7 +101,9 @@ run $SUDO apt-fast clean -q
 
 # 3: Install pnpm
 status "Installing pnpm"
-curl -f https://get.pnpm.io/v6.16.js | node - add --global pnpm
+if ! has pnpm; then
+	curl -f https://get.pnpm.io/v6.16.js | node - add --global pnpm
+fi
 
 # 4: Configure user groups
 status "Adding user to docker group"
