@@ -56,7 +56,7 @@ run $SUDO sed -i sX'archive\.ubuntu\.com'X'mirror.internode.on.net/pub/ubuntu'Xg
 
 # 1: Add repos
 status "Adding repos"
-DEB_HOST_ARCH=$(dpkg-architecture -qDEB_HOST_ARCH)
+DEB_HOST_ARCH=$(dpkg --print-architecture)
 
 # apt-fast
 if ! has apt-fast; then
