@@ -135,6 +135,8 @@
 	rv = revert
 	cp = cherry-pick
 	comp = cherry --abbrev=8 -v
+	# https://docs.gitlab.com/ee/user/project/merge_requests/reviews/#checkout-merge-requests-locally-through-the-head-ref
+	mr = !sh -c 'git fetch $1 merge-requests/$2/head:mr-$1-$2 && git checkout mr-$1-$2' -
 
 	# hub commands
 	pull-request = !hub pull-request
