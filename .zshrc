@@ -110,6 +110,8 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 
 export FZF_DEFAULT_COMMAND=fd
 
+export BAT_THEME=ansi
+
 TIMEFMT='[time] %J  elapsed: %*E, cpu: %P, max mem: %M kB, swapped: %W, signals: %k, msg rx: %r, msg tx: %s'
 
 # Additional stuff
