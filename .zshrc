@@ -20,7 +20,7 @@ safe_source() {
 # path yo
 DOTFILES=${0:h:A}
 [[ $DOTFILES == $HOME ]] && DOTFILES=$HOME/.dotfiles
-PATH=$HOME/.local/bin:$DOTFILES/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+path=($HOME/.local/bin $DOTFILES/bin $path)
 
 export LANG=${LANG:-en_US.UTF-8}
 export LC_CTYPE=${LC_CTYPE:-$LANG}
@@ -29,23 +29,31 @@ PACKAGE_MANAGER=/usr
 if [[ -d /opt/homebrew ]]; then
 	# ARM Homebrew, because, I don’t even know why
 	PACKAGE_MANAGER=/opt/homebrew
-	PATH=/opt/homebrew/bin:$PATH
-	MANPATH=/opt/homebrew/share/man:$MANPATH
+	path=(/opt/homebrew/bin $path)
+	manpath=(/opt/homebrew/share/man $manpath)
 elif [[ -d /usr/local/Homebrew ]]; then
 	# x86 Homebrew, which to be fair, I don’t even know why either
 	PACKAGE_MANAGER=/usr/local
-	MANPATH=/usr/local/share/man:$MANPATH
+	manpath=(/usr/local/share/man $manpath)
 fi
 
 # Da Procursus
 if [[ -d /opt/procursus ]]; then
 	PACKAGE_MANAGER=/opt/procursus
-	PATH=/opt/procursus/bin:$PATH
-	MANPATH=/opt/procursus/share/man:$MANPATH
+	path=(/opt/procursus/bin $path)
+	manpath=(/opt/procursus/share/man $manpath)
 fi
 
+# Ruby
 if has ruby && has gem; then
-	PATH+=:$(ruby -r rubygems -e 'puts Gem.user_dir')/bin
+	path+=($(ruby -r rubygems -e 'puts Gem.user_dir')/bin)
+fi
+
+# pnpm
+if has pnpm; then
+	export PNPM_HOME=$HOME/.local/share/pnpm
+	[[ $VENDOR == apple ]] && PNPM_HOME=$HOME/Library/pnpm
+	path+=($PNPM_HOME)
 fi
 
 # Launch tmux now if in root tty of an SSH session
