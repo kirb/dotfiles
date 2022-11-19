@@ -1,0 +1,23 @@
+#!/usr/bin/env perl
+# Works around a stupid flaw with my keyboard where the "System Control" device seems to repeatedly
+# send the Sleep keycode, or for whatever reason xinput thinks it's repeatedly receiving that
+# keycode. It starts happening at random and usually requires disconnecting and reconnecting the
+# wireless receiver. I run this as a cron every 5 minutes so the device is disabled before it
+# becomes a problem. Only works when using Xorg, but it doesn't seem to be an issue on Wayland.
+
+use File::Basename;
+
+# Find and set $DISPLAY, because we're running from a cron where it won't be set.
+$display = glob("/tmp/.X11-unix/X?");
+exit if !$display;
+$display = basename($display);
+$display =~ s/^X/:/;
+$ENV{DISPLAY} = $display;
+
+# Loop over xinput list to find the System Control device.
+foreach (`xinput list 2>/dev/null`) {
+	next if !/ASUSTeK ROG FALCHION System Control/;
+	($id) = /id=(\d+)/;
+	# Mark it as floating, so it's virtually "detached" from the xinput system.
+	system "xinput --float $id 2>&1 | grep -v Xwayland";
+}
