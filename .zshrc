@@ -89,7 +89,7 @@ DISABLE_AUTO_UPDATE=true
 COMPLETION_WAITING_DOTS=true
 ENABLE_CORRECTION=true
 DEFAULT_USER=adamdemasi
-plugins=(adb safe-paste)
+plugins=(adb command-not-found safe-paste)
 has gpgconf              && plugins+=(gpg-agent)
 [[ $VENDOR == apple ]]   && plugins+=(brew osx pod)
 source $ZSH/oh-my-zsh.sh
@@ -109,6 +109,8 @@ export GOPATH=$PACKAGE_MANAGER/lib/go
 export HOMEBREW_NO_AUTO_UPDATE=1
 
 export FZF_DEFAULT_COMMAND=fd
+
+TIMEFMT='[time] %J  elapsed: %*E, cpu: %P, max mem: %M kB, swapped: %W, signals: %k, msg rx: %r, msg tx: %s'
 
 # Additional stuff
 safe_source $DOTFILES/zsh-aliases
