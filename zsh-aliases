@@ -25,7 +25,7 @@ if has bat; then
 fi
 
 if has exa; then
-	alias l='exa -blah -tmodified'
+	alias ls='exa -blah -tmodified'
 fi
 
 # Kinda-sorta functions
@@ -44,6 +44,8 @@ alias hop='hopperv4 -e'
 alias f=fzf
 alias n=pnpm
 alias y=pnpm
+alias t=task
+alias m=make
 
 # Cross-platform normalisation
 alias pbcopy=clipcopy
@@ -90,6 +92,7 @@ alias sl=ls
 alias ks=ls
 alias lks=ls
 alias kls=ls
+alias l=ls
 alias s=ls
 alias dc=cd
 alias c=cd
