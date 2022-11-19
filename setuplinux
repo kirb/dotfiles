@@ -51,8 +51,9 @@ fi
 
 # 0: Initial setup
 status "Configuring APT"
-run $SUDO sed -Ei sX'^# (deb http://archive\.ubuntu\.com)'X'\1'Xg /etc/apt/sources.list
-run $SUDO sed -i sX'archive\.ubuntu\.com'X'mirror.internode.on.net/pub/ubuntu'Xg /etc/apt/sources.list
+run $SUDO sed -Ei sX'^# (deb http://(.*\.)?archive\.ubuntu\.com)'X'\1'Xg /etc/apt/sources.list
+run $SUDO sed -Ei sX'http://(.*\.)?archive\.ubuntu\.com/ubuntu'X'http://mirror.internode.on.net/pub/ubuntu/ubuntu'Xg /etc/apt/sources.list
+run $SUDO sed -Ei sX'http://(.*\.)?archive\.ubuntu\.com/ubuntu'X'http://mirror.internode.on.net/pub/ubuntu/ubuntu'Xg /etc/apt/sources.list
 
 # 1: Add repos
 status "Adding repos"
@@ -79,8 +80,13 @@ fi
 # 2: Install stuff
 status "Installing packages"
 export DEBIAN_FRONTEND=noninteractive
-# Accept the Microsoft TrueType Core Fonts for the Web EULA
-echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | debconf-set-selections
+# Set debconf defaults
+cat <<EOT | $SUDO debconf-set-selections
+ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true
+apt-fast apt-fast/aptmanager select apt
+apt-fast apt-fast/dlflag select true
+apt-fast apt-fast/maxdownloads select 16
+EOT
 run $SUDO apt-get update
 run $SUDO apt-get install -yq apt-fast
 run $SUDO apt-fast dist-upgrade -yq
@@ -103,8 +109,19 @@ run $SUDO apt-fast clean -q
 
 # 3: Install pnpm
 status "Installing pnpm"
-if ! has pnpm; then
-	curl -f https://get.pnpm.io/v6.16.js | node - add --global pnpm
+run $SUDO npm upgrade -g npm
+if [[ -z $PNPM_HOME ]]; then
+	PNPM_HOME=$HOME/.local/share/pnpm
+	[[ $VENDOR == apple ]] && PNPM_HOME=$HOME/Library/pnpm
+fi
+export PNPM_HOME
+PATH="$PNPM_HOME:$PATH"
+run mkdir -p "$PNPM_HOME"
+
+if has pnpm; then
+	run pnpm install -g pnpm@latest
+else
+	run npx pnpm@latest install -g pnpm@latest
 fi
 
 # 4: Configure user groups
@@ -115,7 +132,11 @@ fi
 
 # 5: Set login shell
 status "Setting shell to zsh"
-run $SUDO chsh -s $(which zsh) $USER
+run $SUDO chsh -s $(command -v zsh) $USER
 
-# 6: Done
+# 6: Clone submodules, because vscode devcontainer doesn't do that automatically
+status "Cloning submodules"
+(cd ~/.dotfiles; run git submodule update --init --recursive)
+
+# 7: Done
 status "Done! Reboot now"
