@@ -45,9 +45,12 @@
 [receive]
 	denyCurrentBranch = updateInstead
 
+[tag]
+	forceSignAnnotated = true
+
 # git mergetool
 [merge]
-	tool = opendiff
+	tool = code
 	# conflictstyle = diff3
 
 # use vscode as diff tool
@@ -61,7 +64,7 @@
 	tool = code
 
 [mergetool "code"]
-	cmd = code -w $MERGED
+	cmd = code -wm $REMOTE $LOCAL $BASE $MERGED
 
 # use the newer git protocol where available
 [protocol]
@@ -126,6 +129,8 @@
 	show = show --patch-with-stat --compact-summary
 	nb = checkout -b
 	rb = rebase
+	rd = commit --amend
+	rda = commit --amend --no-edit
 	rs = reset
 	rv = revert
 	cp = cherry-pick
