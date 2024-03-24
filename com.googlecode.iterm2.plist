@@ -2,6 +2,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AI Prompt</key>
+	<string>#!/usr/bin/\(shell)
+# Note this command runs on systems like this: \(uname)
+# The next line will do this: \(ai.prompt)
+</string>
 	<key>AddNewTabAtEndOfTabs</key>
 	<false/>
 	<key>AdjustWindowForFontSizeChange</key>
@@ -17,6 +22,8 @@
 	<key>AnimateDimming</key>
 	<false/>
 	<key>AutoHideTmuxClientSession</key>
+	<true/>
+	<key>BracketedPasteMode</key>
 	<true/>
 	<key>CheckTestRelease</key>
 	<true/>
@@ -36,6 +43,10 @@
 	<real>24</real>
 	<key>Control</key>
 	<integer>1</integer>
+	<key>ConvertDosNewlines</key>
+	<false/>
+	<key>ConvertItalicsToReverseVideoForTmux</key>
+	<false/>
 	<key>ConvertTabDragToWindowDragForSolitaryTabInCompactOrMinimalTheme</key>
 	<false/>
 	<key>CopyLastNewline</key>
@@ -972,6 +983,10 @@
 	<true/>
 	<key>DisablePotentiallyInsecureEscapeSequences</key>
 	<false/>
+	<key>DisableTopRightIndicators</key>
+	<true/>
+	<key>DisableTransparencyForKeyWindow</key>
+	<false/>
 	<key>DisableWindowShadowWhenTransparencyOnMojave</key>
 	<false/>
 	<key>DisableWindowSizeSnap</key>
@@ -980,12 +995,18 @@
 	<false/>
 	<key>EliminateCloseButtons</key>
 	<false/>
+	<key>EnableAPIServer</key>
+	<false/>
 	<key>EnableDivisionView</key>
 	<true/>
 	<key>EnableProxyIcon</key>
 	<true/>
 	<key>EnableRendezvous</key>
 	<false/>
+	<key>EscapeShellCharsWithBackslash</key>
+	<false/>
+	<key>FakeNotchHeight</key>
+	<real>0.0</real>
 	<key>FocusFollowsMouse</key>
 	<false/>
 	<key>FontChangeAffectsBroadcastingSessions</key>
@@ -1107,12 +1128,16 @@
 			</dict>
 			<key>Ansi 0 Color (Light)</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<string>0</string>
+				<real>1</real>
+				<key>Color Space</key>
+				<string>P3</string>
 				<key>Green Component</key>
-				<string>0</string>
+				<real>1</real>
 				<key>Red Component</key>
-				<string>0</string>
+				<real>0.99999994039535522</real>
 			</dict>
 			<key>Ansi 1 Color</key>
 			<dict>
@@ -1352,12 +1377,16 @@
 			</dict>
 			<key>Ansi 15 Color (Light)</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<string>0.9254902</string>
+				<real>0.40000000000000002</real>
+				<key>Color Space</key>
+				<string>P3</string>
 				<key>Green Component</key>
-				<string>0.9333333</string>
+				<real>0.41176470588235292</real>
 				<key>Red Component</key>
-				<string>0.9333333</string>
+				<real>0.40784313725490196</real>
 			</dict>
 			<key>Ansi 2 Color</key>
 			<dict>
@@ -1562,12 +1591,16 @@
 			</dict>
 			<key>Ansi 7 Color (Light)</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<string>0.8117647</string>
+				<real>0.0</real>
+				<key>Color Space</key>
+				<string>P3</string>
 				<key>Green Component</key>
-				<string>0.8431373</string>
+				<real>0.0</real>
 				<key>Red Component</key>
-				<string>0.827451</string>
+				<real>0.0</real>
 			</dict>
 			<key>Ansi 8 Color</key>
 			<dict>
@@ -1597,12 +1630,16 @@
 			</dict>
 			<key>Ansi 8 Color (Light)</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<string>0.3254902</string>
+				<real>0.40000000000000002</real>
+				<key>Color Space</key>
+				<string>P3</string>
 				<key>Green Component</key>
-				<string>0.3411765</string>
+				<real>0.41176470588235292</real>
 				<key>Red Component</key>
-				<string>0.3333333</string>
+				<real>0.40784313725490196</real>
 			</dict>
 			<key>Ansi 9 Color</key>
 			<dict>
@@ -1728,7 +1765,7 @@
 			<key>Blinking Cursor</key>
 			<true/>
 			<key>Blur</key>
-			<true/>
+			<false/>
 			<key>Blur Radius</key>
 			<real>30</real>
 			<key>Bold Color</key>
@@ -1768,6 +1805,8 @@
 			</dict>
 			<key>Bound Hosts</key>
 			<array/>
+			<key>Brighten Bold Text</key>
+			<true/>
 			<key>Brighten Bold Text (Dark)</key>
 			<true/>
 			<key>Brighten Bold Text (Light)</key>
@@ -2936,7 +2975,7 @@
 			<key>Title Components</key>
 			<integer>1</integer>
 			<key>Transparency</key>
-			<real>0.073284471649484539</real>
+			<real>0.051564613493456167</real>
 			<key>Triggers</key>
 			<array/>
 			<key>Unicode Normalization</key>
@@ -2969,11 +3008,21 @@
 			<true/>
 			<key>Use Non-ASCII Font</key>
 			<false/>
-			<key>Use Separate Colors for Light and Dark Mode</key>
+			<key>Use Selected Text Color</key>
 			<true/>
+			<key>Use Selected Text Color (Dark)</key>
+			<true/>
+			<key>Use Selected Text Color (Light)</key>
+			<true/>
+			<key>Use Separate Colors for Light and Dark Mode</key>
+			<false/>
+			<key>Use Tab Color</key>
+			<false/>
 			<key>Use Tab Color (Dark)</key>
 			<false/>
 			<key>Use Tab Color (Light)</key>
+			<false/>
+			<key>Use Underline Color</key>
 			<false/>
 			<key>Use Underline Color (Dark)</key>
 			<false/>
@@ -3004,6 +3053,16 @@
 	<key>PassOnControlClick</key>
 	<false/>
 	<key>PasteFromClipboard</key>
+	<false/>
+	<key>PasteSpecialChunkDelay</key>
+	<real>0.099999996802456373</real>
+	<key>PasteSpecialChunkSize</key>
+	<integer>1024</integer>
+	<key>PasteSpecialRegex</key>
+	<string></string>
+	<key>PasteSpecialSubstitution</key>
+	<string></string>
+	<key>PasteSpecialUseRegexSubstitution</key>
 	<false/>
 	<key>PinchToChangeFontSizeDisabled</key>
 	<true/>
@@ -3062,7 +3121,7 @@
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>SearchCommand</key>
-	<string>https://encrypted.google.com/search?q=%@</string>
+	<string>https://duckduckgo.com/?q=%@</string>
 	<key>Selection Respects Soft Boundaries</key>
 	<true/>
 	<key>SensitiveScrollWheel</key>
@@ -3086,7 +3145,7 @@
 	<key>SoundForEsc</key>
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
-	<real>0.15968900820463322</real>
+	<real>0.1032971902495449</real>
 	<key>StatusBarPosition</key>
 	<integer>1</integer>
 	<key>StretchTabsToFillBar</key>
@@ -3113,6 +3172,12 @@
 	<false/>
 	<key>TmuxDashboardLimit</key>
 	<integer>10</integer>
+	<key>TmuxIncludeClientNameInWindowTitle</key>
+	<true/>
+	<key>TmuxPauseModeAgeLimit</key>
+	<integer>5</integer>
+	<key>TmuxUnpauseAutomatically</key>
+	<true/>
 	<key>TmuxUsesDedicatedProfile</key>
 	<false/>
 	<key>ToolbeltTools</key>
@@ -3124,20 +3189,6 @@
 	<true/>
 	<key>URLHandlersByGuid</key>
 	<dict>
-		<key>gopher</key>
-		<string>6EE2510D-F7CA-4F05-AEE5-F7F9A420683A</string>
-		<key>news</key>
-		<string>6EE2510D-F7CA-4F05-AEE5-F7F9A420683A</string>
-		<key>nntp</key>
-		<string>6EE2510D-F7CA-4F05-AEE5-F7F9A420683A</string>
-		<key>ssh</key>
-		<string>6EE2510D-F7CA-4F05-AEE5-F7F9A420683A</string>
-		<key>telnet</key>
-		<string>6EE2510D-F7CA-4F05-AEE5-F7F9A420683A</string>
-		<key>wais</key>
-		<string>6EE2510D-F7CA-4F05-AEE5-F7F9A420683A</string>
-		<key>whois</key>
-		<string>6EE2510D-F7CA-4F05-AEE5-F7F9A420683A</string>
 		<key>x-man-page</key>
 		<string>6EE2510D-F7CA-4F05-AEE5-F7F9A420683A</string>
 	</dict>
@@ -3154,7 +3205,7 @@
 	<key>UseLionStyleFullscreen</key>
 	<true/>
 	<key>UseMetal</key>
-	<true/>
+	<false/>
 	<key>UseModernScrollWheelAccumulator</key>
 	<true/>
 	<key>UseSystemCursorWhenPossible</key>
