@@ -1,0 +1,4 @@
+#!/bin/bash
+if ! grep -q pam_tid.so /etc/pam.d/sudo; then
+	printf 'auth sufficient pam_tid.so\n%s\n' "$(< /etc/pam.d/sudo)" > /etc/pam.d/sudo
+fi
