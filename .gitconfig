@@ -53,9 +53,16 @@
 	tool = code
 	# conflictstyle = diff3
 
+[init]
+	defaultBranch = main
+
 # use vscode as diff tool
 [diff]
 	tool = code
+	renameLimit = 10000
+
+[blame]
+	ignoreRevsFile = .git-blame-ignore-revs
 
 [difftool "code"]
 	cmd = code -wd $LOCAL $REMOTE
@@ -181,7 +188,7 @@
 	rst = reset
 	dff = diff
 	dif = diff
-	
+
 # filtery stuff. i don’t have a clue what any of this does
 [filter "media"]
 	clean = git media clean %f
