@@ -13,6 +13,7 @@ alias ip='ip --color'
 alias ipb='ip --color --brief'
 alias du='du --apparent-size'
 # alias rsync='rsync -EX' # TODO: bad idea? not sure…
+alias rsync='rsync --info=progress2'
 alias tmux='tmux -2f ~/.dotfiles/.tmux.conf $TMUX_CC_FLAG'
 alias fzf=fzf-tmux
 
@@ -24,8 +25,13 @@ if has bat; then
 	alias less=bat
 fi
 
-if has exa; then
-	alias ls='exa -blah -tmodified'
+if has eza; then
+	alias eza='eza -blahrs modified'
+	alias ls=eza
+fi
+
+if has fdfind; then
+	alias fd=fdfind
 fi
 
 # Kinda-sorta functions
@@ -41,7 +47,7 @@ alias plbuddy=/usr/libexec/PlistBuddy
 alias xcselect=xcode-select
 alias xcsel=xcode-select
 alias hop='hopperv4 -e'
-alias f=fzf
+alias k=kubectl
 alias n=pnpm
 alias y=pnpm
 alias t=task
