@@ -61,7 +61,7 @@ _ssh_env_cache="$HOME/.ssh/environment-$SHORT_HOST"
 # test if agent-forwarding is enabled
 zstyle -b :omz:plugins:ssh-agent agent-forwarding _agent_forwarding
 
-if [[ $VENDOR != apple ]]; then
+if [[ -z $SSH_AUTH_SOCK ]] && [[ $VENDOR != apple ]]; then
 	if [[ $_agent_forwarding == "yes" && -n "$SSH_AUTH_SOCK" ]]; then
 		# Add a nifty symlink for screen/tmux if agent forwarding
 		[[ -L $SSH_AUTH_SOCK ]] || ln -sf "$SSH_AUTH_SOCK" /tmp/ssh-agent-$USER-screen
@@ -74,9 +74,9 @@ if [[ $VENDOR != apple ]]; then
 	else
 		_start_agent
 	fi
-fi
 
-_add_identities
+	_add_identities
+fi
 
 # tidy up after ourselves
 unset _agent_forwarding _ssh_env_cache
