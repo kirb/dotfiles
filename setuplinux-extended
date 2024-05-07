@@ -1,0 +1,105 @@
+#!/bin/bash
+
+set -e
+
+# Set up nemo
+# https://askubuntu.com/a/1446372
+sudo apt-fast install -y nemo
+# Set as default file manager
+xdg-mime default nemo.desktop inode/directory application/x-gnome-saved-search
+# Make DesktopIconsNG use nemo
+gsettings set org.gnome.shell.extensions.ding use-nemo true
+
+# Install snaps
+for i in kubectl task code webstorm datagrip rider; do
+	sudo snap install --classic $i
+done
+
+# Install flatpaks
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak install -y --noninteractive flathub \
+	com.discordapp.Discord \
+	com.github.huluti.Curtail \
+	com.github.tchx84.Flatseal \
+	com.google.Chrome \
+	com.mongodb.Compass \
+	com.obsproject.Studio \
+	com.obsproject.Studio.Plugin.BackgroundRemoval \
+	com.obsproject.Studio.Plugin.DroidCam \
+	com.obsproject.Studio.Plugin.MoveTransition \
+	com.obsproject.Studio.Plugin.NDI \
+	com.obsproject.Studio.Plugin.OBSVkCapture \
+	com.obsproject.Studio.Plugin.RewardsTheater \
+	com.obsproject.Studio.Plugin.SceneSwitcher \
+	com.obsproject.Studio.Plugin.TransitionTable \
+	com.obsproject.Studio.Plugin.waveform \
+	com.parsecgaming.parsec \
+	com.prusa3d.PrusaSlicer \
+	com.spotify.Client \
+	com.usebottles.bottles \
+	com.yubico.yubioath \
+	fr.handbrake.ghb \
+	io.github.Figma_Linux.figma_linux \
+	org.audacityteam.Audacity \
+	org.audacityteam.Audacity.Codecs \
+	org.gimp.GIMP \
+	org.gnome.baobab \
+	org.gnome.Calculator \
+	org.gnome.Cheese \
+	org.gnome.clocks \
+	org.gnome.Connections \
+	org.gnome.DejaDup \
+	org.gnome.Evince \
+	org.gnome.Firmware \
+	org.gnome.font-viewer \
+	org.gnome.Logs \
+	org.gnome.PowerStats \
+	org.gnome.SimpleScan \
+	org.gnome.Weather \
+	org.inkscape.Inkscape \
+	org.libreoffice.LibreOffice \
+	org.mozilla.firefox \
+	org.mozilla.Thunderbird \
+	org.openscad.OpenSCAD \
+	org.remmina.Remmina \
+	org.videolan.VLC \
+	org.zealdocs.Zeal \
+	xyz.armcord.ArmCord
+
+# Remove packages we replaced with flatpaks
+if snap list firefox >/dev/null 2>&1; then
+	snap remove firefox
+fi
+
+uninstalls=(
+	aisleriot
+	baobab
+	cheese
+	deja-dup
+	evince
+	gnome-calendar
+	gnome-calculator
+	gnome-clocks
+	gnome-mahjongg
+	gnome-mines
+	gnome-sudoku
+	libreoffice
+	shotwell
+	simple-scan
+	thunderbird
+	totem
+	transmission-gtk
+)
+
+selections="$(dpkg --get-selections | grep -E '	install$' | cut -f1)"
+
+for i in "${uninstalls[@]}"; do
+	if [[ $selections == *$i* ]]; then
+		sudo apt remove -y $i
+	fi
+done
+
+# Set up default apps
+export XDG_DATA_DIRS=$HOME/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:$XDG_DATA_DIRS
+xdg-settings set default-web-browser org.mozilla.firefox.desktop
+xdg-settings set default-url-scheme-handler mailto org.mozilla.Thunderbird.desktop
