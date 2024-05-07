@@ -61,20 +61,26 @@ DEB_HOST_ARCH=$(dpkg --print-architecture)
 
 # apt-fast
 if ! has apt-fast; then
-	run curl -fsSL 'https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x1ee2ff37ca8da16b' | gpg --dearmor | $SUDO tee /usr/share/keyrings/apt-fast.gpg >/dev/null
-	run printf 'deb [signed-by=%s] %s %s main\n' /usr/share/keyrings/apt-fast.gpg http://ppa.launchpad.net/apt-fast/stable/ubuntu/ $DISTRIB_CODENAME | $SUDO tee /etc/apt/sources.list.d/apt-fast.list
+	run curl -fsSL 'https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x1ee2ff37ca8da16b' | $SUDO gpg --dearmor -o /usr/share/keyrings/apt-fast.gpg >/dev/null
+	run printf 'deb [arch=%s signed-by=%s] %s %s main\n' $DEB_HOST_ARCH /usr/share/keyrings/apt-fast.gpg http://ppa.launchpad.net/apt-fast/stable/ubuntu/ $DISTRIB_CODENAME | $SUDO tee /etc/apt/sources.list.d/apt-fast.list
 fi
 
 # node.js
 if ! has node; then
-	run curl -fsSL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | gpg --dearmor | $SUDO tee /usr/share/keyrings/nodesource.gpg >/dev/null
-	run printf 'deb [arch=%s signed-by=%s] %s %s main\n' $DEB_HOST_ARCH /usr/share/keyrings/nodesource.gpg https://deb.nodesource.com/node_16.x $DISTRIB_CODENAME | $SUDO tee /etc/apt/sources.list.d/nodesource.list
+	run curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | $SUDO gpg --dearmor -o /usr/share/keyrings/nodesource.gpg
+	run printf 'deb [arch=%s signed-by=%s] %s %s main\n' $DEB_HOST_ARCH /usr/share/keyrings/nodesource.gpg https://deb.nodesource.com/node_20.x $DISTRIB_CODENAME | $SUDO tee /etc/apt/sources.list.d/nodesource.list
 fi
 
 # Docker
 if ! has docker; then
-	run curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor | $SUDO tee /usr/share/keyrings/docker-archive-keyring.gpg >/dev/null
+	run curl -fsSL https://download.docker.com/linux/ubuntu/gpg | $SUDO gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 	run printf 'deb [arch=%s signed-by=%s] %s %s stable\n' $DEB_HOST_ARCH /usr/share/keyrings/docker-archive-keyring.gpg https://download.docker.com/linux/ubuntu $DISTRIB_CODENAME | $SUDO tee /etc/apt/sources.list.d/docker.list
+fi
+
+# eza
+if ! has eza; then
+	run curl -fsSL https://raw.githubusercontent.com/eza-community/eza/main/deb.asc | $SUDO gpg --dearmor -o /etc/apt/keyrings/gierens.gpg
+	run printf "deb [arch=%s signed-by=%s] %s stable main\n" $DEB_HOST_ARCH /etc/apt/keyrings/gierens.gpg http://deb.gierens.de/ | $SUDO tee /etc/apt/sources.list.d/gierens.list
 fi
 
 # 2: Install stuff
@@ -94,8 +100,8 @@ run $SUDO apt-fast install -yq \
 	build-essential dpkg-dev git fontconfig \
 	zsh zsh-autosuggestions zsh-syntax-highlighting \
 	htop iotop iftop powertop tmux \
-	bat fzf \
-	nano imagemagick jq p7zip-full zip unzip zstd openssh-client rsync curl wget aria2 optipng \
+	bat eza fzf \
+	nano imagemagick jq p7zip-full zip unzip zstd openssh-client rsync curl wget aria2 optipng pv \
 	android-sdk-platform-tools \
 	libimobiledevice-utils usbmuxd libplist-utils \
 	fonts-roboto fonts-noto-color-emoji ttf-mscorefonts-installer \
@@ -103,7 +109,7 @@ run $SUDO apt-fast install -yq \
 	docker-ce docker-ce-cli containerd.io
 # Extra packages only available later than focal
 [[ ${DISTRIB_RELEASE%.*} -ge 21 ]] && run $SUDO apt-fast install -yq \
-	exa fonts-jetbrains-mono
+	fonts-jetbrains-mono fonts-inter fonts-inter-variable
 run $SUDO apt-fast autoremove -yq
 run $SUDO apt-fast clean -q
 
