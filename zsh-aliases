@@ -23,6 +23,9 @@ fi
 
 if has bat; then
 	alias less=bat
+elif has batcat; then
+	alias bat=batcat
+	alias less=batcat
 fi
 
 if has eza; then
