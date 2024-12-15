@@ -27,6 +27,8 @@
 	<true/>
 	<key>CheckTestRelease</key>
 	<true/>
+	<key>ClickToSelectCommand</key>
+	<false/>
 	<key>ClosingHotkeySwitchesSpaces</key>
 	<false/>
 	<key>ClosingTmuxTabKillsTmuxWindows</key>
@@ -1081,7 +1083,7 @@
 			<key>ASCII Anti Aliased</key>
 			<true/>
 			<key>ASCII Ligatures</key>
-			<false/>
+			<true/>
 			<key>AWDS Pane Directory</key>
 			<string></string>
 			<key>AWDS Pane Option</key>
@@ -1818,7 +1820,7 @@
 			<key>Columns</key>
 			<integer>85</integer>
 			<key>Command</key>
-			<string>/usr/bin/login -f kirb</string>
+			<string>/bin/zsh</string>
 			<key>Cursor Boost</key>
 			<real>0.0</real>
 			<key>Cursor Boost (Dark)</key>
@@ -2966,6 +2968,19 @@
 			</dict>
 			<key>Sync Title</key>
 			<false/>
+			<key>Tab Color</key>
+			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
+				<key>Blue Component</key>
+				<real>0.0</real>
+				<key>Color Space</key>
+				<string>P3</string>
+				<key>Green Component</key>
+				<real>0.0</real>
+				<key>Red Component</key>
+				<real>0.0</real>
+			</dict>
 			<key>Tags</key>
 			<array/>
 			<key>Terminal Type</key>
@@ -3038,6 +3053,8 @@
 			<string>/Users/kirb</string>
 		</dict>
 	</array>
+	<key>NumberOfLinesForAccessibility</key>
+	<integer>0</integer>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
 	<key>OpenArrangementAtStartup</key>
@@ -3114,6 +3131,8 @@
 	<false/>
 	<key>QuitWhenAllWindowsClosed</key>
 	<false/>
+	<key>RemapModifiersWithoutEventTap</key>
+	<true/>
 	<key>RightCommand</key>
 	<integer>8</integer>
 	<key>RightOption</key>
@@ -3121,7 +3140,7 @@
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>SearchCommand</key>
-	<string>https://duckduckgo.com/?q=%@</string>
+	<string>https://encrypted.google.com/search?q=%@</string>
 	<key>Selection Respects Soft Boundaries</key>
 	<true/>
 	<key>SensitiveScrollWheel</key>
@@ -3145,7 +3164,7 @@
 	<key>SoundForEsc</key>
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
-	<real>0.1032971902495449</real>
+	<real>0.050477472694174755</real>
 	<key>StatusBarPosition</key>
 	<integer>1</integer>
 	<key>StretchTabsToFillBar</key>
@@ -3214,6 +3233,8 @@
 	<false/>
 	<key>VisualIndicatorForEsc</key>
 	<false/>
+	<key>WarnAboutSecureKeyboardInputWithOpenCommand</key>
+	<false/>
 	<key>WebKitDefaultFontSize</key>
 	<integer>11</integer>
 	<key>WebKitStandardFont</key>
@@ -3226,8 +3247,10 @@
 	<integer>0</integer>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
+	<key>disableMetalInLowPowerMode</key>
+	<false/>
 	<key>disableMetalWhenUnplugged</key>
-	<true/>
+	<false/>
 	<key>findIgnoreCase_iTerm</key>
 	<true/>
 	<key>findMode_iTerm</key>
