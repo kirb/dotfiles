@@ -19,3 +19,6 @@
 [submodule "stuff/powerlevel10k"]
 	path = stuff/powerlevel10k
 	url = https://github.com/kirb/powerlevel10k.git
+[submodule "stuff/nanorc"]
+	path = stuff/nanorc
+	url = https://github.com/scopatz/nanorc.git

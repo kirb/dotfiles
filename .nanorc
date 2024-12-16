@@ -4,7 +4,6 @@ set historylog
 unset nowrap
 set regexp
 set smarthome
-set suspend
 set tabsize 2
 
-include "/usr/local/share/nano/*.nanorc"
+#include "~/.dotfiles/stuff/nanorc/*.nanorc"
