@@ -16,6 +16,7 @@ alias du='du --apparent-size'
 alias rsync='rsync --info=progress2'
 alias tmux='tmux -2f ~/.dotfiles/.tmux.conf $TMUX_CC_FLAG'
 alias fzf=fzf-tmux
+alias curl='curl --remote-time --compressed'
 
 if [[ $VENDOR == apple ]]; then
 	alias ping='ping --apple-time'
@@ -29,12 +30,23 @@ elif has batcat; then
 fi
 
 if has eza; then
-	alias eza='eza -blahrs modified'
+	_eza_args=('-blarghMs new --hyperlink --git')
+
+	if [[ $TERM_PROGRAM == ghostty ]]; then
+		_eza_args+=('--icons')
+	fi
+
+	alias eza="eza $_eza_args"
 	alias ls=eza
+	alias lx='eza -@'
+	alias tree='eza -T'
+	unset _eza_args
 fi
 
 if has fdfind; then
-	alias fd=fdfind
+	alias fd='fdfind -g'
+else
+	alias fd='fd -g'
 fi
 
 # Kinda-sorta functions
@@ -49,12 +61,14 @@ alias plistbuddy=/usr/libexec/PlistBuddy
 alias plbuddy=/usr/libexec/PlistBuddy
 alias xcselect=xcode-select
 alias xcsel=xcode-select
+alias neofetch=fastfetch
 alias hop='hopperv4 -e'
 alias k=kubectl
 alias n=pnpm
 alias y=pnpm
 alias t=task
 alias m=make
+alias k=kubectl
 
 # Cross-platform normalisation
 alias pbcopy=clipcopy
@@ -74,20 +88,14 @@ alias denicify='$THEOS/bin/denicify.pl'
 
 # Apps
 if [[ $VENDOR == apple ]]; then
-	alias iterm='open -b com.googlecode.iterm2'
-	alias it=iterm
-	alias it2=iterm
 	alias pxm='open -b com.pixelmatorteam.pixelmator.x'
-	alias psd='open -b com.adobe.Photoshop'
 	alias vlc='open -b org.videolan.vlc'
 	alias io='open -b net.pornel.ImageOptim'
-fi
+	alias tower='open -b com.fournova.Tower3'
 
-# Apple Silicon
-if [[ $VENDOR == apple && $MACHTYPE == aarch64 && $CPUTYPE == arm64 ]]; then
-	alias x86='arch -x86_64'
-	alias sudox86='sudo arch -x86_64'
-	alias xy='arch -x86_64 yarn'
+	if [[ -d /Applications/Tailscale.app ]] && ! has tailscale; then
+		alias tailscale=/Applications/Tailscale.app/Contents/MacOS/Tailscale
+	fi
 fi
 
 # Typos
