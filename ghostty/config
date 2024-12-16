@@ -1,0 +1,55 @@
+font-family = JetBrains Mono
+font-size = 11
+adjust-cell-height = 4
+foreground = feffff
+background = 010101
+selection-foreground = fefefe
+selection-background = 565656
+cursor-color = 55b97e
+cursor-style = bar
+cursor-text = fefefe
+mouse-scroll-multiplier = 1
+mouse-hide-while-typing = true
+background-opacity = 0.96
+unfocused-split-opacity = 0.94
+keybind = alt+left=esc:b
+keybind = alt+right=esc:f
+keybind = ctrl+left=esc:b
+keybind = ctrl+right=esc:f
+window-padding-x = 5
+window-padding-y = 0
+window-theme = dark
+window-colorspace = display-p3
+window-width = 85
+window-height = 25
+window-step-resize = true
+copy-on-select = true
+shell-integration = zsh
+shell-integration-features = true
+macos-titlebar-style = tabs
+auto-update = download
+
+# black
+palette =  0=#000000
+palette =  8=#666666
+# red
+palette =  1=#cd3131
+palette =  9=#f14c4c
+# green
+palette =  2=#0dbc79
+palette = 10=#23d18b
+# yellow
+palette =  3=#e5e510
+palette = 11=#f5f543
+# blue
+palette =  4=#2472c8
+palette = 12=#3b8eea
+# magenta
+palette =  5=#bc3fbc
+palette = 13=#d670d6
+# cyan
+palette =  6=#11a8cd
+palette = 14=#29b8db
+# white
+palette =  7=#e5e5e5
+palette = 15=#e5e5e5
