@@ -49,12 +49,6 @@ fi
 
 [[ $UID != 0 ]] && SUDO=sudo
 
-# 0: Initial setup
-status "Configuring APT"
-run $SUDO sed -Ei sX'^# (deb http://(.*\.)?archive\.ubuntu\.com)'X'\1'Xg /etc/apt/sources.list
-run $SUDO sed -Ei sX'http://(.*\.)?archive\.ubuntu\.com/ubuntu'X'http://mirror.internode.on.net/pub/ubuntu/ubuntu'Xg /etc/apt/sources.list
-run $SUDO sed -Ei sX'http://(.*\.)?archive\.ubuntu\.com/ubuntu'X'http://mirror.internode.on.net/pub/ubuntu/ubuntu'Xg /etc/apt/sources.list
-
 # 1: Add repos
 status "Adding repos"
 DEB_HOST_ARCH=$(dpkg --print-architecture)
@@ -88,7 +82,6 @@ status "Installing packages"
 export DEBIAN_FRONTEND=noninteractive
 # Set debconf defaults
 cat <<EOT | $SUDO debconf-set-selections
-ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true
 apt-fast apt-fast/aptmanager select apt
 apt-fast apt-fast/dlflag select true
 apt-fast apt-fast/maxdownloads select 16
@@ -104,7 +97,7 @@ run $SUDO apt-fast install -yq \
 	nano imagemagick jq p7zip-full zip unzip zstd openssh-client rsync curl wget aria2 optipng pv \
 	android-sdk-platform-tools \
 	libimobiledevice-utils usbmuxd libplist-utils \
-	fonts-roboto fonts-noto-color-emoji ttf-mscorefonts-installer \
+	fonts-roboto fonts-noto-color-emoji \
 	nodejs \
 	docker-ce docker-ce-cli containerd.io
 # Extra packages only available later than focal
