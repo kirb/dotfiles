@@ -8,7 +8,7 @@
 
 # Important functions
 has() {
-	[[ $+commands[$1] == 1 ]]
+	(( $+commands[$1] ))
 }
 
 safe_source() {
@@ -20,7 +20,7 @@ safe_source() {
 # path yo
 DOTFILES=${0:h:A}
 [[ $DOTFILES == $HOME ]] && DOTFILES=$HOME/.dotfiles
-path=($HOME/.local/bin $DOTFILES/bin $path)
+path=($HOME/.local/bin $DOTFILES/bin $path /sbin /usr/local/bin /usr/sbin /usr/local/sbin)
 
 export LANG=${LANG:-en_US.UTF-8}
 export LC_CTYPE=${LC_CTYPE:-$LANG}
@@ -31,10 +31,6 @@ if [[ -d /opt/homebrew ]]; then
 	PACKAGE_MANAGER=/opt/homebrew
 	path=(/opt/homebrew/bin $path)
 	manpath=(/opt/homebrew/share/man $manpath)
-elif [[ -d /usr/local/Homebrew ]]; then
-	# x86 Homebrew, which to be fair, I don’t even know why either
-	PACKAGE_MANAGER=/usr/local
-	manpath=(/usr/local/share/man $manpath)
 fi
 
 # Da Procursus
@@ -56,8 +52,20 @@ if has pnpm; then
 	path+=($PNPM_HOME)
 fi
 
+# krew
+if [[ -d ~/.krew ]]; then
+	export KREW_ROOT=$HOME/.krew
+	path+=($KREW_ROOT/bin)
+fi
+
+# Fix ghostty terminfo (for now)
+if [[ $TERM == xterm-ghostty && ! -d $TERMINFO ]]; then
+	TERM=xterm-256color
+	export TERM_PROGRAM=ghostty LC_TERMINAL=ghostty
+fi
+
 # Launch tmux now if in root tty of an SSH session
-if [[ ! -z $SSH_CLIENT && -z $TMUX ]] && has tmux; then
+if [[ ! -z $SSH_CLIENT && -z $TMUX && -z $VSCODE_SHELL_INTEGRATION ]] && has tmux; then
 	[[ $LC_TERMINAL == iTerm2 ]] && TMUX_CC_FLAG=-CC
 	tmux -2f ~/.dotfiles/.tmux.conf $TMUX_CC_FLAG attach
 fi
@@ -73,7 +81,7 @@ fi
 # Do this before we source instant prompt, because it might interactively prompt for passphrase
 ZSH=$DOTFILES/stuff/oh-my-zsh
 ZSH_CUSTOM=$DOTFILES/oh-my-zsh/custom
-[[ -z $NOT_ACTUALLY_INTERACTIVE ]] && source $ZSH_CUSTOM/plugins/ssh-agent/ssh-agent.plugin.zsh
+[[ -z $NOT_ACTUALLY_INTERACTIVE && $VENDOR != apple ]] && source $ZSH_CUSTOM/plugins/ssh-agent/ssh-agent.plugin.zsh
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -89,22 +97,29 @@ DISABLE_AUTO_UPDATE=true
 COMPLETION_WAITING_DOTS=true
 ENABLE_CORRECTION=true
 DEFAULT_USER=adamdemasi
-plugins=(adb command-not-found safe-paste)
-has gpgconf              && plugins+=(gpg-agent)
-[[ $VENDOR == apple ]]   && plugins+=(brew osx pod)
+plugins=(command-not-found git gitfast safe-paste zsh-interactive-cd)
+has bundler && plugins+=(bundler)
+has gpgconf && plugins+=(gpg-agent)
+has hub     && plugins+=(github)
+has pip     && plugins+=(pip)
+has repo    && plugins+=(repo)
+has ripgrep && plugins+=(ripgrep)
+has swift   && plugins+=(swiftpm)
+has ufw     && plugins+=(ufw)
+[[ $VENDOR == apple ]] && plugins+=(brew osx pod)
 source $ZSH/oh-my-zsh.sh
 
 # Exports
-export PROJ=~/Developer
-export THEOS=~/theos
-export THEOS_DEVICE_IP=local
-
 export EDITOR='code -wr'
 [[ ! -z $SSH_CLIENT ]] && export EDITOR=nano
 
+export THEOS=~/theos
+export THEOS_DEVICE_IP=local
+
 export PERL_MB_OPT="--install_base \"$HOME/.perl5\""
 export PERL_MM_OPT="INSTALL_BASE=$HOME/.perl5"
-export GOPATH=$PACKAGE_MANAGER/lib/go
+
+export GOPATH=$HOME/go
 
 export HOMEBREW_NO_AUTO_UPDATE=1
 
