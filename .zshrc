@@ -106,7 +106,7 @@ has repo    && plugins+=(repo)
 has ripgrep && plugins+=(ripgrep)
 has swift   && plugins+=(swiftpm)
 has ufw     && plugins+=(ufw)
-[[ $VENDOR == apple ]] && plugins+=(brew osx pod)
+[[ $VENDOR == apple ]] && plugins+=(brew macos pod)
 source $ZSH/oh-my-zsh.sh
 
 # Exports
