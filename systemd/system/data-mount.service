@@ -1,0 +1,10 @@
+[Unit]
+Description=Mount /data for WSL
+
+[Service]
+Type=oneshot
+ExecStart=/home/adamdemasi/.dotfiles/bin/wsl-mount-data
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

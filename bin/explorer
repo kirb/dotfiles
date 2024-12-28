@@ -1,0 +1,11 @@
+#!/bin/bash
+args=()
+for arg in "$@"; do
+	case "$arg" in
+		/select,)  args+=("/select,");;
+		/select,*) args+=("/select,$(wslpath -w "${arg:8}")");;
+		*/*) args+=("$(wslpath -w "$arg")");;
+		*)   args+=("$arg");;
+	esac
+done
+exec /mnt/c/Windows/explorer.exe "${args[@]}"

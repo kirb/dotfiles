@@ -1,0 +1,32 @@
+#!/bin/bash
+set -e
+
+serial='0000_0000_0000_0001_00A0_7523_3F1A_20BA.'
+
+if [[ $UID != 0 ]]; then
+	echo Needs to be run as root >&2
+	exit 1
+fi
+
+if ! ls /dev/disk/by-id/*_$serial >/dev/null 2>&1; then
+	PATH+=:/mnt/c/Windows/System32:/mnt/c/Windows/System32/WindowsPowerShell/v1.0
+	drive="$(powershell.exe -Command 'Get-PhysicalDisk | Where-Object { $_.SerialNumber -eq "'$serial'" } | Select-Object -ExpandProperty DeviceID' | tr -d $'\r')"
+
+	if [[ $drive == "" ]]; then
+		echo Drive not found >&2
+		exit 1
+	fi
+
+	sudo.exe wsl --mount '\\.\PHYSICALDRIVE'$drive --bare
+fi
+
+if ! zfs list data >/dev/null 2>&1; then
+	for i in {1..60}; do
+		zpool import -fd /dev/disk/by-id data || continue
+		break
+	done
+fi
+
+if ! zfs list data >/dev/null 2>&1; then
+	zfs mount data
+fi

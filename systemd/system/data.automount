@@ -1,0 +1,9 @@
+[Unit]
+Description=Automount /data on WSL
+
+[Automount]
+Where=/data
+TimeoutIdleSec=0
+
+[Install]
+WantedBy=multi-user.target

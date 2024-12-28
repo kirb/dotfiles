@@ -1,0 +1,9 @@
+#!/bin/bash
+args=()
+for arg in "$@"; do
+	case "$arg" in
+		*/*) args+=("$(wslpath -w "$arg")");;
+		*)   args+=("$arg");;
+	esac
+done
+exec /mnt/c/Windows/system32/cmd.exe /c start "" "${args[@]}"
