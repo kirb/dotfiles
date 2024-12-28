@@ -14,6 +14,7 @@ alias ipb='ip --color --brief'
 alias du='du --apparent-size'
 alias tmux='tmux -2f ~/.dotfiles/.tmux.conf $TMUX_CC_FLAG'
 alias fzf=fzf-tmux
+alias make='make -j$(nproc)'
 alias curl='curl --remote-time --compressed'
 
 if has zstd && rsync --version | grep -q zstd; then
@@ -53,7 +54,16 @@ else
 	alias fd='fd -g'
 fi
 
-alias rg='rg --hyperlink-format=vscode -i'
+if has rg; then
+	_rg_hyperlink_format=vscode
+	if [[ ! -z $WSL_DISTRO_NAME ]]; then
+		# https://stackoverflow.com/q/59976876
+		_rg_hyperlink_format="vscode://vscode-remote/wsl+${WSL_DISTRO_NAME}{path}:{line}:{column}"
+	fi
+	[[ $TERM_PROGRAM == vscode ]] && _rg_hyperlink_format=none
+	alias rg='rg -i --hyperlink-format='$_rg_hyperlink_format
+	unset _rg_hyperlink_format
+fi
 
 # Kinda-sorta functions
 alias filesize='stat -c %s'
