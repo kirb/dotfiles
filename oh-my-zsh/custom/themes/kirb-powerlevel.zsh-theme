@@ -4,7 +4,7 @@ typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status) # battery)
 if [[ $VENDOR == apple ]]; then
 	typeset -g POWERLEVEL9K_MODE=sf-symbols
 else
-	typeset -g POWERLEVEL9K_MODE=awesome-patched
+	typeset -g POWERLEVEL9K_MODE=nerdfont-complete
 fi
 
 typeset -g POWERLEVEL9K_BACKGROUND=                            # transparent background
