@@ -12,11 +12,15 @@ alias pv='pv -W'
 alias ip='ip --color'
 alias ipb='ip --color --brief'
 alias du='du --apparent-size'
-# alias rsync='rsync -EX' # TODO: bad idea? not sure…
-alias rsync='rsync --info=progress2'
 alias tmux='tmux -2f ~/.dotfiles/.tmux.conf $TMUX_CC_FLAG'
 alias fzf=fzf-tmux
 alias curl='curl --remote-time --compressed'
+
+if has zstd && rsync --version | grep -q zstd; then
+	alias rsync='rsync -AX --info=progress2 --zc=zstd --zl=1'
+else
+	alias rsync='rsync -AX --info=progress2'
+fi
 
 if [[ $VENDOR == apple ]]; then
 	alias ping='ping --apple-time'
@@ -48,6 +52,8 @@ if has fdfind; then
 else
 	alias fd='fd -g'
 fi
+
+alias rg='rg --hyperlink-format=vscode -i'
 
 # Kinda-sorta functions
 alias filesize='stat -c %s'
@@ -92,6 +98,7 @@ if [[ $VENDOR == apple ]]; then
 	alias vlc='open -b org.videolan.vlc'
 	alias io='open -b net.pornel.ImageOptim'
 	alias tower='open -b com.fournova.Tower3'
+	alias sketch='open -b com.bohemiancoding.sketch3'
 
 	if [[ -d /Applications/Tailscale.app ]] && ! has tailscale; then
 		alias tailscale=/Applications/Tailscale.app/Contents/MacOS/Tailscale
