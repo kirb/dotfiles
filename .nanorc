@@ -6,4 +6,4 @@ set regexp
 set smarthome
 set tabsize 2
 
-#include "~/.dotfiles/stuff/nanorc/*.nanorc"
+include "~/.dotfiles/stuff/nanorc/*.nanorc"
