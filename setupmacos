@@ -302,7 +302,7 @@ if [[ $has_sudo == 1 ]]; then
 fi
 
 # 1: install homebrew
-if [[ ! -d ~/homebrew && ! -d /usr/local/Homebrew ]]; then
+if ! [[ -d ~/homebrew || -d /opt/homebrew || -d /usr/local/Homebrew ]]; then
 	status "Installing Homebrew"
 
 	if [[ $has_sudo == 1 ]]; then
