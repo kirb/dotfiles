@@ -38,7 +38,7 @@ if has eza; then
 	_eza_args=('-blarghMs new --hyperlink --git')
 
 	if [[ $TERM_PROGRAM == ghostty ]]; then
-		_eza_args+=('--icons')
+		_eza_args+=('--icons auto')
 	fi
 
 	alias eza="eza $_eza_args"
@@ -119,6 +119,7 @@ if [[ $VENDOR == apple ]]; then
 	alias io='open -b net.pornel.ImageOptim'
 	alias tower='open -b com.fournova.Tower3'
 	alias sketch='open -b com.bohemiancoding.sketch3'
+	alias subm='open -b com.sublimemerge'
 
 	if [[ -d /Applications/Tailscale.app ]] && ! has tailscale; then
 		alias tailscale=/Applications/Tailscale.app/Contents/MacOS/Tailscale
