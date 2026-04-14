@@ -65,6 +65,11 @@ if has rg; then
 	unset _rg_hyperlink_format
 fi
 
+# Shut up
+if has magick; then
+	alias convert=magick
+fi
+
 # Kinda-sorta functions
 alias filesize='stat -c %s'
 alias finder='open -R'
