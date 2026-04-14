@@ -76,7 +76,8 @@ fi
 # Check for IntelliJ’s printenv command because anything interactive/blocking will break it
 # detecting environment at startup.
 # https://youtrack.jetbrains.com/articles/IDEA-A-19/Shell-Environment-Loading
-[[ ! -z $INTELLIJ_ENVIRONMENT_READER ]] && NOT_ACTUALLY_INTERACTIVE=1
+# Also consider JetBrains debugger runs as not interactive
+[[ ! -z $INTELLIJ_ENVIRONMENT_READER || ! -z $IJ_RESTARTER_LOG ]] && NOT_ACTUALLY_INTERACTIVE=1
 
 # Do this before we source instant prompt, because it might interactively prompt for passphrase
 ZSH=$DOTFILES/stuff/oh-my-zsh
@@ -134,5 +135,8 @@ safe_source $DOTFILES/zsh-aliases
 safe_source $DOTFILES/zsh-functions
 
 # This must be sourced last
-safe_source $PACKAGE_MANAGER/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-safe_source $PACKAGE_MANAGER/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+if [[ -z $NOT_ACTUALLY_INTERACTIVE ]]; then
+	safe_source $PACKAGE_MANAGER/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+	safe_source $PACKAGE_MANAGER/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+	has code && safe_source "$(code --locate-shell-integration-path zsh)"
+fi
