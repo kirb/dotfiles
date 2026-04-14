@@ -9,3 +9,11 @@
 # nano
 *~
 .*.swp
+
+# Agents
+AGENTS.md
+CLAUDE.md
+.claude/
+
+# Build
+.nuke/
