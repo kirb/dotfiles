@@ -48,6 +48,13 @@
 [pull]
 	rebase = true
 
+# autostash! https://stackoverflow.com/q/30208928
+[rebase]
+	autoStash = true
+
+[merge]
+	autoStash = true
+
 # allow pushing to non-bare repos on this machine
 [receive]
 	denyCurrentBranch = updateInstead
