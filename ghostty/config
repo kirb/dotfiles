@@ -1,6 +1,7 @@
 font-family = JetBrains Mono
 font-size = 11
 adjust-cell-height = 4
+adjust-cursor-thickness = 1
 foreground = feffff
 background = 010101
 selection-foreground = fefefe
@@ -28,6 +29,7 @@ shell-integration = zsh
 shell-integration-features = true
 macos-titlebar-style = tabs
 auto-update = download
+# auto-update-channel = tip
 
 # black
 palette =  0=#000000
@@ -53,3 +55,6 @@ palette = 14=#29b8db
 # white
 palette =  7=#e5e5e5
 palette = 15=#e5e5e5
+
+# literal \n on shift-enter
+keybind = shift+enter=text:\n
