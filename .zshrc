@@ -59,9 +59,9 @@ if [[ -d ~/.krew ]]; then
 fi
 
 # Fix ghostty terminfo (for now)
-if [[ $TERM == xterm-ghostty && ! -d $TERMINFO ]]; then
-	TERM=xterm-256color
+if [[ $TERM == xterm-ghostty ]]; then
 	export TERM_PROGRAM=ghostty LC_TERMINAL=ghostty
+	[[ ! -d $TERMINFO ]] && TERM=xterm-256color
 fi
 
 # Launch tmux now if in root tty of an SSH session
