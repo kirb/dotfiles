@@ -71,7 +71,12 @@ if has magick; then
 fi
 
 # Kinda-sorta functions
-alias filesize='stat -c %s'
+if has ustat; then
+	alias filesize='ustat -c %s'
+else
+	alias filesize='stat -c %s'
+fi
+
 alias finder='open -R'
 alias logcat='logcat-color --stay-connected -v threadtime'
 
