@@ -69,7 +69,8 @@
 	renameLimit = 10000
 
 [blame]
-	ignoreRevsFile = .git-blame-ignore-revs
+	# Complains if this file doesn’t exist, sigh
+	# ignoreRevsFile = .git-blame-ignore-revs
 
 [difftool "code"]
 	cmd = code -wd $LOCAL $REMOTE
