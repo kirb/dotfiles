@@ -28,6 +28,13 @@
 [commit]
 	gpgsign = true
 
+# actually, SSH sign commits
+[gpg]
+	format = ssh
+
+[gpg "ssh"]
+	program = ~/.dotfiles/bin/op-ssh-sign
+
 # use the macos keychain credential helper
 [credential]
 	helper = osxkeychain

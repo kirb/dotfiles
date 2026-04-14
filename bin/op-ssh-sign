@@ -1,0 +1,14 @@
+#!/bin/bash
+set -e
+case "$OSTYPE" in
+	darwin*)
+		exec "/Applications/1Password.app/Contents/MacOS/op-ssh-sign" "$@" ;;
+	linux-gnu)
+		if [[ $PATH =~ */mnt/c* ]]; then
+			exec "/mnt/c/Users/$USER/AppData/Local/Microsoft/WindowsApps/op-ssh-sign-wsl.exe" "$@"
+		else
+			exec "/opt/1Password/op-ssh-sign" "$@"
+		fi ;;
+	msys)
+		exec "$LOCALAPPDATA/Microsoft/WindowsApps/op-ssh-sign.exe" "$@" ;;
+esac
