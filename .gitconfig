@@ -34,6 +34,7 @@
 
 [gpg "ssh"]
 	program = ~/.dotfiles/bin/op-ssh-sign
+	allowedSignersFile = ~/.dotfiles/git-allowed-signers.private
 
 # use the macos keychain credential helper
 [credential]
