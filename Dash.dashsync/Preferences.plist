@@ -88,56 +88,6 @@
 					<string>CSS_Named_Colors</string>
 				</dict>
 			</dict>
-			<key>Carthage</key>
-			<dict>
-				<key>date</key>
-				<date>2022-01-31T15:01:38Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array/>
-					<key>name</key>
-					<string>Carthage</string>
-					<key>platform</key>
-					<string>cheatsheet</string>
-					<key>uniqueIdentifier</key>
-					<string>Carthage</string>
-				</dict>
-			</dict>
-			<key>Chrome_Dev_Tools</key>
-			<dict>
-				<key>date</key>
-				<date>2022-01-31T15:01:35Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>Chrome Dev Tools</string>
-					</array>
-					<key>name</key>
-					<string>Chrome Developer Tools</string>
-					<key>platform</key>
-					<string>cheatsheet</string>
-					<key>uniqueIdentifier</key>
-					<string>Chrome_Dev_Tools</string>
-				</dict>
-			</dict>
-			<key>Chromium_Command_Line_Switches</key>
-			<dict>
-				<key>date</key>
-				<date>2022-01-31T15:01:37Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array/>
-					<key>name</key>
-					<string>Chromium Command Line Switches</string>
-					<key>platform</key>
-					<string>cheatsheet</string>
-					<key>uniqueIdentifier</key>
-					<string>Chromium_Command_Line_Switches</string>
-				</dict>
-			</dict>
 			<key>Crontab</key>
 			<dict>
 				<key>date</key>
@@ -184,59 +134,6 @@
 					<string>cheatsheet</string>
 					<key>uniqueIdentifier</key>
 					<string>Dockerfile</string>
-				</dict>
-			</dict>
-			<key>Final_Cut_Pro</key>
-			<dict>
-				<key>date</key>
-				<date>2025-05-07T02:13:01Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array/>
-					<key>name</key>
-					<string>Final Cut Pro</string>
-					<key>platform</key>
-					<string>cheatsheet</string>
-					<key>uniqueIdentifier</key>
-					<string>Final_Cut_Pro</string>
-				</dict>
-			</dict>
-			<key>Font_Awesome</key>
-			<dict>
-				<key>date</key>
-				<date>2025-05-07T02:13:02Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array/>
-					<key>name</key>
-					<string>Font Awesome</string>
-					<key>platform</key>
-					<string>cheatsheet</string>
-					<key>uniqueIdentifier</key>
-					<string>Font_Awesome</string>
-				</dict>
-			</dict>
-			<key>Git</key>
-			<dict>
-				<key>date</key>
-				<date>2022-01-31T15:01:36Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>terminal</string>
-						<string>shell</string>
-						<string>bash</string>
-						<string>zsh</string>
-					</array>
-					<key>name</key>
-					<string>Git</string>
-					<key>platform</key>
-					<string>cheatsheet</string>
-					<key>uniqueIdentifier</key>
-					<string>Git</string>
 				</dict>
 			</dict>
 			<key>HTML_Entities</key>
@@ -337,22 +234,6 @@
 					<string>Kubernetes</string>
 				</dict>
 			</dict>
-			<key>Licenses</key>
-			<dict>
-				<key>date</key>
-				<date>2025-05-07T02:13:26Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array/>
-					<key>name</key>
-					<string>Licenses</string>
-					<key>platform</key>
-					<string>cheatsheet</string>
-					<key>uniqueIdentifier</key>
-					<string>Licenses</string>
-				</dict>
-			</dict>
 			<key>MIME_Types</key>
 			<dict>
 				<key>date</key>
@@ -367,24 +248,6 @@
 					<string>cheatsheet</string>
 					<key>uniqueIdentifier</key>
 					<string>MIME_Types</string>
-				</dict>
-			</dict>
-			<key>Mutt</key>
-			<dict>
-				<key>date</key>
-				<date>2025-05-07T02:13:35Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>mutt mua</string>
-					</array>
-					<key>name</key>
-					<string>Mutt</string>
-					<key>platform</key>
-					<string>cheatsheet</string>
-					<key>uniqueIdentifier</key>
-					<string>Mutt</string>
 				</dict>
 			</dict>
 			<key>NSDateFormatter</key>
@@ -443,22 +306,6 @@
 					<string>cheatsheet</string>
 					<key>uniqueIdentifier</key>
 					<string>NSPredicate</string>
-				</dict>
-			</dict>
-			<key>Netcat</key>
-			<dict>
-				<key>date</key>
-				<date>2025-05-07T02:13:37Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array/>
-					<key>name</key>
-					<string>Netcat</string>
-					<key>platform</key>
-					<string>cheatsheet</string>
-					<key>uniqueIdentifier</key>
-					<string>Netcat</string>
 				</dict>
 			</dict>
 			<key>Objective-C</key>
@@ -545,22 +392,6 @@
 					<string>Objective-C_Blocks</string>
 				</dict>
 			</dict>
-			<key>Obsidian</key>
-			<dict>
-				<key>date</key>
-				<date>2025-05-07T02:13:51Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array/>
-					<key>name</key>
-					<string>Obsidian</string>
-					<key>platform</key>
-					<string>cheatsheet</string>
-					<key>uniqueIdentifier</key>
-					<string>Obsidian</string>
-				</dict>
-			</dict>
 			<key>OpenSCAD</key>
 			<dict>
 				<key>date</key>
@@ -575,22 +406,6 @@
 					<string>cheatsheet</string>
 					<key>uniqueIdentifier</key>
 					<string>OpenSCAD</string>
-				</dict>
-			</dict>
-			<key>PhpStorm</key>
-			<dict>
-				<key>date</key>
-				<date>2025-05-07T02:14:01Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array/>
-					<key>name</key>
-					<string>PhpStorm</string>
-					<key>platform</key>
-					<string>cheatsheet</string>
-					<key>uniqueIdentifier</key>
-					<string>PhpStorm</string>
 				</dict>
 			</dict>
 			<key>Python_Debugger</key>
@@ -740,40 +555,6 @@
 					<string>Swift</string>
 				</dict>
 			</dict>
-			<key>Unix_File_Permissions</key>
-			<dict>
-				<key>date</key>
-				<date>2025-05-07T02:14:31Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>chmod</string>
-					</array>
-					<key>name</key>
-					<string>Unix File Permissions</string>
-					<key>platform</key>
-					<string>cheatsheet</string>
-					<key>uniqueIdentifier</key>
-					<string>Unix_File_Permissions</string>
-				</dict>
-			</dict>
-			<key>WebSocket_Status_Codes</key>
-			<dict>
-				<key>date</key>
-				<date>2023-09-18T07:52:17Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array/>
-					<key>name</key>
-					<string>WebSocket Status Codes</string>
-					<key>platform</key>
-					<string>cheatsheet</string>
-					<key>uniqueIdentifier</key>
-					<string>WebSocket_Status_Codes</string>
-				</dict>
-			</dict>
 			<key>Xcode_Shortcuts</key>
 			<dict>
 				<key>date</key>
@@ -803,35 +584,6 @@
 					<string>Xcode_Shortcuts</string>
 				</dict>
 			</dict>
-			<key>Xcode_UI_Testing</key>
-			<dict>
-				<key>date</key>
-				<date>2022-01-31T15:01:38Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>apple</string>
-						<string>cocoa touch</string>
-						<string>iphone</string>
-						<string>ipad</string>
-						<string>ios</string>
-						<string>mac os x</string>
-						<string>macosx</string>
-						<string>objc</string>
-						<string>objectivec</string>
-						<string>objective c</string>
-						<string>objective-c</string>
-						<string>swift</string>
-					</array>
-					<key>name</key>
-					<string>Xcode UI Testing</string>
-					<key>platform</key>
-					<string>cheatsheet</string>
-					<key>uniqueIdentifier</key>
-					<string>Xcode_UI_Testing</string>
-				</dict>
-			</dict>
 			<key>YAML</key>
 			<dict>
 				<key>date</key>
@@ -846,22 +598,6 @@
 					<string>cheatsheet</string>
 					<key>uniqueIdentifier</key>
 					<string>YAML</string>
-				</dict>
-			</dict>
-			<key>You_Might_Not_Need_jQuery</key>
-			<dict>
-				<key>date</key>
-				<date>2023-09-18T07:52:20Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array/>
-					<key>name</key>
-					<string>You Might Not Need jQuery</string>
-					<key>platform</key>
-					<string>cheatsheet</string>
-					<key>uniqueIdentifier</key>
-					<string>You_Might_Not_Need_jQuery</string>
 				</dict>
 			</dict>
 			<key>iOS_Design</key>
@@ -889,27 +625,6 @@
 					<string>cheatsheet</string>
 					<key>uniqueIdentifier</key>
 					<string>iOS_Design</string>
-				</dict>
-			</dict>
-			<key>iTerm2</key>
-			<dict>
-				<key>date</key>
-				<date>2025-05-07T02:13:21Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>terminal</string>
-						<string>shell</string>
-						<string>bash</string>
-						<string>zsh</string>
-					</array>
-					<key>name</key>
-					<string>iTerm2</string>
-					<key>platform</key>
-					<string>cheatsheet</string>
-					<key>uniqueIdentifier</key>
-					<string>iTerm2</string>
 				</dict>
 			</dict>
 			<key>npm</key>
@@ -971,201 +686,7 @@
 			</dict>
 		</dict>
 		<key>uninstalled</key>
-		<dict>
-			<key>Conventional_Commits</key>
-			<dict>
-				<key>date</key>
-				<date>2020-09-14T11:21:10Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array/>
-					<key>name</key>
-					<string>Conventional Commits</string>
-					<key>platform</key>
-					<string>cheatsheet</string>
-					<key>uniqueIdentifier</key>
-					<string>Conventional_Commits</string>
-				</dict>
-			</dict>
-			<key>Emoji</key>
-			<dict>
-				<key>date</key>
-				<date>2020-09-14T11:21:38Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array/>
-					<key>name</key>
-					<string>Emoji</string>
-					<key>platform</key>
-					<string>cheatsheet</string>
-					<key>uniqueIdentifier</key>
-					<string>Emoji</string>
-				</dict>
-			</dict>
-			<key>Git_Flow</key>
-			<dict>
-				<key>date</key>
-				<date>2020-09-14T11:22:34Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>terminal</string>
-						<string>shell</string>
-						<string>bash</string>
-						<string>zsh</string>
-					</array>
-					<key>name</key>
-					<string>Git Flow</string>
-					<key>platform</key>
-					<string>cheatsheet</string>
-					<key>uniqueIdentifier</key>
-					<string>Git_Flow</string>
-				</dict>
-			</dict>
-			<key>Keybase.io</key>
-			<dict>
-				<key>date</key>
-				<date>2024-12-27T12:03:36Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array/>
-					<key>name</key>
-					<string>Keybase.io</string>
-					<key>platform</key>
-					<string>cheatsheet</string>
-					<key>uniqueIdentifier</key>
-					<string>Keybase.io</string>
-				</dict>
-			</dict>
-			<key>Mac_Startup_Keys</key>
-			<dict>
-				<key>date</key>
-				<date>2020-09-14T11:29:07Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>mac os x startup keys</string>
-						<string>macosx startup keys</string>
-					</array>
-					<key>name</key>
-					<string>Mac Startup Keys</string>
-					<key>platform</key>
-					<string>cheatsheet</string>
-					<key>uniqueIdentifier</key>
-					<string>Mac_Startup_Keys</string>
-				</dict>
-			</dict>
-			<key>Oh-My-Zsh_Git</key>
-			<dict>
-				<key>date</key>
-				<date>2016-10-06T08:40:38Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>ohmyzsh</string>
-						<string>oh my zsh</string>
-						<string>terminal</string>
-						<string>shell</string>
-						<string>bash</string>
-						<string>zsh</string>
-					</array>
-					<key>name</key>
-					<string>Oh-My-Zsh Git</string>
-					<key>platform</key>
-					<string>cheatsheet</string>
-					<key>uniqueIdentifier</key>
-					<string>Oh-My-Zsh_Git</string>
-				</dict>
-			</dict>
-			<key>ROS</key>
-			<dict>
-				<key>date</key>
-				<date>2020-09-14T11:20:17Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>Robot Operating System</string>
-					</array>
-					<key>name</key>
-					<string>ROS</string>
-					<key>platform</key>
-					<string>cheatsheet</string>
-					<key>uniqueIdentifier</key>
-					<string>ROS</string>
-				</dict>
-			</dict>
-			<key>Sublime_Text_3</key>
-			<dict>
-				<key>date</key>
-				<date>2016-10-06T08:40:50Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array/>
-					<key>name</key>
-					<string>Sublime Text 3</string>
-					<key>platform</key>
-					<string>cheatsheet</string>
-					<key>uniqueIdentifier</key>
-					<string>Sublime_Text_3</string>
-				</dict>
-			</dict>
-			<key>Things</key>
-			<dict>
-				<key>date</key>
-				<date>2024-12-27T12:03:43Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array/>
-					<key>name</key>
-					<string>Things</string>
-					<key>platform</key>
-					<string>cheatsheet</string>
-					<key>uniqueIdentifier</key>
-					<string>Things</string>
-				</dict>
-			</dict>
-			<key>Trello</key>
-			<dict>
-				<key>date</key>
-				<date>2020-09-14T11:29:48Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array/>
-					<key>name</key>
-					<string>Trello</string>
-					<key>platform</key>
-					<string>cheatsheet</string>
-					<key>uniqueIdentifier</key>
-					<string>Trello</string>
-				</dict>
-			</dict>
-			<key>Visual_Studio_Code</key>
-			<dict>
-				<key>date</key>
-				<date>2025-05-07T02:14:36Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array/>
-					<key>name</key>
-					<string>Visual Studio Code</string>
-					<key>platform</key>
-					<string>cheatsheet</string>
-					<key>uniqueIdentifier</key>
-					<string>Visual_Studio_Code</string>
-				</dict>
-			</dict>
-		</dict>
+		<dict/>
 	</dict>
 	<key>DHClojureRepo</key>
 	<dict>
@@ -1236,22 +757,7 @@
 			</dict>
 		</dict>
 		<key>uninstalled</key>
-		<dict>
-			<key>AFNetwork</key>
-			<dict>
-				<key>date</key>
-				<date>2019-01-18T03:43:38Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>AFNetwork</string>
-					<key>platform</key>
-					<string>cocoapods</string>
-					<key>uniqueIdentifier</key>
-					<string>AFNetwork</string>
-				</dict>
-			</dict>
-		</dict>
+		<dict/>
 	</dict>
 	<key>DHDartRepo</key>
 	<dict>
@@ -1272,36 +778,7 @@
 		<key>installed</key>
 		<dict/>
 		<key>uninstalled</key>
-		<dict>
-			<key>AvaloniaUI/Avalonia</key>
-			<dict>
-				<key>date</key>
-				<date>2023-10-31T03:02:48Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>AvaloniaUI/Avalonia</string>
-					<key>platform</key>
-					<string>github</string>
-					<key>uniqueIdentifier</key>
-					<string>AvaloniaUI/Avalonia</string>
-				</dict>
-			</dict>
-			<key>hbang/libcephei</key>
-			<dict>
-				<key>date</key>
-				<date>2018-07-11T10:58:40Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>hbang/libcephei</string>
-					<key>platform</key>
-					<string>github</string>
-					<key>uniqueIdentifier</key>
-					<string>hbang/libcephei</string>
-				</dict>
-			</dict>
-		</dict>
+		<dict/>
 	</dict>
 	<key>DHGoRepo</key>
 	<dict>
@@ -1371,1010 +848,12 @@
 		<key>installed</key>
 		<dict/>
 		<key>uninstalled</key>
-		<dict>
-			<key>AWS_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-12T06:04:41Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>Amazon Web Services</string>
-					</array>
-					<key>name</key>
-					<string>AWS (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>AWS_Online</string>
-				</dict>
-			</dict>
-			<key>Android_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-12T06:04:43Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>java</string>
-					</array>
-					<key>name</key>
-					<string>Android (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>Android_Online</string>
-				</dict>
-			</dict>
-			<key>Bash_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-12T06:04:40Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>bash shell</string>
-						<string>terminal</string>
-					</array>
-					<key>name</key>
-					<string>Bash (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>Bash_Online</string>
-				</dict>
-			</dict>
-			<key>Bootstrap_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-12T06:04:41Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>twitter bootstrap</string>
-					</array>
-					<key>name</key>
-					<string>Bootstrap (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>Bootstrap_Online</string>
-				</dict>
-			</dict>
-			<key>C++_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-12T06:04:40Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array/>
-					<key>name</key>
-					<string>C++ (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>C++_Online</string>
-				</dict>
-			</dict>
-			<key>CSS_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-12T06:04:43Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array/>
-					<key>name</key>
-					<string>CSS (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>CSS_Online</string>
-				</dict>
-			</dict>
-			<key>C_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-12T06:04:43Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array/>
-					<key>name</key>
-					<string>C (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>C_Online</string>
-				</dict>
-			</dict>
-			<key>C_Sharp_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-12T06:04:42Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array/>
-					<key>name</key>
-					<string>C# (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>C_Sharp_Online</string>
-				</dict>
-			</dict>
-			<key>DOM_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-12T06:04:43Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>dom events</string>
-					</array>
-					<key>name</key>
-					<string>DOM (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>DOM_Online</string>
-				</dict>
-			</dict>
-			<key>Docker_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-12T06:04:42Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array/>
-					<key>name</key>
-					<string>Docker (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>Docker_Online</string>
-				</dict>
-			</dict>
-			<key>Express_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-12T06:04:41Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>expressjs</string>
-						<string>nodejs</string>
-						<string>node.js</string>
-						<string>express.js</string>
-					</array>
-					<key>name</key>
-					<string>Express (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>Express_Online</string>
-				</dict>
-			</dict>
-			<key>Font_Awesome_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-12T06:04:44Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array/>
-					<key>name</key>
-					<string>Font Awesome (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>Font_Awesome_Online</string>
-				</dict>
-			</dict>
-			<key>Git_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-12T06:04:42Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array/>
-					<key>name</key>
-					<string>Git (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>Git_Online</string>
-				</dict>
-			</dict>
-			<key>Gradle_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-12T06:04:45Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array/>
-					<key>name</key>
-					<string>Gradle (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>Gradle_Online</string>
-				</dict>
-			</dict>
-			<key>Groovy_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-12T06:04:41Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>java</string>
-					</array>
-					<key>name</key>
-					<string>Groovy (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>Groovy_Online</string>
-				</dict>
-			</dict>
-			<key>HTML_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-12T06:04:44Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array/>
-					<key>name</key>
-					<string>HTML (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>HTML_Online</string>
-				</dict>
-			</dict>
-			<key>JavaScript_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-12T06:04:40Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>dom events</string>
-						<string>canvas</string>
-					</array>
-					<key>name</key>
-					<string>JavaScript (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>JavaScript_Online</string>
-				</dict>
-			</dict>
-			<key>Jekyll_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-12T06:04:42Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>jekyllrb jekyll.rb jekyll ruby</string>
-					</array>
-					<key>name</key>
-					<string>Jekyll (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>Jekyll_Online</string>
-				</dict>
-			</dict>
-			<key>Linux_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-12T06:04:45Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>unix fedora redhat red hat ubuntu freebsd opensuse arch centos slackware debian gentoo linux commands manpages</string>
-					</array>
-					<key>name</key>
-					<string>Linux (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>Linux_Online</string>
-				</dict>
-			</dict>
-			<key>Mac_OS_X_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-12T06:04:46Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>leopard</string>
-						<string>snow leopard</string>
-						<string>lion</string>
-						<string>mountain lion</string>
-						<string>mavericks</string>
-						<string>10.8</string>
-						<string>10.6</string>
-						<string>10.7</string>
-						<string>10.9</string>
-						<string>10.5</string>
-						<string>xcode</string>
-						<string>apple</string>
-						<string>cocoa</string>
-						<string>objective-c</string>
-						<string>objc</string>
-						<string>objective c</string>
-						<string>macosx</string>
-						<string>mac osx</string>
-					</array>
-					<key>name</key>
-					<string>macOS (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>Mac_OS_X_Online</string>
-				</dict>
-			</dict>
-			<key>Man_Pages_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-12T06:04:47Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>unix</string>
-						<string>linux</string>
-						<string>git</string>
-						<string>svn</string>
-						<string>mercurial</string>
-						<string>hg</string>
-						<string>subversion</string>
-						<string>manpages</string>
-					</array>
-					<key>name</key>
-					<string>Man Pages (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>Man_Pages_Online</string>
-				</dict>
-			</dict>
-			<key>Markdown_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-12T06:04:49Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array/>
-					<key>name</key>
-					<string>Markdown (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>Markdown_Online</string>
-				</dict>
-			</dict>
-			<key>Microsoft_Excel_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-12T06:04:49Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>Microsoft Office Excel</string>
-						<string>Microsoft Excel Office</string>
-					</array>
-					<key>name</key>
-					<string>Microsoft Excel (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>Microsoft_Excel_Online</string>
-				</dict>
-			</dict>
-			<key>MongoDB_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-12T06:04:51Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array/>
-					<key>name</key>
-					<string>MongoDB (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>MongoDB_Online</string>
-				</dict>
-			</dict>
-			<key>Mongoose_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-12T06:04:52Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>nodejs</string>
-						<string>node.js</string>
-						<string>mongoose.js</string>
-						<string>mongoosejs</string>
-					</array>
-					<key>name</key>
-					<string>Mongoose (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>Mongoose_Online</string>
-				</dict>
-			</dict>
-			<key>MySQL_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-12T06:05:07Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array/>
-					<key>name</key>
-					<string>MySQL (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>MySQL_Online</string>
-				</dict>
-			</dict>
-			<key>NET_Framework_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-12T06:04:40Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>Microsoft .NET Framework</string>
-						<string>C#</string>
-						<string>f#</string>
-						<string>vb</string>
-						<string>visual basic</string>
-						<string>visualbasic</string>
-					</array>
-					<key>name</key>
-					<string>.NET Framework (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>NET_Framework_Online</string>
-				</dict>
-			</dict>
-			<key>Nginx_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-12T06:05:06Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array/>
-					<key>name</key>
-					<string>Nginx (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>Nginx_Online</string>
-				</dict>
-			</dict>
-			<key>NodeJS_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-12T06:05:05Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>node.js</string>
-					</array>
-					<key>name</key>
-					<string>NodeJS (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>NodeJS_Online</string>
-				</dict>
-			</dict>
-			<key>PHP_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-12T06:05:09Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array/>
-					<key>name</key>
-					<string>PHP (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>PHP_Online</string>
-				</dict>
-			</dict>
-			<key>Perl_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-12T06:05:06Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array/>
-					<key>name</key>
-					<string>Perl (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>Perl_Online</string>
-				</dict>
-			</dict>
-			<key>PostgreSQL_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-12T06:05:07Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>psql</string>
-					</array>
-					<key>name</key>
-					<string>PostgreSQL (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>PostgreSQL_Online</string>
-				</dict>
-			</dict>
-			<key>PowerShell_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2024-02-05T13:10:14Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>Microsoft PowerShell</string>
-					</array>
-					<key>name</key>
-					<string>PowerShell (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>PowerShell_Online</string>
-				</dict>
-			</dict>
-			<key>Pug_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-12T06:05:06Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>node.js</string>
-						<string>nodejs</string>
-						<string>jade</string>
-					</array>
-					<key>name</key>
-					<string>Pug (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>Pug_Online</string>
-				</dict>
-			</dict>
-			<key>Python_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2024-02-05T13:10:12Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array/>
-					<key>name</key>
-					<string>Python (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>Python_Online</string>
-				</dict>
-			</dict>
-			<key>React_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-12T06:05:08Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>react.js</string>
-						<string>reactjs</string>
-					</array>
-					<key>name</key>
-					<string>React (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>React_Online</string>
-				</dict>
-			</dict>
-			<key>Redis_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-12T06:05:07Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array/>
-					<key>name</key>
-					<string>Redis (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>Redis_Online</string>
-				</dict>
-			</dict>
-			<key>Regular_Expressions_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-12T06:05:05Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>regex</string>
-					</array>
-					<key>name</key>
-					<string>Regular Expressions (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>Regular_Expressions_Online</string>
-				</dict>
-			</dict>
-			<key>SQL_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-12T06:05:07Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array/>
-					<key>name</key>
-					<string>SQL (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>SQL_Online</string>
-				</dict>
-			</dict>
-			<key>SQL_Server_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-12T06:05:10Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>Microsoft SQL Server</string>
-					</array>
-					<key>name</key>
-					<string>SQL Server (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>SQL_Server_Online</string>
-				</dict>
-			</dict>
-			<key>SQLite_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-12T06:05:09Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array/>
-					<key>name</key>
-					<string>SQLite (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>SQLite_Online</string>
-				</dict>
-			</dict>
-			<key>SVG_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-12T06:05:09Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array/>
-					<key>name</key>
-					<string>SVG (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>SVG_Online</string>
-				</dict>
-			</dict>
-			<key>Sass_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-12T06:05:10Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>ruby gems</string>
-						<string>rubygems</string>
-					</array>
-					<key>name</key>
-					<string>Sass (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>Sass_Online</string>
-				</dict>
-			</dict>
-			<key>Swift_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-12T06:05:06Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>iphone</string>
-						<string>ipad</string>
-						<string>xcode</string>
-						<string>apple</string>
-						<string>cocoa touch</string>
-						<string>leopard</string>
-						<string>snow leopard</string>
-						<string>lion</string>
-						<string>mountain lion</string>
-						<string>mavericks</string>
-						<string>10.8</string>
-						<string>10.6</string>
-						<string>10.7</string>
-						<string>10.9</string>
-						<string>10.5</string>
-						<string>xcode</string>
-						<string>apple</string>
-						<string>cocoa</string>
-						<string>macosx</string>
-						<string>mac osx</string>
-						<string>mac os x</string>
-					</array>
-					<key>name</key>
-					<string>Swift (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>Swift_Online</string>
-				</dict>
-			</dict>
-			<key>T-SQL_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-12T06:05:08Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>Transact-SQL</string>
-					</array>
-					<key>name</key>
-					<string>T-SQL (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>T-SQL_Online</string>
-				</dict>
-			</dict>
-			<key>TypeScript_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-12T06:05:07Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>javascript</string>
-					</array>
-					<key>name</key>
-					<string>TypeScript (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>TypeScript_Online</string>
-				</dict>
-			</dict>
-			<key>Windows_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-12T06:05:05Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>microsoft windows</string>
-					</array>
-					<key>name</key>
-					<string>Windows (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>Windows_Online</string>
-				</dict>
-			</dict>
-			<key>Zsh_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-12T06:05:08Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>zsh shell</string>
-						<string>terminal</string>
-					</array>
-					<key>name</key>
-					<string>Zsh (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>Zsh_Online</string>
-				</dict>
-			</dict>
-			<key>iOS_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-12T06:04:41Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>iphone</string>
-						<string>ipad</string>
-						<string>xcode</string>
-						<string>apple</string>
-						<string>cocoa touch</string>
-						<string>objective-c</string>
-						<string>objc</string>
-					</array>
-					<key>name</key>
-					<string>iOS (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>iOS_Online</string>
-				</dict>
-			</dict>
-			<key>jQuery_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-12T06:04:44Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array/>
-					<key>name</key>
-					<string>jQuery (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>jQuery_Online</string>
-				</dict>
-			</dict>
-			<key>watchOS_Online</key>
-			<dict>
-				<key>date</key>
-				<date>2023-12-12T06:05:07Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>ios</string>
-						<string>iphoneos</string>
-						<string>ipad</string>
-						<string>xcode</string>
-						<string>apple</string>
-						<string>cocoa touch</string>
-						<string>objective-c</string>
-						<string>objc</string>
-						<string>swift</string>
-						<string>watchkit</string>
-					</array>
-					<key>name</key>
-					<string>watchOS (Online)</string>
-					<key>platform</key>
-					<string>soonline</string>
-					<key>uniqueIdentifier</key>
-					<string>watchOS_Online</string>
-				</dict>
-			</dict>
-		</dict>
+		<dict/>
 	</dict>
 	<key>DHSwiftRepo</key>
 	<dict>
 		<key>installed</key>
-		<dict>
-			<key>https://github.com/SDWebImage/SDWebImage</key>
-			<dict>
-				<key>date</key>
-				<date>2026-02-26T07:47:02Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>SDWebImage/SDWebImage</string>
-					<key>platform</key>
-					<string>docc</string>
-					<key>uniqueIdentifier</key>
-					<string>https://github.com/SDWebImage/SDWebImage</string>
-				</dict>
-			</dict>
-			<key>https://github.com/SDWebImage/SDWebImageSwiftUI</key>
-			<dict>
-				<key>date</key>
-				<date>2025-11-04T05:59:44Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>SDWebImage/SDWebImageSwiftUI</string>
-					<key>platform</key>
-					<string>docc</string>
-					<key>uniqueIdentifier</key>
-					<string>https://github.com/SDWebImage/SDWebImageSwiftUI</string>
-				</dict>
-			</dict>
-			<key>https://github.com/stephencelis/SQLite.swift</key>
-			<dict>
-				<key>date</key>
-				<date>2025-10-25T05:33:28Z</date>
-				<key>entry</key>
-				<dict>
-					<key>name</key>
-					<string>stephencelis/SQLite.swift</string>
-					<key>platform</key>
-					<string>docc</string>
-					<key>uniqueIdentifier</key>
-					<string>https://github.com/stephencelis/SQLite.swift</string>
-				</dict>
-			</dict>
-		</dict>
+		<dict/>
 		<key>uninstalled</key>
 		<dict/>
 	</dict>
@@ -2408,29 +887,6 @@
 					<string>AWS_CLI</string>
 				</dict>
 			</dict>
-			<key>Android_Gradle_Plugin</key>
-			<dict>
-				<key>date</key>
-				<date>2025-05-07T02:16:33Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>android</string>
-						<string>gradle</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Android_Gradle_Plugin#readme</string>
-					<key>authorLinkText</key>
-					<string>Tarek Belkahia</string>
-					<key>name</key>
-					<string>Android Gradle Plugin</string>
-					<key>platform</key>
-					<string>usercontribAndroid_Gradle_Plugin</string>
-					<key>uniqueIdentifier</key>
-					<string>Android_Gradle_Plugin</string>
-				</dict>
-			</dict>
 			<key>Beautiful_Soup</key>
 			<dict>
 				<key>date</key>
@@ -2455,28 +911,10 @@
 					<string>Beautiful_Soup</string>
 				</dict>
 			</dict>
-			<key>Boto3</key>
-			<dict>
-				<key>date</key>
-				<date>2026-04-09T08:50:02Z</date>
-				<key>entry</key>
-				<dict>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Boto3#readme</string>
-					<key>authorLinkText</key>
-					<string>James Seward</string>
-					<key>name</key>
-					<string>boto3</string>
-					<key>platform</key>
-					<string>usercontribBoto3</string>
-					<key>uniqueIdentifier</key>
-					<string>Boto3</string>
-				</dict>
-			</dict>
 			<key>CanIUse</key>
 			<dict>
 				<key>date</key>
-				<date>2020-12-26T09:15:25Z</date>
+				<date>2026-04-17T10:58:05Z</date>
 				<key>entry</key>
 				<dict>
 					<key>aliases</key>
@@ -2495,26 +933,6 @@
 					<string>usercontribCanIUse</string>
 					<key>uniqueIdentifier</key>
 					<string>CanIUse</string>
-				</dict>
-			</dict>
-			<key>Chrome_Extensions_API</key>
-			<dict>
-				<key>date</key>
-				<date>2025-05-07T02:17:23Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array/>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Chrome_Extensions_API#readme</string>
-					<key>authorLinkText</key>
-					<string>Jonathan Revah, Georg Barikin</string>
-					<key>name</key>
-					<string>Chrome Extensions API</string>
-					<key>platform</key>
-					<string>usercontribChrome_Extensions_API</string>
-					<key>uniqueIdentifier</key>
-					<string>Chrome_Extensions_API</string>
 				</dict>
 			</dict>
 			<key>Clang</key>
@@ -2556,70 +974,6 @@
 					<string>usercontribClickHouse</string>
 					<key>uniqueIdentifier</key>
 					<string>ClickHouse</string>
-				</dict>
-			</dict>
-			<key>ESLint</key>
-			<dict>
-				<key>date</key>
-				<date>2023-09-18T07:53:40Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>eslint</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/ESLint#readme</string>
-					<key>authorLinkText</key>
-					<string>Stefan Kolb</string>
-					<key>name</key>
-					<string>ESLint</string>
-					<key>platform</key>
-					<string>usercontribESLint</string>
-					<key>uniqueIdentifier</key>
-					<string>ESLint</string>
-				</dict>
-			</dict>
-			<key>FFmpeg</key>
-			<dict>
-				<key>date</key>
-				<date>2023-09-18T07:53:52Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array/>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/FFmpeg#readme</string>
-					<key>authorLinkText</key>
-					<string>Steve Yin</string>
-					<key>name</key>
-					<string>FFmpeg</string>
-					<key>platform</key>
-					<string>usercontribFFmpeg</string>
-					<key>uniqueIdentifier</key>
-					<string>FFmpeg</string>
-				</dict>
-			</dict>
-			<key>GNU_Automake</key>
-			<dict>
-				<key>date</key>
-				<date>2024-08-10T09:13:09Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>automake</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/GNU_Automake#readme</string>
-					<key>authorLinkText</key>
-					<string>Louie Shprung</string>
-					<key>name</key>
-					<string>GNU Automake</string>
-					<key>platform</key>
-					<string>usercontribGNU_Automake</string>
-					<key>uniqueIdentifier</key>
-					<string>GNU_Automake</string>
 				</dict>
 			</dict>
 			<key>GNU_Make</key>
@@ -2665,37 +1019,6 @@
 					<string>usercontribJSON_for_Modern_C++</string>
 					<key>uniqueIdentifier</key>
 					<string>JSON_for_Modern_C++</string>
-				</dict>
-			</dict>
-			<key>Jest</key>
-			<dict>
-				<key>date</key>
-				<date>2023-09-18T08:00:29Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>Jest</string>
-						<string>React</string>
-						<string>Webpack</string>
-						<string>jQuery</string>
-						<string>CoffeeScript</string>
-						<string>Facebook</string>
-						<string>JavaScript</string>
-						<string>Reactjs</string>
-						<string>UI</string>
-						<string>Unit Test</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Jest#readme</string>
-					<key>authorLinkText</key>
-					<string>Xianming Zhong</string>
-					<key>name</key>
-					<string>Jest</string>
-					<key>platform</key>
-					<string>usercontribJest</string>
-					<key>uniqueIdentifier</key>
-					<string>Jest</string>
 				</dict>
 			</dict>
 			<key>Kubernetes</key>
@@ -2745,74 +1068,6 @@
 					<string>usercontribLinux_Man_Pages</string>
 					<key>uniqueIdentifier</key>
 					<string>Linux_Man_Pages</string>
-				</dict>
-			</dict>
-			<key>Mediawiki</key>
-			<dict>
-				<key>date</key>
-				<date>2023-09-18T08:03:17Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array/>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Mediawiki#readme</string>
-					<key>authorLinkText</key>
-					<string>Inductiveload</string>
-					<key>name</key>
-					<string>Mediawiki</string>
-					<key>platform</key>
-					<string>usercontribMediawiki</string>
-					<key>uniqueIdentifier</key>
-					<string>Mediawiki</string>
-				</dict>
-			</dict>
-			<key>Powershell</key>
-			<dict>
-				<key>date</key>
-				<date>2023-09-18T08:03:35Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>Windows shell</string>
-						<string>pwsh</string>
-						<string>Cmdlets</string>
-						<string>Windows automation</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Powershell#readme</string>
-					<key>authorLinkText</key>
-					<string>tddschn</string>
-					<key>name</key>
-					<string>Powershell</string>
-					<key>platform</key>
-					<string>usercontribPowershell</string>
-					<key>uniqueIdentifier</key>
-					<string>Powershell</string>
-				</dict>
-			</dict>
-			<key>React_Router</key>
-			<dict>
-				<key>date</key>
-				<date>2025-05-07T02:21:29Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>React</string>
-						<string>ReactJS</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/React_Router#readme</string>
-					<key>authorLinkText</key>
-					<string>Gareth Oakley</string>
-					<key>name</key>
-					<string>React Router</string>
-					<key>platform</key>
-					<string>usercontribReact_Router</string>
-					<key>uniqueIdentifier</key>
-					<string>React_Router</string>
 				</dict>
 			</dict>
 			<key>Swift</key>
@@ -2945,48 +1200,6 @@
 					<string>date-fns</string>
 				</dict>
 			</dict>
-			<key>discord.js</key>
-			<dict>
-				<key>date</key>
-				<date>2020-12-26T09:15:29Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array/>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/discord.js#readme</string>
-					<key>authorLinkText</key>
-					<string>neoney</string>
-					<key>name</key>
-					<string>discord.js</string>
-					<key>platform</key>
-					<string>usercontribdiscord.js</string>
-					<key>uniqueIdentifier</key>
-					<string>discord.js</string>
-				</dict>
-			</dict>
-			<key>electron</key>
-			<dict>
-				<key>date</key>
-				<date>2023-09-18T07:53:27Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>atom-shell</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/electron#readme</string>
-					<key>authorLinkText</key>
-					<string>Francesco Pira</string>
-					<key>name</key>
-					<string>Electron</string>
-					<key>platform</key>
-					<string>usercontribelectron</string>
-					<key>uniqueIdentifier</key>
-					<string>electron</string>
-				</dict>
-			</dict>
 			<key>jq</key>
 			<dict>
 				<key>date</key>
@@ -3051,170 +1264,9 @@
 					<string>pnpm</string>
 				</dict>
 			</dict>
-			<key>virtualenv</key>
-			<dict>
-				<key>date</key>
-				<date>2025-05-07T02:23:10Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array/>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/virtualenv#readme</string>
-					<key>authorLinkText</key>
-					<string>Dan Girellini</string>
-					<key>name</key>
-					<string>virtualenv</string>
-					<key>platform</key>
-					<string>usercontribvirtualenv</string>
-					<key>uniqueIdentifier</key>
-					<string>virtualenv</string>
-				</dict>
-			</dict>
-			<key>webpack</key>
-			<dict>
-				<key>date</key>
-				<date>2023-09-18T08:04:44Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>web pack</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/webpack#readme</string>
-					<key>authorLinkText</key>
-					<string>Matija Marohnić, Guill Lo</string>
-					<key>name</key>
-					<string>webpack</string>
-					<key>platform</key>
-					<string>usercontribwebpack</string>
-					<key>uniqueIdentifier</key>
-					<string>webpack</string>
-				</dict>
-			</dict>
 		</dict>
 		<key>uninstalled</key>
-		<dict>
-			<key>AutoIt</key>
-			<dict>
-				<key>date</key>
-				<date>2025-05-14T15:43:13Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>AutoIt Script</string>
-						<string>Au3</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/AutoIt#readme</string>
-					<key>authorLinkText</key>
-					<string>Juno_okyo</string>
-					<key>name</key>
-					<string>AutoIt</string>
-					<key>platform</key>
-					<string>usercontribAutoIt</string>
-					<key>uniqueIdentifier</key>
-					<string>AutoIt</string>
-				</dict>
-			</dict>
-			<key>MEANJS</key>
-			<dict>
-				<key>date</key>
-				<date>2025-05-07T02:05:37Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>MEAN.JS</string>
-						<string>JavaScript</string>
-						<string>MongoDB</string>
-						<string>Express</string>
-						<string>AngularJS</string>
-						<string>Node.js</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/MEANJS#readme</string>
-					<key>authorLinkText</key>
-					<string>Aziz Alto</string>
-					<key>name</key>
-					<string>MEAN.JS</string>
-					<key>platform</key>
-					<string>usercontribMEANJS</string>
-					<key>uniqueIdentifier</key>
-					<string>MEANJS</string>
-				</dict>
-			</dict>
-			<key>Mastodon</key>
-			<dict>
-				<key>date</key>
-				<date>2024-12-27T12:04:39Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array/>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Mastodon#readme</string>
-					<key>authorLinkText</key>
-					<string>Christian Paul</string>
-					<key>name</key>
-					<string>Mastodon</string>
-					<key>platform</key>
-					<string>usercontribMastodon</string>
-					<key>uniqueIdentifier</key>
-					<string>Mastodon</string>
-				</dict>
-			</dict>
-			<key>Visual_Studio_Code</key>
-			<dict>
-				<key>date</key>
-				<date>2024-12-27T12:04:18Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>visual studio</string>
-						<string>visual studio code</string>
-						<string>vsc</string>
-						<string>vs</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/Visual_Studio_Code#readme</string>
-					<key>authorLinkText</key>
-					<string>NeuroForLunch</string>
-					<key>name</key>
-					<string>Visual Studio Code</string>
-					<key>platform</key>
-					<string>usercontribVisual_Studio_Code</string>
-					<key>uniqueIdentifier</key>
-					<string>Visual_Studio_Code</string>
-				</dict>
-			</dict>
-			<key>npm</key>
-			<dict>
-				<key>date</key>
-				<date>2023-09-18T08:02:59Z</date>
-				<key>entry</key>
-				<dict>
-					<key>aliases</key>
-					<array>
-						<string>Node Package Manager</string>
-						<string>node.js</string>
-					</array>
-					<key>authorLinkHref</key>
-					<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/npm#readme</string>
-					<key>authorLinkText</key>
-					<string>François Massart</string>
-					<key>name</key>
-					<string>npm</string>
-					<key>platform</key>
-					<string>usercontribnpm</string>
-					<key>uniqueIdentifier</key>
-					<string>npm</string>
-				</dict>
-			</dict>
-		</dict>
+		<dict/>
 	</dict>
 	<key>DHWKWebViewTextSizeMultiplier</key>
 	<real>0.0</real>
@@ -3476,11 +1528,6 @@
 	<dict>
 		<key>installed</key>
 		<dict>
-			<key>http://kapeli.com/feeds/Apache_HTTP_Server.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2020-12-26T09:15:25Z</date>
-			</dict>
 			<key>http://kapeli.com/feeds/Apple_API_Reference.xml</key>
 			<dict>
 				<key>date</key>
@@ -3511,30 +1558,10 @@
 				<key>date</key>
 				<date>2020-12-26T09:19:06Z</date>
 			</dict>
-			<key>http://kapeli.com/feeds/Docker.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2020-12-26T09:18:54Z</date>
-			</dict>
 			<key>http://kapeli.com/feeds/Express.xml</key>
 			<dict>
 				<key>date</key>
 				<date>2020-12-26T09:17:44Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Font_Awesome.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2020-12-26T09:16:15Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/GLib.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2025-07-27T03:34:51Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Gulp.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2020-12-26T09:19:14Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/HTML.xml</key>
 			<dict>
@@ -3551,16 +1578,6 @@
 				<key>date</key>
 				<date>2021-10-16T11:27:02Z</date>
 			</dict>
-			<key>http://kapeli.com/feeds/Jekyll.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2020-12-26T09:19:02Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Laravel.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2025-05-07T02:11:43Z</date>
-			</dict>
 			<key>http://kapeli.com/feeds/Lua.xml</key>
 			<dict>
 				<key>date</key>
@@ -3570,11 +1587,6 @@
 			<dict>
 				<key>date</key>
 				<date>2020-12-26T09:18:31Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Markdown.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2020-12-26T09:19:08Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/MongoDB.xml</key>
 			<dict>
@@ -3605,11 +1617,6 @@
 			<dict>
 				<key>date</key>
 				<date>2020-12-26T09:18:27Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Perl.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2020-12-26T09:17:58Z</date>
 			</dict>
 			<key>http://kapeli.com/feeds/Pug.xml</key>
 			<dict>
@@ -3646,11 +1653,6 @@
 				<key>date</key>
 				<date>2020-12-26T09:18:01Z</date>
 			</dict>
-			<key>http://kapeli.com/feeds/Statamic.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2025-05-07T02:10:13Z</date>
-			</dict>
 			<key>http://kapeli.com/feeds/TypeScript.xml</key>
 			<dict>
 				<key>date</key>
@@ -3661,95 +1663,9 @@
 				<key>date</key>
 				<date>2020-12-26T09:18:17Z</date>
 			</dict>
-			<key>https://hbang.github.io/Alderis/docsets/Alderis.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2020-12-26T09:16:04Z</date>
-			</dict>
-			<key>https://hbang.github.io/TypeStatus/docsets/TypeStatus.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2020-12-26T09:19:07Z</date>
-			</dict>
-			<key>https://hbang.github.io/libcephei/docsets/Cephei.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2020-12-26T09:18:05Z</date>
-			</dict>
-			<key>https://hbang.github.io/libopener/docsets/Opener.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2020-12-26T09:18:42Z</date>
-			</dict>
 		</dict>
 		<key>uninstalled</key>
-		<dict>
-			<key>http://kapeli.com/feeds/ActionScript.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2021-06-08T06:46:24Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/AppleScript.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2021-06-08T06:46:24Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Bootstrap_3.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2020-09-14T11:08:26Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Bootstrap_4.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2025-05-18T13:01:18Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Grunt.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2020-09-14T11:09:14Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Java_SE8.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2021-10-16T02:53:51Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Lo-Dash.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2020-09-14T11:05:12Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/MomentJS.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2024-12-27T12:03:50Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/NET_Framework.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2024-02-05T13:11:38Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/Python_2.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2025-05-07T02:10:40Z</date>
-			</dict>
-			<key>http://kapeli.com/feeds/WordPress.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2021-06-08T06:46:24Z</date>
-			</dict>
-			<key>http://rotemy.com/dash/msdn/msdn.xml</key>
-			<dict>
-				<key>date</key>
-				<date>2018-06-16T13:46:38Z</date>
-			</dict>
-			<key>https://hbang.github.io/libcephei/xcode-docset.atom</key>
-			<dict>
-				<key>date</key>
-				<date>2018-03-23T07:31:33Z</date>
-			</dict>
-		</dict>
+		<dict/>
 	</dict>
 	<key>isPinned</key>
 	<true/>
@@ -3941,35 +1857,7 @@
 			<dict/>
 		</dict>
 		<key>uninstalled</key>
-		<dict>
-			<key>FileMaker</key>
-			<dict>
-				<key>13.0.0</key>
-				<dict>
-					<key>date</key>
-					<date>2023-09-18T08:07:37Z</date>
-					<key>entry</key>
-					<dict>
-						<key>aliases</key>
-						<array>
-							<string>FileMaker Pro</string>
-							<string>FileMaker</string>
-							<string>FMP</string>
-						</array>
-						<key>authorLinkHref</key>
-						<string>https://github.com/Kapeli/Dash-User-Contributions/tree/master/docsets/FileMaker#readme</string>
-						<key>authorLinkText</key>
-						<string>Jason P. Scharf</string>
-						<key>name</key>
-						<string>FileMaker</string>
-						<key>platform</key>
-						<string>usercontribFileMaker</string>
-						<key>uniqueIdentifier</key>
-						<string>FileMaker</string>
-					</dict>
-				</dict>
-			</dict>
-		</dict>
+		<dict/>
 	</dict>
 	<key>versionedFeeds</key>
 	<dict>
